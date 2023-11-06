@@ -1,14 +1,26 @@
-import React from 'react'
-import Link from 'next/link'
+import React from "react";
+import Link from "next/link";
+
+import navLinks from "../constants/navLinks";
+import { TNavLinks } from '../types/types'
 
 const Navbar = () => {
   return (
-    <nav>
-      <Link href="/comics">Comics</Link>
-      <Link href="/games">Games</Link>
-      <Link href="https://bloombeard.tumblr.com/">Blog</Link>
-      <Link href="/about">About</Link>
-    </nav>
+    <div className="navbar">
+      <div className="navbar--title">
+        <Link href="/">Forrest Storrs</Link>
+      </div>
+
+      <div className="navbar--links">
+        {Object.keys(navLinks).map((navLink) => (
+          <li key={navLinks[navLink as keyof TNavLinks].label}>
+            <Link href={navLinks[navLink as keyof TNavLinks].target}>
+              {navLinks[navLink as keyof TNavLinks].label}
+            </Link>
+          </li>
+        ))}
+      </div>
+    </div>
   );
 };
 

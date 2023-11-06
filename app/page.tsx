@@ -5,7 +5,7 @@ import grannyImage from './Granny.png'
 const Home = () => {
   return (
     <main>
-      <div>Forrest Storrs</div>
+      <div>P L A C E H O L D E R</div>
     </main>
   )
 }

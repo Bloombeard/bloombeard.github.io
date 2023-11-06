@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* base styles */
+body {
+    color: #f2f2f2;
+    background-color: #3b6842;
+}
+
+/* nav styles */
+.navbar {
+    color: #3b6842;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 3vw;
+
+    .navbar--title {
+        font-size: 106px;
+        font-style: normal;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 15px;
+        line-height: 1em;
+    }
+
+    .navbar--links {
+        
+    }
+}
