@@ -15,7 +15,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 3vw;
+    align-items: center;
 
     .navbar--title {
         font-size: 106px;
@@ -24,9 +24,24 @@ body {
         text-transform: uppercase;
         letter-spacing: 15px;
         line-height: 1em;
+        margin: 1vw 3vw;
     }
 
     .navbar--links {
-        
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: 2em;
+        margin: 1vw 3vw;
+
+        .navbar--link {
+            padding: 0 .4em;
+
+            &:hover {
+                color: #f2f2f2;
+                background-color: #3b6842;
+                // transition: 0.1s ease-in-out;
+            }
+        }
     }
 }
