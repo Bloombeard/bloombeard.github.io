@@ -1,9 +1,11 @@
 import React from 'react'
+import Image from 'next/image'
+import grannyImage from './Granny.png'
 
 const Home = () => {
   return (
     <main>
-      <div>Dashboard</div>
+      <div>Forrest Storrs</div>
     </main>
   )
 }
