@@ -45,3 +45,25 @@ body {
         }
     }
 }
+
+/* comics page styles */
+.comics-page--links-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40% 40% 40% 40%;
+    
+    .comics-page--link {
+        display: flex;
+        justify-content: center;
+        padding: 20% 20%;
+
+        border: 1rem solid;
+
+        &:hover {
+            color: #3b6842;
+            background-color: #f2f2f2;
+
+            border: none;
+        }
+    }
+}

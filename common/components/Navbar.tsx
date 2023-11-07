@@ -1,13 +1,13 @@
 import React from "react";
 import Link from "next/link";
 
-import navLinks from "../constants/navLinks";
-import { TNavLinks } from '../types/types'
+import { navBarLinks } from "../constants/navLinks";
+import { TNavBarLinks } from '../types/types'
 
 const Navbar = () => {
-  const renderNavLinks = () => (
-    Object.keys(navLinks).map((key) => {
-      const navLink = navLinks[key as keyof TNavLinks]
+  const renderNavBarLinks = () => (
+    Object.keys(navBarLinks).map((key) => {
+      const navLink = navBarLinks[key as keyof TNavBarLinks]
       
       return (
         <Link className='navbar--link' key={navLink.label} href={navLink.target}>
@@ -23,7 +23,7 @@ const Navbar = () => {
         <Link href="/">Forrest Storrs</Link>
       </div>
       <div className="navbar--links">
-        {renderNavLinks()}
+        {renderNavBarLinks()}
       </div>
     </div>
   );

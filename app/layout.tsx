@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Courier_Prime } from "next/font/google";
 
 import "./globals.scss";
-import Navbar from './components/Navbar'
+import Navbar from '../common/components/Navbar'
 
 const courierPrime = Courier_Prime({ 
   subsets: ['latin'],

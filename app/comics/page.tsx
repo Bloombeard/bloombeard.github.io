@@ -1,18 +1,26 @@
 import React from "react";
-import Image from 'next/image'
-import grannyImage from '../Granny.png'
+import Link from 'next/link'
+import { comicLinks } from '../../common/constants/navLinks'
+import { TComicLinks } from '../../common/types/types'
 
 const Comics = () => {
+  const renderComicLinks = () => (
+    Object.keys(comicLinks).map(key => {
+      const comicLink = comicLinks[key as keyof TComicLinks]
+
+      return (
+        <Link className='comics-page--link' key={comicLink.label} href={comicLink.target}>
+          {comicLink.label}
+        </Link>
+      )
+    })
+  )
+  
   return (
-    <main>
-      <Image
-        src={grannyImage}
-        alt="enemies at the gates"
-        quality={100}
-        placeholder="blur"
-      />
-    </main>
-  );
-};
+    <div className='comics-page--links-wrapper'>
+      {renderComicLinks()}
+    </div>
+    )
+}
 
 export default Comics;
