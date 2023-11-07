@@ -5,21 +5,6 @@ import { navBarLinks } from "../constants/navLinks";
 import Links from "./Links";
 
 const Navbar = () => {
-  const renderNavBarLinks = () =>
-    Object.keys(navBarLinks).map((key) => {
-      const navLink = navBarLinks[key as keyof TNavBarLinks];
-
-      return (
-        <Link
-          className="navbar--link"
-          key={navLink.label}
-          href={navLink.target}
-        >
-          {navLink.label}
-        </Link>
-      );
-    });
-
   return (
     <div className="navbar">
       <div className="navbar--title">

@@ -2,9 +2,9 @@ import React from "react"
 
 const Elixers = () => {
   return (
-    <div>
-      Elixers
-    </div>
+    <main>
+      <div>Elixers</div>
+    </main>
   )
 }
 

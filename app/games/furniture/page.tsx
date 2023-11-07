@@ -2,9 +2,9 @@ import React from "react"
 
 const Furniture = () => {
   return (
-    <div>
-      Your Living Room Is Full of Furniture
-    </div>
+    <main>
+      <div>Your Living Room Is Full of Furniture</div>
+    </main>
   )
 }
 

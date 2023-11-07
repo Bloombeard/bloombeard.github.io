@@ -2,9 +2,9 @@ import React from "react"
 
 const RedLight = () => {
   return (
-    <div>
-      Red Light
-    </div>
+    <main>
+      <div>Red Light</div>
+    </main>
   )
 }
 

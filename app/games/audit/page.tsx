@@ -2,9 +2,9 @@ import React from "react"
 
 const Audit = () => {
   return (
-    <div>
-      Audit
-    </div>
+    <main>
+      <div>Audit</div>
+    </main>
   )
 }
 

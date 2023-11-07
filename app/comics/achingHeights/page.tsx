@@ -2,9 +2,9 @@ import React from "react"
 
 const AchingHeights = () => {
   return (
-    <div>
-      Aching Heights
-    </div>
+    <main>
+      <div>Aching Heights</div>
+    </main>
   )
 }
 

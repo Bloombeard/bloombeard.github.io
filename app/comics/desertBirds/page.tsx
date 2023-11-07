@@ -2,9 +2,9 @@ import React from 'react'
 
 const DesertBirds = () => {
   return (
-    <div>
-      Desert Birds
-    </div>
+    <main>
+      <div>Desert Birds</div>
+    </main>
   )
 }
 
