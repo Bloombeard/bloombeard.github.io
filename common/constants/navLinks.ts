@@ -1,51 +1,66 @@
-import { TNavBarLinks, TComicLinks } from '../types/types'
+import { TNavLinks } from '../types/types'
 
-export const navBarLinks: TNavBarLinks = {
-    comics: {
+export const navBarLinks: TNavLinks = [
+    {
         label: 'Comics',
         target: '/comics',
     },
-    games: {
+    {
         label: 'Games',
         target: '/games',
     },
-    publications: {
+    {
         label: 'Publications',
         target: '/publications',
     },
-    blog: {
+    {
         label: 'Blog',
         target: 'https://bloombeard.tumblr.com/',
     },
-    about: {
+    {
         label: 'About',
         target: '/about',
     },
-}
+]
 
-export const comicLinks: TComicLinks = {
-    mallKing: {
+export const comicLinks: TNavLinks = [
+    {
         label: 'The Curse of the Mall King',
         target: '/comics/mallKing',
     },
-    achingHeights: {
+    {
         label: 'Aching Heights',
         target: '/comics/achingHeights',
     },
-    devyn: {
+    {
         label: 'Devyn',
         target: '/comics/devyn',
     },
-    glittergym: {
+    {
         label: 'Glittergym',
         target: '/comics/glittergym',
     },
-    desertBirds: {
+    {
         label: 'Desert Birds',
         target: '/comics/desertBirds',
     },
-    redLight: {
+    {
         label: 'Red Light',
         target: '/comics/redLight',
     },
-}
+]
+
+export const gameLinks: TNavLinks = [
+    {
+        label: "Madame Bassitor's Catalogue of Curious Elixers",
+        target: '/games/elixers'
+    },
+    {
+        label: 'The Audit',
+        target: '/games/audit'
+    },
+    {
+        label: 'Your Living Room is Full of Furniture',
+        target: '/games/furniture',
+    },
+]

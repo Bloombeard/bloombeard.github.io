@@ -1,25 +1,10 @@
 import React from "react";
-import Link from 'next/link'
 import { comicLinks } from '../../common/constants/navLinks'
-import { TComicLinks } from '../../common/types/types'
+import Links from '../../common/components/Links'
 
-const Comics = () => {
-  const renderComicLinks = () => (
-    Object.keys(comicLinks).map(key => {
-      const comicLink = comicLinks[key as keyof TComicLinks]
-
-      return (
-        <Link className='comics-page--link' key={comicLink.label} href={comicLink.target}>
-          {comicLink.label}
-        </Link>
-      )
-    })
-  )
-  
+const Comics = () => {  
   return (
-    <div className='comics-page--links-wrapper'>
-      {renderComicLinks()}
-    </div>
+      <Links wrapperClass='hub-page--links-wrapper' linkClass='hub-page--link' links={comicLinks} />
     )
 }
 

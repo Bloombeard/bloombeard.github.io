@@ -3,19 +3,4 @@ export type TNavLink = {
     target: string
 }
 
-export type TNavBarLinks = {
-    comics: TNavLink
-    games: TNavLink
-    publications: TNavLink
-    blog: TNavLink
-    about: TNavLink
-}
-
-export type TComicLinks = {
-    mallKing: TNavLink
-    achingHeights: TNavLink
-    devyn: TNavLink
-    glittergym: TNavLink
-    desertBirds: TNavLink
-    redLight: TNavLink
-}
+export type TNavLinks = TNavLink[]

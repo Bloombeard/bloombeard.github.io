@@ -2,29 +2,34 @@ import React from "react";
 import Link from "next/link";
 
 import { navBarLinks } from "../constants/navLinks";
-import { TNavBarLinks } from '../types/types'
+import Links from "./Links";
 
 const Navbar = () => {
-  const renderNavBarLinks = () => (
+  const renderNavBarLinks = () =>
     Object.keys(navBarLinks).map((key) => {
-      const navLink = navBarLinks[key as keyof TNavBarLinks]
-      
+      const navLink = navBarLinks[key as keyof TNavBarLinks];
+
       return (
-        <Link className='navbar--link' key={navLink.label} href={navLink.target}>
+        <Link
+          className="navbar--link"
+          key={navLink.label}
+          href={navLink.target}
+        >
           {navLink.label}
         </Link>
-      )
-    })
-  )
-  
+      );
+    });
+
   return (
     <div className="navbar">
       <div className="navbar--title">
         <Link href="/">Forrest Storrs</Link>
       </div>
-      <div className="navbar--links">
-        {renderNavBarLinks()}
-      </div>
+      <Links
+        wrapperClass="navbar--links"
+        linkClass="navbar--link"
+        links={navBarLinks}
+      />
     </div>
   );
 };

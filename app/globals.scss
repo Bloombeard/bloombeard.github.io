@@ -46,13 +46,13 @@ body {
     }
 }
 
-/* comics page styles */
-.comics-page--links-wrapper {
+/* hub page styles */
+.hub-page--links-wrapper {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 40% 40% 40% 40%;
     
-    .comics-page--link {
+    .hub-page--link {
         display: flex;
         justify-content: center;
         padding: 20% 20%;

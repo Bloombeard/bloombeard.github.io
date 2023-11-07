@@ -1,10 +1,11 @@
 import React from 'react'
 
+import { gameLinks } from '@/common/constants/navLinks'
+import Links from '@/common/components/Links'
+
 const Games = () => {
     return (
-        <main>
-            <div>Games</div>
-        </main>
+        <Links wrapperClass='hub-page--links-wrapper' linkClass='hub-page--link' links={gameLinks} />
     )
 }
 
