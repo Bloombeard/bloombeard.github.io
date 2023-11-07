@@ -10,9 +10,18 @@
   height: 440px;
   margin-bottom: 8rem;
 
-  .content-header--cover {
+  .content-header--cover-wrapper {
     width: calc(50% - 1%);
-    border: 1px solid black;
+    height: 49vw;
+    max-height: 466px;
+    position: relative;
+    overflow: hidden;
+
+    .content-header--cover-image {
+      object-fit: cover;
+      height: auto;
+    //   object-position: right top;
+    }
   }
 
   .content-header--description {
@@ -40,7 +49,7 @@
         font-size: 14px;
         font-weight: 400;
       }
-      
+
       .content-header--description__link {
         display: flex;
         flex-direction: row;
@@ -52,23 +61,10 @@
         padding-right: 10%;
 
         &:hover {
-            // color: $offBlack;
-            color: $offWhite;
-            background-color: $deepGreen
+          // color: $offBlack;
+          color: $offWhite;
+          background-color: $deepGreen;
         }
-
-        // &::after {
-        //     color: $offBlack;
-        //     font-style: normal;
-        //     content: '\00a0|\00a0',
-        // }
-
-        // &:nth-last-child(-n + 1) {
-        //     &::after {
-        //         content: none,
-        //     }
-        // }
-
       }
     }
   }

@@ -10,4 +10,6 @@ export type TDescriptionBlock = {
     subtitle?: string
     bodyText?: string
     links?: TNavLinks
+    coverImage: any
+    coverAltText: string
 }
