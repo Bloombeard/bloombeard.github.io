@@ -2,7 +2,7 @@
 
 /* nav styles */
 .navbar {
-    color: $deepGreen;
+    color: $softGreen;
     background-color: $offWhite;
     display: flex;
     flex-direction: row;
@@ -32,7 +32,7 @@
 
             &:hover {
                 color: $offWhite;
-                background-color: $deepGreen;
+                background-color: $softGreen;
                 // transition: 0.1s ease-in-out;
             }
         }

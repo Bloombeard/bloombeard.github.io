@@ -3,13 +3,17 @@
 /* base styles */
 body {
     color: $offWhite;
-    background-color: $deepGreen;
+    background-color: $softGreen;
 }
  
 main {
     display: flex;
     justify-content: center;
-    padding: 50px;
+    padding: 17px;
+    
+    @media (min-width: $screen-sm-min) {
+        padding: 50px;
+    }
 }
 
 h1 {
