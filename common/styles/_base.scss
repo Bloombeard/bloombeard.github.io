@@ -1,0 +1,37 @@
+@import '_variables';
+
+/* base styles */
+body {
+    color: $offWhite;
+    background-color: $deepGreen;
+}
+ 
+main {
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 33px;
+    letter-spacing: .1rem
+}
+
+h2 {
+    color: $offBlack;
+    font-weight: 300;
+    font-size: 14px;
+    font-style: normal;
+    letter-spacing: .05rem;
+    margin-top: 4%;
+    margin-bottom: 1.6em;
+}
+
+p {
+    color: $offBlack;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.6em;
+}

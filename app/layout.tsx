@@ -2,7 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { Courier_Prime } from "next/font/google";
 
-import "./globals.scss";
+import "../common/styles/style.scss";
 import Navbar from '../common/components/Navbar'
 
 const courierPrime = Courier_Prime({ 

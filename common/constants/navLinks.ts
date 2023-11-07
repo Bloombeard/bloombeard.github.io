@@ -1,5 +1,10 @@
 import { TNavLinks } from '../types/types'
 
+const _externalLinks = {
+    blog: 'https://bloombeard.tumblr.com/',
+    instagram: 'https://www.instagram.com/bloombeard/',
+}
+
 export const navBarLinks: TNavLinks = [
     {
         label: 'Comics',
@@ -15,7 +20,7 @@ export const navBarLinks: TNavLinks = [
     },
     {
         label: 'Blog',
-        target: 'https://bloombeard.tumblr.com/',
+        target: _externalLinks.blog,
     },
     {
         label: 'About',
@@ -62,5 +67,16 @@ export const gameLinks: TNavLinks = [
     {
         label: 'Your Living Room is Full of Furniture',
         target: '/games/furniture',
+    },
+]
+
+export const aboutPageLinks: TNavLinks = [
+    {
+        label: 'Blog',
+        target: _externalLinks.blog,
+    },
+    {
+        label: 'Instagram',
+        target: _externalLinks.instagram,
     },
 ]

@@ -4,3 +4,10 @@ export type TNavLink = {
 }
 
 export type TNavLinks = TNavLink[]
+
+export type TDescriptionBlock = {
+    title?: string
+    subtitle?: string
+    bodyText?: string
+    links?: TNavLinks
+}
