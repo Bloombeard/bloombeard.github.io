@@ -10,7 +10,13 @@
   align-items: center;
 
   @media (min-width: $screen-sm-min) {
+    margin-bottom: 4rem;
+    flex-direction: column;
+  }
+
+  @media (min-width: $screen-md-min) {
     margin-bottom: 8rem;
+    flex-direction: row;
   }
 
   .navbar--title__clickable {
@@ -18,15 +24,22 @@
 
     @media (min-width: $screen-sm-min) {
       display: flex;
+      
       font-size: 40px;
       font-style: normal;
       font-weight: 700;
       text-transform: uppercase;
       // letter-spacing:
-      letter-spacing: 15px;
-      font-size: 106px;
+      letter-spacing: 7px;
+      font-size: 53px;
       line-height: 1em;
-      margin: 1vw 3vw;
+      margin: 2vw 3vw 0 3vw;
+    }
+
+    @media (min-width: $screen-md-min) {
+        letter-spacing: 15px;
+        font-size: 106px;
+        margin: 1vw 3vw;
     }
   }
 
@@ -36,6 +49,10 @@
     text-transform: uppercase;
     margin-left: 3%;
     margin-top: 1%;
+
+    @media (min-width: $screen-sm-min) {
+        display: none;
+    }
   }
 
   .navbar--links {
@@ -43,10 +60,15 @@
 
     @media (min-width: $screen-sm-min) {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: flex-end;
-      font-size: 2em;
+      font-size: 26px;
       margin: 1vw 3vw;
+    }
+
+    @media (min-width: $screen-md-min) {
+        flex-direction: column;
+        font-size: 2em;
     }
 
     .navbar--link {
@@ -63,6 +85,8 @@
   .navbar--hamburger__button {
     padding: 0 5vw;
     
-    // border: 1px black solid;
+    @media (min-width: $screen-sm-min) {
+        display: none;
+    }
   }
 }
