@@ -1,40 +1,68 @@
-@import '_variables';
+@import "_variables";
 
 /* nav styles */
 .navbar {
-    color: $softGreen;
-    background-color: $offWhite;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  color: $softGreen;
+  background-color: $offWhite;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $screen-sm-min) {
     margin-bottom: 8rem;
+  }
 
-    .navbar--title {
-        font-size: 106px;
-        font-style: normal;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 15px;
-        line-height: 1em;
-        margin: 1vw 3vw;
+  .navbar--title__clickable {
+    display: none;
+
+    @media (min-width: $screen-sm-min) {
+      display: flex;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 700;
+      text-transform: uppercase;
+      // letter-spacing:
+      letter-spacing: 15px;
+      font-size: 106px;
+      line-height: 1em;
+      margin: 1vw 3vw;
+    }
+  }
+
+  .navbar--title__static {
+    display: flex;
+    font-size: 33px;
+    text-transform: uppercase;
+    margin-left: 3%;
+    margin-top: 1%;
+  }
+
+  .navbar--links {
+    display: none;
+
+    @media (min-width: $screen-sm-min) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      font-size: 2em;
+      margin: 1vw 3vw;
     }
 
-    .navbar--links {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
-        font-size: 2em;
-        margin: 1vw 3vw;
+    .navbar--link {
+      padding: 0 0.4em;
 
-        .navbar--link {
-            padding: 0 .4em;
-
-            &:hover {
-                color: $offWhite;
-                background-color: $softGreen;
-                // transition: 0.1s ease-in-out;
-            }
-        }
+      &:hover {
+        color: $offWhite;
+        background-color: $softGreen;
+        // transition: 0.1s ease-in-out;
+      }
     }
+  }
+
+  .navbar--hamburger__button {
+    padding: 0 5vw;
+    
+    // border: 1px black solid;
+  }
 }
