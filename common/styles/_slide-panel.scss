@@ -8,11 +8,12 @@
     height: 100%;
     background-color: $rust;
     z-index: 1;
-    transform: translate3d(100%, 0, 0);
+    transform: translateX(100%);
     transition: transform .2s ease-in;
+    overflow-x: hidden;
 
     &.slide-panel--open {
-        transform: translate3d(0, 0, 0)
+        transform: translateX(0)
     }
 
     .slide-panel--links {

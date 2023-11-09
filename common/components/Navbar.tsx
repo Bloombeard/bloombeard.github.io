@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from "next/link";
 
 import Links from "@/common/components/Links";
@@ -11,6 +11,7 @@ import { hamburgerColors } from "@/common/constants/hamburgerColors";
 
 const Navbar = () => {
   const [isSlidePanelOpen, setIsSlidePanelOpen] = useState(false);
+
   const hamburgerColorFill = isSlidePanelOpen
     ? hamburgerColors.slidePanelOpen
     : hamburgerColors.slidePanelClosed;
