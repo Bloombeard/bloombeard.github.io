@@ -1,10 +1,6 @@
 @import "_variables";
 
-.slide-panel--closed {
-    display: none;
-}
-
-.slide-panel--open {
+.slide-panel {
     position: absolute;
     top: 0;
     right: 0;
@@ -12,6 +8,12 @@
     height: 100%;
     background-color: $rust;
     z-index: 1;
+    transform: translate3d(100%, 0, 0);
+    transition: transform .2s ease-in;
+
+    &.slide-panel--open {
+        transform: translate3d(0, 0, 0)
+    }
 
     .slide-panel--links {
         display: flex;

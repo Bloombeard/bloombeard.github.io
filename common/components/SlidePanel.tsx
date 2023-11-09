@@ -3,7 +3,7 @@
 import React from "react";
 
 import Links from "@/common/components/Links";
-import { navBarLinks } from "../constants/navLinks";
+import { navBarLinks } from "@/common/constants/navLinks";
 
 interface TProps {
   isOpen: boolean;
@@ -15,7 +15,7 @@ const SlidePanel = (props: TProps) => {
 
   return (
     // <div className='slide-panel--open'>
-    <div className={isOpen ? "slide-panel--open" : "slide-panel--closed"}>
+    <div className={`slide-panel ${isOpen ? "slide-panel--open" : ""}`}>
       <Links
         wrapperClass="slide-panel--links"
         linkClass="slide-panel--link"
