@@ -84,6 +84,7 @@
 
   .navbar--hamburger__button {
     padding: 0 5vw;
+    z-index: 9;
     
     @media (min-width: $screen-sm-min) {
         display: none;

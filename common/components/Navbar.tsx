@@ -1,16 +1,17 @@
-'use client'
+"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from 'next/image'
 
-import { navBarLinks } from "../constants/navLinks";
-import Links from "./Links";
-import HamburgerIcon from '@/common/assets/HamburgerIcon.svg'
-import SlidePanel from "./SlidePanel";
+import Links from "@/common/components/Links";
+import SlidePanel from '@/common/components/SlidePanel'
+import HamburgerIcon from "@/common/components/HamburgerIcon";
+import { navBarLinks } from "@/common/constants/navLinks";
+import { hamburgerColors } from "@/common/constants/hamburgerColors";
 
 const Navbar = () => {
   const [isSlidePanelOpen, setIsSlidePanelOpen] = useState(false)
+  const hamburgerColorFill = isSlidePanelOpen ? hamburgerColors.slidePanelOpen : hamburgerColors.slidePanelClosed
   
   const openSlideMenu = () => {
     console.log('*** menu open')
@@ -19,21 +20,26 @@ const Navbar = () => {
       setIsSlidePanelOpen(!isSlidePanelOpen)
     )
   }
-
   return (
-    <div className="navbar">
-      <div className="navbar--title__clickable">
-        <Link href="/">Forrest Storrs</Link>
+    <div>
+      <SlidePanel isOpen={isSlidePanelOpen} toggleCallback={() => setIsSlidePanelOpen(!isSlidePanelOpen)} />
+      <div className="navbar">
+        <div className="navbar--title__clickable">
+          <Link href="/">Forrest Storrs</Link>
+        </div>
+        <div className="navbar--title__static">Forrest Storrs</div>
+        <Links
+          wrapperClass="navbar--links"
+          linkClass="navbar--link"
+          links={navBarLinks}
+        />
+        <button
+          className="navbar--hamburger__button"
+          onClick={() => openSlideMenu()}
+        >
+          <HamburgerIcon colorFill={hamburgerColorFill} />
+        </button>
       </div>
-      <div className="navbar--title__static">Forrest Storrs</div>
-      <Links
-        wrapperClass="navbar--links"
-        linkClass="navbar--link"
-        links={navBarLinks}
-      />
-      <button className='navbar--hamburger__button' onClick={() => openSlideMenu()}>
-        <Image src={HamburgerIcon} height={25} width={25} quality={100} alt='hamburger menu' />
-      </button>
     </div>
   );
 };
