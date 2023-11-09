@@ -5,29 +5,6 @@ const _externalLinks = {
     instagram: 'https://www.instagram.com/bloombeard/',
 }
 
-export const navBarLinks: TNavLinks = [
-    {
-        label: 'Comics',
-        target: '/comics',
-    },
-    {
-        label: 'Games',
-        target: '/games',
-    },
-    {
-        label: 'Publications',
-        target: '/publications',
-    },
-    {
-        label: 'Blog',
-        target: _externalLinks.blog,
-    },
-    {
-        label: 'About',
-        target: '/about',
-    },
-]
-
 export const comicLinks: TNavLinks = [
     {
         label: 'The Curse of the Mall King',
@@ -78,5 +55,30 @@ export const aboutPageLinks: TNavLinks = [
     {
         label: 'Instagram',
         target: _externalLinks.instagram,
+    },
+]
+
+export const navBarLinks: TNavLinks = [
+    {
+        label: 'Comics',
+        target: '/comics',
+        expansion: comicLinks,
+    },
+    {
+        label: 'Games',
+        target: '/games',
+        expansion: gameLinks,
+    },
+    {
+        label: 'Publications',
+        target: '/publications',
+    },
+    {
+        label: 'Blog',
+        target: _externalLinks.blog,
+    },
+    {
+        label: 'About',
+        target: '/about',
     },
 ]

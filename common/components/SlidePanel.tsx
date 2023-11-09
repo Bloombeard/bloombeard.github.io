@@ -20,7 +20,7 @@ const SlidePanel = (props: TProps) => {
         wrapperClass="slide-panel--links"
         linkClass="slide-panel--link"
         links={navBarLinks}
-        onClickCallback={toggleCallback}
+        toggleCallback={toggleCallback}
       />
     </div>
   );
