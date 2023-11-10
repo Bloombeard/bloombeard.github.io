@@ -16,6 +16,10 @@
     align-items: flex-start;
   }
 
+  @media (min-width: $screen-md-min) {
+    margin-top: 4rem;
+  }
+
   .content-header--cover-wrapper { 
     position: relative;
     overflow: hidden;
