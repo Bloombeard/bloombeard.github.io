@@ -1,4 +1,5 @@
 import { TNavLinks } from '../types/types'
+import MallKing11 from '@/common/assets/MallKing11.png'
 
 const _externalLinks = {
     blog: 'https://bloombeard.tumblr.com/',
@@ -7,8 +8,10 @@ const _externalLinks = {
 
 export const comicLinks: TNavLinks = [
     {
-        label: 'The Curse of the Mall King',
+        label: `The Curse of the Mall\xa0King`,
         target: '/comics/mallKing',
+        previewImage: MallKing11,
+        previewAltText: 'The Curse of the Mall King',
     },
     {
         label: 'Aching Heights',
@@ -33,6 +36,10 @@ export const comicLinks: TNavLinks = [
 ]
 
 export const gameLinks: TNavLinks = [
+    {
+        label: `Stuart Bidding's Wish${String.fromCharCode(8209)}Granting Factory`,
+        target: '/games/factory',
+    },
     {
         label: "Madame Bassitor's Catalogue of Curious Elixers",
         target: '/games/elixers'

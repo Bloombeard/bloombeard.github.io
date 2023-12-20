@@ -2,6 +2,8 @@ export type TNavLink = {
     label: string
     target: string
     expansion?: TNavLinks
+    previewImage?: any
+    previewAltText?: string
 }
 
 export type TNavLinks = TNavLink[]

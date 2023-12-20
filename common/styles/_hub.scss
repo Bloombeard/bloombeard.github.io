@@ -1,23 +1,85 @@
-@import '_variables';
+@import "_variables";
 
 /* hub page styles */
 .hub-page--links-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $offWhite;
+  
+  @media (min-width: $screen-sm-min) {
     display: grid;
-    grid-template-columns: 50% 50%;
     grid-template-rows: 40% 40% 40% 40%;
+    grid-template-columns: 50% 50%;
+    padding: 5%;
+  }
+
+  .hub-page--link {
+    display: flex;
+    padding: 20% 10%;
+    height: 50vw;
+    width: 85vw;
+    justify-content: center;
+    align-items: center;
+    background-color: $softGreen;
+    position: relative;
+    font-size: 1em;
+    text-shadow: 1px 1px 1px $offBlack;
+    text-align: center;
+    margin: 4%;
+    overflow: hidden;
     
-    .hub-page--link {
-        display: flex;
-        justify-content: center;
-        padding: 20% 20%;
+    @media (min-width: $screen-sm-min) {
+      height: 22vw;
+      width: 40vw;
+    }
 
-        border: 1rem solid;
+    @media (min-width: $screen-md-min) {
+        font-size: 1.3em;
+    }
 
-        &:hover {
-            color: $softGreen;
-            background-color: $offWhite;
+    .hub-page--image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 2;
+    }
 
-            border: none;
+    .hub-page--preview-image {
+      position: absolute;
+      height: 100%;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      object-fit: cover;
+      transform: scale(1.05);
+      transition: transform 0.3s ease-out;
+    }
+
+    .hub-page--link-label {
+        display: inline-block;
+        position: relative;
+        transition-property: transform, text-shadow;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+        z-index: 9;
+        text-shadow: 1px 2px 5px black;
+    }
+
+    &:hover {
+        .hub-page--preview-image {
+            transform: scale(1)
+        }
+
+        .hub-page--link-label {
+            transform: translateY(-2px) scale(1.05);
+            text-shadow: 2px 4px 10px black;
         }
     }
+
+  }
 }

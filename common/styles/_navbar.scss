@@ -33,11 +33,12 @@
       line-height: 1em;
       margin: 2vw 3vw 0 3vw;
     }
-
+    
     @media (min-width: $screen-md-min) {
-        letter-spacing: 15px;
-        font-size: 106px;
-        margin: 1vw 3vw;
+      letter-spacing: 15px;
+      font-size: 106px;
+      margin: 1vw 3vw;
+      width: min-content;
     }
   }
 
@@ -75,14 +76,13 @@
       &:hover {
         color: $offWhite;
         background-color: $softGreen;
-        // transition: 0.1s ease-in-out;
       }
     }
   }
 
   .navbar--hamburger__button {
     padding: 0 5vw;
-    z-index: 9;
+    z-index: 10;
     
     @media (min-width: $screen-sm-min) {
         display: none;

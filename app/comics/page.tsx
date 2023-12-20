@@ -4,7 +4,7 @@ import Links from '../../common/components/Links'
 
 const Comics = () => {  
   return (
-      <Links wrapperClass='hub-page--links-wrapper' linkClass='hub-page--link' links={comicLinks} />
+      <Links wrapperClass='hub-page--links-wrapper' linkClass='hub-page--link' links={comicLinks} isHubPage />
     )
 }
 
