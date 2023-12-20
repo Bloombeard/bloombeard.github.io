@@ -42,15 +42,15 @@ export const publications: TPublicationBlock[] = [
     target: "https://barrenmagazine.com/red-bills-blood-quest/",
   },
   {
-    title: "The Embassy",
-    pubDetails: "Published in Allegory, Volume 37/64, in May 2020",
-    storyType: storyTypes.shortStory,
-  },
-  {
     title: "Cotton Cobwebs",
     pubDetails: "Published in Shirley Magazine, issue 13, in April 2019",
     storyType: storyTypes.flashFiction,
     target: "https://static1.squarespace.com/static/5415c66be4b083b6212c9bec/t/5ea5cdadee8832657c87dddc/1587924409677/ISSUE+13+ARCHIVE.pdf"
+  },
+  {
+    title: "The Embassy",
+    pubDetails: "Published in Allegory, Volume 37/64, in May 2020",
+    storyType: storyTypes.shortStory,
   },
   {
     title: "Holy Ground",

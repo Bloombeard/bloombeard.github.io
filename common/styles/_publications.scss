@@ -1,0 +1,38 @@
+@import "_variables";
+
+.publications__wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .pub {
+        display: flex;
+        flex-direction: row;
+        
+        .pub__title {
+            display: flex;
+            width: 20vw;
+            font-size: 2em;
+            margin: 17px 64px 17px 0;
+        }
+
+        .pub__title--link {
+            text-decoration: underline;
+        }
+
+        .pub__details-wrapper {
+            display: flex;
+            flex-direction: column;
+            font-size: 1.5em;
+
+            .pub__detail {
+
+            }
+        }
+    }
+
+    .pub__divider-line {
+        background-color: $offWhite;
+        height: 1px;
+        margin: 17px 0 17px 0;
+    }
+}

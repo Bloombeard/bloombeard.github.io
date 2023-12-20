@@ -1,14 +1,19 @@
 import React from "react";
 import Link from "next/link";
+import { Oswald } from "next/font/google";
 
 import { TPublicationBlock } from "@/common/types/types";
 import { publications } from "@/common/constants/publications";
+
+const oswald = Oswald({
+    subsets: ["latin"],
+})
 
 const Publications = () => {
     const _renderPubTitle = (pub: TPublicationBlock) => {
         if (pub.target) {
             return (
-                <Link className="pub__title" href={pub.target}>{pub.title}</Link>
+                <Link className="pub__title pub__title--link" href={pub.target}>{pub.title}</Link>
             )
         }
 
@@ -37,12 +42,17 @@ const Publications = () => {
   
     return (
     <main>
-      <div className="publications__wrapper">
+      <div className={`${oswald.className} publications__wrapper`}>
         {publications.map((pub: TPublicationBlock, i) => (
-            <div className="pub" key={`pub${i}`}>
-                {_renderPubTitle(pub)}                
-                {_renderPubDetails(pub)}
-            </div>
+            <>
+                <div className="pub" key={`pub${i}`}>
+                    {_renderPubTitle(pub)}                
+                    {_renderPubDetails(pub)}
+                </div>
+                {publications.length - 1 > i && (
+                    <div className="pub__divider-line" />
+                )}
+            </>
         ))}
       </div>
     </main>
