@@ -16,3 +16,19 @@ export type TDescriptionBlock = {
     coverImage: any
     coverAltText: string
 }
+
+export type TPublicationBlock = {
+    title: string
+    repubDetails?: string
+    pubDetails?: string
+    awards?: string
+    storyType: string
+    target?: string
+}
+
+export type TStoryTypes = {
+    flashFiction: string
+    shortStory: string
+    novella: string
+    comic: string
+}
