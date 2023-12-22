@@ -10,21 +10,21 @@ const oswald = Oswald({
 })
 
 const Publications = () => {
-    const _renderPubTitle = (pub: TPublicationBlock) => {
-        if (pub.target) {
-            return (
-                <Link className="pub__title pub__title--link" href={pub.target}>{pub.title}</Link>
-            )
-        }
+    // const _renderPubTitle = (pub: TPublicationBlock) => {
+    //     if (pub.target) {
+    //         return (
+    //             <Link className="pub__title pub__title--link" href={pub.target}>{pub.title}</Link>
+    //         )
+    //     }
 
-        return <div className="pub__title">{pub.title}</div>
-    }
+    //     return <div className="pub__title">{pub.title}</div>
+    // }
 
-    const _renderPubDetails = (pub: TPublicationBlock) => {
+    const _renderPubDetails = (pub: TPublicationBlock, availability: boolean) => {
         const details: any[] = []
 
         Object.keys(pub).forEach(pubKey => {
-            if (pubKey !== 'title' && pubKey !== 'target') {
+            if (pubKey !== 'title' && pubKey !== 'target' && pubKey !== 'availability') {
                 details.push(pub[pubKey as keyof TPublicationBlock])
             }
         })
@@ -32,31 +32,57 @@ const Publications = () => {
         return (
             <div className="pub__details-wrapper">
                 {details.map((detail: string, i) => (
-                    <div className="pub__detail" key={`detail${i}`}>
+                    <div className="pub__detail">
                         {detail}
                     </div>
                 ))}
+                {!pub.target && pub.availability && (
+                    <div className="pub__detail pub__detail--availability">{pub.availability}</div>
+                )}
             </div>
         )
     }
-  
-    return (
-    <main>
-      <div className={`${oswald.className} publications__wrapper`}>
-        {publications.map((pub: TPublicationBlock, i) => (
-            <>
-                <div className="pub" key={`pub${i}`}>
-                    {_renderPubTitle(pub)}                
-                    {_renderPubDetails(pub)}
+
+    const _renderPublication = (pub: TPublicationBlock, i: number) => {
+        if (pub.target) {
+            return (
+                <Link className="pub__link" href={pub.target}>
+                    <div className="pub">
+                        <div className="pub__title">{pub.title}</div>
+                        {_renderPubDetails(pub, true)}
+                    </div>
+                    {publications.length - 1 > i && (
+                        <div className="pub__divider-line" />
+                    )}
+                </Link>
+            )
+        }
+
+        return (
+            <div className="pub__no-link">
+                <div className="pub">
+                    <div className="pub__title">{pub.title}</div>
+                    {_renderPubDetails(pub, false)}
                 </div>
                 {publications.length - 1 > i && (
                     <div className="pub__divider-line" />
                 )}
-            </>
-        ))}
-      </div>
-    </main>
-  );
+            </div>
+        )
+    }
+
+
+
+
+    return (
+        <main>
+            <div className={`${oswald.className} publications__wrapper`}>
+                {publications.map((pub: TPublicationBlock, i) => 
+                    { return _renderPublication(pub, i) }
+                )}
+            </div>
+        </main>
+    )
 };
 
 export default Publications;

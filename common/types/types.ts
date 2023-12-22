@@ -24,6 +24,7 @@ export type TPublicationBlock = {
     awards?: string
     storyType: string
     target?: string
+    availability?: string
 }
 
 export type TStoryTypes = {

@@ -4,30 +4,54 @@
     display: flex;
     flex-direction: column;
 
+    .pub__link {
+        .pub {
+            &:hover {
+                color: $softGreen;
+                background-color: $offWhite;
+                border-left: 1vw solid $offWhite;
+                border-right: 1vw solid $offWhite;
+            }
+        }
+    }
+
+    .pub__no-link{
+        &:hover {
+            .pub__detail--availability {
+                color: $softGreen;
+                background-color: $offWhite;
+                border-left: 1vw solid $offWhite;
+                border-right: 1vw solid $offWhite;
+            }
+        }
+    }
+
     .pub {
         display: flex;
         flex-direction: row;
-        
+        border-left: 1vw solid transparent;
+        border-right: 1vw solid transparent;
+
+
         .pub__title {
             display: flex;
             width: 20vw;
             font-size: 2em;
-            margin: 17px 32px 17px 0;
-        }
-
-        .pub__title--link {
-            text-decoration: underline;
+            margin: 11px 32px 17px 0;
         }
 
         .pub__details-wrapper {
             display: flex;
             flex-direction: column;
             font-size: 1.2em;
-            margin: 17px 0 17px 32px;
+            margin: 11px 0 17px 32px;
             letter-spacing: 0.05em;
 
             .pub__detail {
+                width: fit-content;
                 margin: 10px 0 10px 0;
+                border-left: 1vw solid transparent;
+                border-right: 1vw solid transparent;
             }
         }
     }
