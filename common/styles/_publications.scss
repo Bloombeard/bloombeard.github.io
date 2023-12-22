@@ -4,6 +4,13 @@
     display: flex;
     flex-direction: column;
 
+    .publications__header {
+        font-size: 1.5em;
+        color: $softGreen;
+        background-color: $offWhite;
+        padding: 2vw;
+    }
+
     .pub__link {
         .pub {
             &:hover {
