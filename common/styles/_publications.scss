@@ -9,6 +9,7 @@
         color: $softGreen;
         background-color: $offWhite;
         padding: 2vw;
+        margin: 20px 0 80px 0;
     }
 
     .pub__link {
@@ -18,6 +19,14 @@
                 background-color: $offWhite;
                 border-left: 1vw solid $offWhite;
                 border-right: 1vw solid $offWhite;
+            }
+
+            .pub__title {
+                text-decoration: underline;
+
+                @media (min-width: $screen-sm-min) {
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -35,24 +44,36 @@
 
     .pub {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         border-left: 1vw solid transparent;
         border-right: 1vw solid transparent;
+
+        @media (min-width: $screen-sm-min) {
+            flex-direction: row;
+        }
 
 
         .pub__title {
             display: flex;
-            width: 20vw;
+            width: fit-content;
             font-size: 2em;
-            margin: 11px 32px 17px 0;
+            
+            @media (min-width: $screen-sm-min) {
+                width: 20vw;
+                margin: 11px 32px 17px 0;
+            }
         }
 
         .pub__details-wrapper {
             display: flex;
             flex-direction: column;
             font-size: 1.2em;
-            margin: 11px 0 17px 32px;
             letter-spacing: 0.05em;
+            margin-left: 10vw;
+            
+            @media (min-width: $screen-sm-min) {
+                margin: 11px 0 17px 32px;
+            }
 
             .pub__detail {
                 width: fit-content;

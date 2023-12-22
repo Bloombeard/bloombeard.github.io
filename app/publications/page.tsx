@@ -66,7 +66,7 @@ const Publications = () => {
   return (
     <main className={oswald.className}>
       <div className="publications__wrapper">
-        <div className="publications__header">Publications from 2020 and earlier were published under the name 'Joshua Storrs.'<br/>In 2020, Joshua changed their name to Forrest, and continues to write under their chosen name.</div>
+        <div className="publications__header">Forrest changed their name in 2020. Earlier publications appear under their old name, 'Joshua&nbsp;Storrs.'</div>
         {publications.map((pub: TPublicationBlock, i) => {
           return _renderPublication(pub, i);
         })}
