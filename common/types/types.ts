@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image"
+
 export type TNavLink = {
     label: string
     target: string
@@ -46,3 +48,10 @@ export type TStoryTypes = {
     novella: string
     comic: string
 }
+
+export type TComicPage = {
+    altText: string
+    image: StaticImageData
+}
+
+export type TComicPages = TComicPage[]

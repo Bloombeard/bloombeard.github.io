@@ -1,3 +1,5 @@
+import { TComicPages } from '../types/types'
+
 import MallKing00 from '@/common/assets/mallKingPages/MallKing00.png'
 import MallKing01 from '@/common/assets/mallKingPages/MallKing01.png'
 import MallKing02 from '@/common/assets/mallKingPages/MallKing02.png'
@@ -18,6 +20,77 @@ import MallKing16 from '@/common/assets/mallKingPages/MallKing16.png'
 import MallKing17 from '@/common/assets/mallKingPages/MallKing17.png'
 
 
-export const mallKingPages = [
-
+export const mallKingPages: TComicPages = [
+    {
+        altText: 'Mall King front cover',
+        image: MallKing00,
+    },
+    {
+        altText: 'Mall King page 1',
+        image: MallKing01,
+    },
+    {
+        altText: 'Mall King page 2',
+        image: MallKing02,
+    },
+    {
+        altText: 'Mall King page 3',
+        image: MallKing03,
+    },
+    {
+        altText: 'Mall King page 4',
+        image: MallKing04,
+    },
+    {
+        altText: 'Mall King page 5',
+        image: MallKing05,
+    },
+    {
+        altText: 'Mall King page 6',
+        image: MallKing06,
+    },
+    {
+        altText: 'Mall King page 7',
+        image: MallKing07,
+    },
+    {
+        altText: 'Mall King page 8',
+        image: MallKing08,
+    },
+    {
+        altText: 'Mall King page 9',
+        image: MallKing09,
+    },
+    {
+        altText: 'Mall King page 10',
+        image: MallKing10,
+    },
+    {
+        altText: 'Mall King page 11',
+        image: MallKing11,
+    },
+    {
+        altText: 'Mall King page 12',
+        image: MallKing12,
+    },
+    {
+        altText: 'Mall King page 13',
+        image: MallKing13,
+    },
+    {
+        altText: 'Mall King page 14',
+        image: MallKing14,
+    },
+    {
+        altText: 'Mall King page 15',
+        image: MallKing15,
+    },
+    {
+        altText: 'Mall King page 16',
+        image: MallKing16,
+    },
+    {
+        altText: 'Mall King back cover',
+        image: MallKing17,
+    },
 ]

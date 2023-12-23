@@ -1,0 +1,15 @@
+@import "_variables";
+
+.comic-reader__wrapper {
+    
+    .comic-reader__pages {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        overflow-x: scroll;
+   
+        .comic-reader__page {
+
+        }
+    }
+    }
