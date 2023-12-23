@@ -1,9 +1,11 @@
+import ContentHeader from "@/common/components/ContentHeader"
+import { elixersHeader } from "@/common/constants/headerBlocks"
 import React from "react"
 
 const Elixers = () => {
   return (
     <main>
-      <div>Elixers</div>
+      <ContentHeader block={elixersHeader} />
     </main>
   )
 }

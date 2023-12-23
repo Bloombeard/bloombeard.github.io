@@ -1,9 +1,11 @@
+import ContentHeader from "@/common/components/ContentHeader"
+import { glittergymHeader } from "@/common/constants/headerBlocks"
 import React from "react"
 
 const Glittergym = () => {
   return (
     <main>
-      <div>Glittergym</div>
+      <ContentHeader block={glittergymHeader} />
     </main>
   )
 }

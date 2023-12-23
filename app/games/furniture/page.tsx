@@ -1,9 +1,11 @@
+import ContentHeader from "@/common/components/ContentHeader"
+import { furnitureHeader } from "@/common/constants/headerBlocks"
 import React from "react"
 
 const Furniture = () => {
   return (
     <main>
-      <div>Your Living Room Is Full of Furniture</div>
+      <ContentHeader block={furnitureHeader} />
     </main>
   )
 }

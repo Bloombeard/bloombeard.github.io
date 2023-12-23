@@ -8,6 +8,19 @@ export type TNavLink = {
 
 export type TNavLinks = TNavLink[]
 
+export type TExternalLinks = {
+    mallKing: TNavLinks,
+    achingHeights: TNavLinks,
+    devyn: TNavLinks,
+    glittergym: TNavLinks,
+    desertBirds: TNavLinks,
+    redLight: TNavLinks,
+    wishFactory: TNavLinks,
+    elixers: TNavLinks,
+    audit: TNavLinks,
+    furniture: TNavLinks,
+}
+
 export type TDescriptionBlock = {
     title?: string
     subtitle?: string

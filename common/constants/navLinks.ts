@@ -1,5 +1,5 @@
-import { TNavLinks } from '../types/types'
-import MallKing11 from '@/common/assets/MallKing11.png'
+import { TExternalLinks, TNavLinks } from '../types/types'
+import MallKing00 from '@/common/assets/mallKingPages/MallKing00.png'
 
 const _externalLinks = {
     blog: 'https://bloombeard.tumblr.com/',
@@ -10,20 +10,8 @@ export const comicLinks: TNavLinks = [
     {
         label: `The Curse of the Mall\xa0King`,
         target: '/comics/mallKing',
-        previewImage: MallKing11,
+        previewImage: MallKing00,
         previewAltText: 'The Curse of the Mall King',
-    },
-    {
-        label: 'Aching Heights',
-        target: '/comics/achingHeights',
-    },
-    {
-        label: 'Devyn',
-        target: '/comics/devyn',
-    },
-    {
-        label: 'Glittergym',
-        target: '/comics/glittergym',
     },
     {
         label: 'Desert Birds',
@@ -32,6 +20,18 @@ export const comicLinks: TNavLinks = [
     {
         label: 'Red Light',
         target: '/comics/redLight',
+    },
+    {
+        label: 'Devyn',
+        target: '/comics/devyn',
+    },
+    {
+        label: 'Aching Heights',
+        target: '/comics/achingHeights',
+    },
+    {
+        label: 'Glittergym',
+        target: '/comics/glittergym',
     },
 ]
 
@@ -64,6 +64,49 @@ export const aboutPageLinks: TNavLinks = [
         target: _externalLinks.instagram,
     },
 ]
+
+export const externalDownloadLinks: TExternalLinks = {
+    mallKing: [{
+        label: 'Hi-res download',
+        target: 'https://payhip.com/b/2ZGV',
+    }],
+    achingHeights: [{
+        label: 'Hi-res download',
+        target: '',
+    }],
+    devyn: [{
+        label: 'Hi-res download',
+        target: '',
+    }],
+    glittergym: [{
+        label: 'Hi-res download',
+        target: '',
+    }],
+    desertBirds: [{
+        label: 'Hi-res download',
+        target: '',
+    }],
+    redLight: [{
+        label: 'Hi-res download',
+        target: '',
+    }],
+    wishFactory: [{
+        label: 'Download',
+        target: '',
+    }],
+    elixers: [{
+        label: 'Download',
+        target: '',
+    }],
+    audit: [{
+        label: 'Download',
+        target: '',
+    }],
+    furniture: [{
+        label: 'Download',
+        target: '',
+    }],
+}
 
 export const navBarLinks: TNavLinks = [
     {

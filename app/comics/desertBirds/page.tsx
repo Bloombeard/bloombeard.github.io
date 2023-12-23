@@ -1,9 +1,11 @@
+import ContentHeader from '@/common/components/ContentHeader'
+import { desertBirdsHeader } from '@/common/constants/headerBlocks'
 import React from 'react'
 
 const DesertBirds = () => {
   return (
     <main>
-      <div>Desert Birds</div>
+      <ContentHeader block={desertBirdsHeader} />
     </main>
   )
 }

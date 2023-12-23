@@ -1,17 +1,13 @@
 import React from "react";
 import Image from 'next/image'
 
-import grannyImage from '../../Granny.png'
+import ContentHeader from "@/common/components/ContentHeader";
+import { mallKingHeader } from "@/common/constants/headerBlocks";
 
 const MallKing = () => {
   return (
     <main>
-      <Image
-        src={grannyImage}
-        alt="enemies at the gates"
-        quality={100}
-        placeholder="blur"
-      />
+      <ContentHeader block={mallKingHeader} />
     </main>
   );
 };

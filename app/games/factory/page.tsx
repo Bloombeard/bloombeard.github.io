@@ -1,9 +1,11 @@
+import ContentHeader from "@/common/components/ContentHeader";
+import { wishFactoryHeader } from "@/common/constants/headerBlocks";
 import React from "react";
 
 const Factory = () => {
   return (
     <main>
-      <div>Factory</div>
+      <ContentHeader block={wishFactoryHeader} />
     </main>
   );
 };

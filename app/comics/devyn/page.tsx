@@ -1,9 +1,11 @@
+import ContentHeader from "@/common/components/ContentHeader"
+import { devynHeader } from "@/common/constants/headerBlocks"
 import React from "react"
 
 const Devyn = () => {
   return (
     <main>
-      <div>Devyn</div>
+      <ContentHeader block={devynHeader} />
     </main>
   )
 }
