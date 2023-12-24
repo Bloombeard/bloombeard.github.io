@@ -69,7 +69,7 @@ export const desertBirdsHeader: TDescriptionBlock = {
 export const wishFactoryHeader: TDescriptionBlock = {
     title: "Stuart Bidding's Wish-Granting Factory",
     subtitle: 'one-page tabletop RPG',
-    bodyText: 'Co-written with Echo Reece, COPY GOES HERE',
+    bodyText: 'Co-written with Echo Reece. A 1-page 1-shot tabletop RPG in which players balance making wishes with as few words as possible against a factory which grants their wishes as literally as possible.',
     links: externalDownloadLinks.wishFactory,
     coverImage: Headshot,
     coverAltText: 'Wish Factory cover image',
@@ -78,7 +78,7 @@ export const wishFactoryHeader: TDescriptionBlock = {
 export const elixersHeader: TDescriptionBlock = {
     title: "Madame Bassitor's Catalogue of Curious Elixers",
     subtitle: 'tabletop RPG supplement pamphlet',
-    bodyText: 'Illustrations by Yang Zhen Lee. COPY GOES HERE',
+    bodyText: 'Illustrations by Yang Zhen Lee. A tri-fold pamphlet detailing twelve, horror-themed potions. Intended as a system-agnostic supplement for tabletop RPGs.',
     links: externalDownloadLinks.elixers,
     coverImage: Headshot,
     coverAltText: 'Elixer Catalogue cover image',
@@ -96,7 +96,7 @@ export const furnitureHeader: TDescriptionBlock = {
 export const auditHeader: TDescriptionBlock = {
     title: 'The Audit',
     subtitle: "original adventure for the tabletop RPG, 'Dread,' by Epidiah Ravachol",
-    bodyText: 'AUDIT COPY GOES HERE',
+    bodyText: "Up to five characters explore an abandoned mech hangar in order to complete an audit for a galactic megacorp. Written for the 'Dread' one-shot RPG system, in which players perform actions by pulling blocks from a Jenga tower.",
     links: externalDownloadLinks.audit,
     coverImage: Headshot,
     coverAltText: 'The Audit cover image',
