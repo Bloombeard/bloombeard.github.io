@@ -1,5 +1,5 @@
 import { TExternalLinks, TNavLinks } from '../types/types'
-import MallKing00 from '@/common/assets/mallKingPages/MallKing00.png'
+import MallKing00 from '@/public/assets/mallKingPages/MallKing00.png'
 
 const _externalLinks = {
     blog: 'https://bloombeard.tumblr.com/',

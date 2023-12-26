@@ -1,7 +1,7 @@
 import { TDescriptionBlock } from '../types/types'
 import { aboutPageLinks, externalDownloadLinks } from './navLinks'
 
-import Headshot from '@/common/assets/Headshot.png'
+import Headshot from '@/public/assets/Headshot.png'
 
 export const aboutHeader: TDescriptionBlock = {
     title: 'Forrest Storrs',
