@@ -1,4 +1,4 @@
-import { TComicPages } from '../types/types'
+import { TComicPages, TComicPDFs } from '../types/types'
 
 import MallKing00 from '@/public/assets/mallKingPages/MallKing00.png'
 import MallKing01 from '@/public/assets/mallKingPages/MallKing01.png'
@@ -94,3 +94,8 @@ export const mallKingPages: TComicPages = [
         image: MallKing17,
     },
 ]
+
+export const comicPDFs: TComicPDFs = {
+    mallKing: '/assets/mallKingPages/mallKingPDF.pdf',
+    mallKingHiRes: '/assets/mallKingPages/mallKingHiRes.pdf',
+}

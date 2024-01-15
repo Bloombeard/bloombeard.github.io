@@ -1,15 +1,23 @@
 @import "_variables";
 
 .comic-reader__wrapper {
-    
-    .comic-reader__pages {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        overflow-x: scroll;
-   
-        .comic-reader__page {
+    height: 80vh;
 
-        }
+    .comic-reader__page--previous {
+        position: absolute;
+        // visibility: hidden;
+        z-index: 3;
     }
+
+    .comic-reader__page--current {
+        position: absolute;
+        // visibility: visible;
+        z-index: 2;
     }
+
+    .comic-reader__page--next {
+        position: absolute;
+        // visibility: hidden;
+        z-index: 1;
+    }
+}
