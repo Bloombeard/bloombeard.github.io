@@ -1,23 +1,52 @@
 @import "_variables";
 
 .comic-reader__wrapper {
-    height: 80vh;
+    height: fit-content;
+    display: grid;
+    grid-template-columns: 1fr;
 
-    .comic-reader__page--previous {
-        position: absolute;
-        // visibility: hidden;
-        z-index: 3;
+    & div {
+        place-self: center;
+        grid-row-start: 1;
+        grid-column-start: 1;
     }
 
-    .comic-reader__page--current {
-        position: absolute;
-        // visibility: visible;
-        z-index: 2;
+    .comic-reader__page--hidden {
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all 0.25s ease-out;
     }
 
-    .comic-reader__page--next {
-        position: absolute;
-        // visibility: hidden;
-        z-index: 1;
+    .comic-reader__page--visible {
+        opacity: 1;
+        transition: all 0.25s ease-out;
+    }
+
+}
+
+.comic-reader__navigation {
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2vw;
+
+    .comic-reader__nav-button {
+        padding: 1vw 2vw;
+        height: 5vw;
+
+        &:hover {
+            color: $softGreen;
+            background-color: $offWhite;
+        }
+    }
+
+    .comic-reader__nav-selector {
+        padding: 1vw 2vw;
+        margin: 0 1vw;
+        height: 5vw;
+        background-color: $offWhite;
+        color: $softGreen;
     }
 }

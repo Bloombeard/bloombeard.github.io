@@ -17,34 +17,30 @@ const ComicReader = (props: TProps) => {
     const { pages } = props
 
     const [totalPages, setTotalPages] = useState<number>(0)
-    // const [currentPage, setCurrentPage] = useState<number>(1)
+    const [currentPage, setCurrentPage] = useState<number>(1)
 
     const onDocumentLoadSuccess = ({ numPages: nextNumPages }: PDFDocumentProxy) => {
         setTotalPages(nextNumPages)
-        // setCurrentPage(1)
+        setCurrentPage(1)
     }
 
-    // const changePage = (offset: number) => {
-    //     setCurrentPage(prevPageNumber => prevPageNumber + offset);
-    // }
+    const getPageClassName = (i: number) => {
+        let className = 'comic-reader__page'
 
-    // const previousPage = () => {
-    //     changePage(-1);
-    // }
+        if (i < currentPage) {
+            return className += '--hidden'
+        }
 
-    // const nextPage = () => {
-    //     changePage(1);
-    // }
+        return className += '--visible'
+    }
 
     const renderPages = () => {
         const pageElements = []
 
-        console.log('totalPages is ', totalPages)
-
-        for (let i = 0; i <= totalPages; i++) (
+        for (let i = 1; i <= totalPages; i++) (
             pageElements.push(
                 <Page
-                className="comic-reader__page--current"
+                className={getPageClassName(i)}
                 pageNumber={i}
                 renderTextLayer={false}
                 renderAnnotationLayer={false}
@@ -52,7 +48,20 @@ const ComicReader = (props: TProps) => {
             )
         )
 
-        return pageElements
+        // stack pages in reverse so last one loaded ends up on top.
+        return pageElements.reverse()
+    }
+
+    const renderPageSelectOptions = () => {
+        const options = []
+
+        for (let i = 1; i <= totalPages; i++) {
+            options.push(
+                <option className="comic-reader__nav-selector--option" value={i}>Page {i} of {totalPages}</option>
+            )
+        }
+
+        return options
     }
 
     //TODO: Add 'load' button and maybe a loading bar if possible. We DON'T want the pdf to load on page load. It's too big.
@@ -62,27 +71,45 @@ const ComicReader = (props: TProps) => {
             <Document renderMode='canvas' className="comic-reader__wrapper" file={pages} onLoadSuccess={onDocumentLoadSuccess}>
                 {renderPages()}
             </Document>
-            {/* {totalPages && (
-                <div>
-                    <p>
-                        Page {currentPage || (totalPages ? 1 : '--')} of {totalPages || '--'}
-                    </p>
+            {totalPages && (
+                <div className='comic-reader__navigation'>
                     <button
+                        className="comic-reader__nav-button"
+                        type="button"
+                        disabled={currentPage === 1}
+                        onClick={() => setCurrentPage(1)}
+                    >
+                        {'<<'} First
+                    </button>
+                    <button
+                        className="comic-reader__nav-button"
                         type="button"
                         disabled={currentPage <= 1}
-                        onClick={previousPage}
+                        onClick={() => setCurrentPage(currentPage - 1)}
                     >
-                        Previous
+                        {'<'} Previous
                     </button>
+                    <select className="comic-reader__nav-selector" onChange={e => setCurrentPage(Number(e.target.value))}>
+                        {renderPageSelectOptions()}
+                    </select>
                     <button
+                        className="comic-reader__nav-button"
                         type="button"
                         disabled={currentPage >= totalPages}
-                        onClick={nextPage}
+                        onClick={() => setCurrentPage(currentPage + 1)}
                     >
-                        Next
+                        Next {'>'}
+                    </button>
+                    <button
+                        className="comic-reader__nav-button"
+                        type="button"
+                        disabled={currentPage === totalPages}
+                        onClick={() => setCurrentPage(totalPages)}
+                    >
+                        Last {'>>'}
                     </button>
                 </div>
-            )} */}
+            )}
         </>
     )
 }
