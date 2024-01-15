@@ -52,6 +52,7 @@ const ComicReader = (props: TProps) => {
         return pageElements.reverse()
     }
 
+    //TODO: Add logic to update selected option on any page change.
     const renderPageSelectOptions = () => {
         const options = []
 
@@ -64,11 +65,18 @@ const ComicReader = (props: TProps) => {
         return options
     }
 
+    //TODO: Add logic detector cursor position. Clicking on the left-third of the page = previous page.
+    const onPageClick = () => {
+        if (currentPage < totalPages) {
+            setCurrentPage(currentPage + 1)
+        }
+    }
+
     //TODO: Add 'load' button and maybe a loading bar if possible. We DON'T want the pdf to load on page load. It's too big.
 
     return (
         <>
-            <Document renderMode='canvas' className="comic-reader__wrapper" file={pages} onLoadSuccess={onDocumentLoadSuccess}>
+            <Document onClick={() => onPageClick()} renderMode='canvas' className="comic-reader__wrapper" file={pages} onLoadSuccess={onDocumentLoadSuccess}>
                 {renderPages()}
             </Document>
             {totalPages && (

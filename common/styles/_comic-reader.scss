@@ -4,6 +4,7 @@
     height: fit-content;
     display: grid;
     grid-template-columns: 1fr;
+    cursor: pointer;
 
     & div {
         place-self: center;
