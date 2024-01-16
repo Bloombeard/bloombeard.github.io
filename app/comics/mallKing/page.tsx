@@ -13,7 +13,7 @@ const MallKing = () => {
   return (
     <main>
       <ContentHeader block={mallKingHeader} />
-      <ComicReader pages={comicPDFs.mallKingHiRes} />
+      <ComicReader shouldLoop pages={comicPDFs.mallKingHiRes} />
     </main>
   );
 };

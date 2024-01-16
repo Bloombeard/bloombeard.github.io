@@ -41,6 +41,15 @@
             color: $softGreen;
             background-color: $offWhite;
         }
+
+        &.comic-reader__nav-button--disabled {
+            color: $greyedOut;
+
+            &:hover {
+                color: $greyedOut;
+                background-color: transparent;
+            }
+        }
     }
 
     .comic-reader__nav-selector {
