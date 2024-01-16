@@ -1,180 +1,221 @@
 "use client"
 
 import React, { useEffect, useRef, useState } from "react"
-import { pdfjs, Document, Page } from 'react-pdf'
-import { PDFDocumentProxy } from 'pdfjs-dist';
+import { pdfjs, Document, Page } from "react-pdf"
+import { PDFDocumentProxy } from "pdfjs-dist"
 
 interface TProps {
-    shouldLoop?: boolean
-    pages: string | File | null
+  shouldLoop?: boolean
+  pages: string | File | null
 }
 
-pdfjs.GlobalWorkerOptions.workerSrc = new URL(
-    'pdfjs-dist/build/pdf.worker.min.js',
-    import.meta.url,
-).toString();
+pdfjs.GlobalWorkerOptions.workerSrc = new URL("pdfjs-dist/build/pdf.worker.min.js", import.meta.url).toString()
 
 const ComicReader = (props: TProps) => {
-    const { shouldLoop, pages } = props
+  const { shouldLoop, pages } = props
+  const desktopBreakpoint = 576
+  const mobileBreakpoint = 430
+  const desktopcomicPageWidth = 570
+  const mobilecomicPageWidth = 396
+  const tinycomicPageWidth = 300
 
-    const [totalPages, setTotalPages] = useState<number>(0)
-    const [currentPage, setCurrentPage] = useState<number>(1)
-
-    useEffect(() => {
-        const readerNavSelector = document?.getElementById('readerNavSelector') as HTMLInputElement
-        
-        if (readerNavSelector?.value) {
-            readerNavSelector.value = currentPage.toString()
-        }
-    }, [currentPage])
-
-    const onDocumentLoadSuccess = ({ numPages: nextNumPages }: PDFDocumentProxy) => {
-        setTotalPages(nextNumPages)
-        setCurrentPage(1)
+  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < desktopBreakpoint)
+  
+  const selectcomicPageWidth = (): number => {
+    if (!isMobile) {
+      return desktopcomicPageWidth
+    } else if (isMobile && window.innerWidth >= mobileBreakpoint) {
+      return mobilecomicPageWidth
     }
 
-    const getPageClassName = (i: number) => {
-        let className = 'comic-reader__page'
+    return tinycomicPageWidth
+  }
 
-        if (i < currentPage) {
-            return className += '--hidden'
-        }
+  const [totalPages, setTotalPages] = useState<number>(0)
+  const [currentPage, setCurrentPage] = useState<number>(1)
+  const [comicPageWidth, setComicPageWidth] = useState<number>(selectcomicPageWidth())
 
-        return className += '--visible'
+  useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= desktopBreakpoint && comicPageWidth !== desktopcomicPageWidth) {
+        setComicPageWidth(desktopcomicPageWidth)
+        isMobile && setIsMobile(false)
+      } else if (
+        window.innerWidth < desktopBreakpoint &&
+        window.innerWidth >= mobileBreakpoint &&
+        comicPageWidth !== mobilecomicPageWidth
+      ) {
+        setComicPageWidth(mobilecomicPageWidth)
+        !isMobile && setIsMobile(true)
+      } else if (window.innerWidth < mobileBreakpoint && comicPageWidth !== tinycomicPageWidth) {
+        setComicPageWidth(tinycomicPageWidth)
+        !isMobile && setIsMobile(true)
+      }
+    }
+    window.addEventListener("resize", onResize)
+
+    return () => {
+      window.removeEventListener("resize", onResize)
+    }
+  }, [comicPageWidth])
+
+  useEffect(() => {
+    const readerNavSelector = document?.getElementById("readerNavSelector") as HTMLInputElement
+
+    if (readerNavSelector?.value) {
+      readerNavSelector.value = currentPage.toString()
+    }
+  }, [currentPage])
+
+  const onDocumentLoadSuccess = ({ numPages: nextNumPages }: PDFDocumentProxy) => {
+    setTotalPages(nextNumPages)
+    setCurrentPage(1)
+  }
+
+  const getPageClassName = (i: number) => {
+    let className = "comic-reader__page"
+
+    if (i < currentPage) {
+      return (className += "--hidden")
     }
 
-    const getButtonClassNames = (isDisabled: boolean) => {
-        let classNames = 'comic-reader__nav-button '
+    return (className += "--visible")
+  }
 
-        if (isDisabled) {
-            classNames += 'comic-reader__nav-button--disabled'
-        }
+  const getButtonClassNames = (isDisabled: boolean) => {
+    let classNames = "comic-reader__nav-button "
 
-        return classNames
+    if (isDisabled) {
+      classNames += "comic-reader__nav-button--disabled"
     }
 
-    const renderPages = () => {
-        const pageElements = []
+    return classNames
+  }
 
-        for (let i = 1; i <= totalPages; i++) (
-            pageElements.push(
-                <Page
-                key={`Page${i}`}
-                className={getPageClassName(i)}
-                pageNumber={i}
-                renderTextLayer={false}
-                renderAnnotationLayer={false}
-                />
-            )
-        )
+  const turnPageForward = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage(currentPage + 1)
+    } else if (currentPage === totalPages && shouldLoop) {
+      setCurrentPage(1)
+    }
+  }
 
-        // render pages in reverse so they're 'stacked' in the right order.
-        return pageElements.reverse()
+  const turnPageBack = () => {
+    if (currentPage > 1) {
+      setCurrentPage(currentPage - 1)
+    } else if (currentPage === 1 && shouldLoop) {
+      setCurrentPage(totalPages)
+    }
+  }
+
+  //TODO: Add logic detector cursor position. Clicking on the left-third of the page = previous page.
+  const onPageClick = (e: React.MouseEvent<HTMLElement>) => {
+    if (document) {
+      const wrapperBoundaries = document.getElementsByClassName("comic-reader__wrapper")[0].getBoundingClientRect()
+
+      const leftThirdBoundary: number = wrapperBoundaries.width / 3 + wrapperBoundaries.left
+
+      if (e.clientX < leftThirdBoundary) {
+        turnPageBack()
+      } else {
+        turnPageForward()
+      }
+    }
+  }
+
+  const renderPages = () => {
+    const pageElements = []
+
+    for (let i = 1; i <= totalPages; i++)
+      pageElements.push(
+        <Page
+          key={`Page${i}`}
+          className={getPageClassName(i)}
+          pageNumber={i}
+          renderTextLayer={false}
+          renderAnnotationLayer={false}
+          width={comicPageWidth}
+        />
+      )
+
+    // render pages in reverse so they're 'stacked' in the right order.
+    return pageElements.reverse()
+  }
+
+  const renderPageSelectOptions = () => {
+    const options = []
+
+    for (let i = 1; i <= totalPages; i++) {
+      options.push(
+        <option className="comic-reader__nav-selector--option" value={i}>
+          Page {i} of {totalPages}
+        </option>
+      )
     }
 
-    const renderPageSelectOptions = () => {
-        const options = []
+    return options
+  }
 
-        for (let i = 1; i <= totalPages; i++) {
-            options.push(
-                <option className="comic-reader__nav-selector--option" value={i}>Page {i} of {totalPages}</option>
-            )
-        }
+  //TODO: Add 'load' button and maybe a loading bar if possible. We DON'T want the pdf to load on page load. It's too big.
 
-        return options
-    }
-
-    const turnPageForward = () => {
-        if (currentPage < totalPages) {
-            setCurrentPage(currentPage + 1)
-        }
-        else if (currentPage === totalPages && shouldLoop) {
-            setCurrentPage(1)
-        }
-    }
-
-    const turnPageBack = () => {
-        if (currentPage > 1) {
-            setCurrentPage(currentPage - 1)
-        }
-        else if (currentPage === 1 && shouldLoop) {
-            setCurrentPage(totalPages)
-        }
-    }
-
-    //TODO: Add logic detector cursor position. Clicking on the left-third of the page = previous page.
-    const onPageClick = (e: React.MouseEvent<HTMLElement>) => {
-        if (document) {
-            const wrapperBoundaries = document.getElementsByClassName("comic-reader__wrapper")[0].getBoundingClientRect()
-
-            const leftThirdBoundary: number = wrapperBoundaries.width / 3 + wrapperBoundaries.left
-            
-            if (e.clientX < leftThirdBoundary) {
-                turnPageBack()
-            } else {
-                turnPageForward()
-            }
-        }        
-    }
-
-    //TODO: Add 'load' button and maybe a loading bar if possible. We DON'T want the pdf to load on page load. It's too big.
-
-    return (
-        <>
-            <Document 
-                onClick={e => onPageClick(e)}
-                renderMode='canvas'
-                className="comic-reader__wrapper"
-                file={pages}
-                onLoadSuccess={onDocumentLoadSuccess}
+  return (
+    <>
+      <Document
+        onClick={(e) => onPageClick(e)}
+        renderMode="canvas"
+        className="comic-reader__wrapper"
+        file={pages}
+        onLoadSuccess={onDocumentLoadSuccess}
+      >
+        {renderPages()}
+      </Document>
+      {totalPages && (
+        <div className="comic-reader__navigation">
+          <button
+            className={getButtonClassNames(currentPage === 1)}
+            type="button"
+            disabled={currentPage === 1}
+            onClick={() => setCurrentPage(1)}
+          >
+            {"<<"}{!isMobile && "\u00A0First"}
+          </button>
+          <button
+            className={getButtonClassNames(!shouldLoop && currentPage <= 1)}
+            type="button"
+            disabled={!shouldLoop && currentPage <= 1}
+            onClick={() => turnPageBack()}
+          >
+            {"<"}{!isMobile && "\u00A0Previous"}
+          </button>
+          {!isMobile && (
+            <select
+              id="readerNavSelector"
+              className="comic-reader__nav-selector"
+              onChange={(e) => setCurrentPage(Number(e.target.value))}
             >
-                {renderPages()}
-            </Document>
-            {totalPages && (
-                <div className='comic-reader__navigation'>
-                    <button
-                        className={getButtonClassNames(currentPage === 1)}
-                        type="button"
-                        disabled={currentPage === 1}
-                        onClick={() => setCurrentPage(1)}
-                    >
-                        {'<<'} First
-                    </button>
-                    <button
-                        className={getButtonClassNames(!shouldLoop && currentPage <= 1)}
-                        type="button"
-                        disabled={!shouldLoop && currentPage <= 1}
-                        onClick={() => turnPageBack()}
-                    >
-                        {'<'} Previous
-                    </button>
-                    <select
-                        id="readerNavSelector"
-                        className="comic-reader__nav-selector"
-                        onChange={e => setCurrentPage(Number(e.target.value))}
-                    >
-                        {renderPageSelectOptions()}
-                    </select>
-                    <button
-                        className={getButtonClassNames(!shouldLoop && currentPage >= totalPages)}
-                        type="button"
-                        disabled={!shouldLoop && currentPage >= totalPages}
-                        onClick={() => turnPageForward()}
-                    >
-                        Next {'>'}
-                    </button>
-                    <button
-                        className={getButtonClassNames(currentPage === totalPages)}
-                        type="button"
-                        disabled={currentPage === totalPages}
-                        onClick={() => setCurrentPage(totalPages)}
-                    >
-                        Last {'>>'}
-                    </button>
-                </div>
-            )}
-        </>
-    )
+              {renderPageSelectOptions()}
+            </select>
+          )}
+          <button
+            className={getButtonClassNames(!shouldLoop && currentPage >= totalPages)}
+            type="button"
+            disabled={!shouldLoop && currentPage >= totalPages}
+            onClick={() => turnPageForward()}
+          >
+            {!isMobile && "Next\u00A0"}{">"}
+          </button>
+          <button
+            className={getButtonClassNames(currentPage === totalPages)}
+            type="button"
+            disabled={currentPage === totalPages}
+            onClick={() => setCurrentPage(totalPages)}
+          >
+            {!isMobile && "Last\u00A0"}{">>"}
+          </button>
+        </div>
+      )}
+    </>
+  )
 }
 
 export default ComicReader
