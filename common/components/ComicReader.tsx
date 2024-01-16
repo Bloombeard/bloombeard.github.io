@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from "react"
 import { pdfjs, Document, Page } from "react-pdf"
 import { PDFDocumentProxy } from "pdfjs-dist"
+import { useSwipeable } from 'react-swipeable'
 
 interface TProps {
   shouldLoop?: boolean
@@ -19,8 +20,8 @@ const ComicReader = (props: TProps) => {
   const mobilecomicPageWidth = 396
   const tinycomicPageWidth = 300
 
-  const [isMobile, setIsMobile] = useState<boolean>(window.innerWidth < desktopBreakpoint)
-  
+  const [isMobile, setIsMobile] = useState<boolean>( window? window.innerWidth < desktopBreakpoint : true)
+
   const selectcomicPageWidth = (): number => {
     if (!isMobile) {
       return desktopcomicPageWidth
@@ -57,7 +58,7 @@ const ComicReader = (props: TProps) => {
     return () => {
       window.removeEventListener("resize", onResize)
     }
-  }, [comicPageWidth])
+  }, [comicPageWidth, isMobile])
 
   useEffect(() => {
     const readerNavSelector = document?.getElementById("readerNavSelector") as HTMLInputElement
@@ -74,6 +75,7 @@ const ComicReader = (props: TProps) => {
 
   const getPageClassName = (i: number) => {
     let className = "comic-reader__page"
+    console.log(i)
 
     if (i < currentPage) {
       return (className += "--hidden")
@@ -92,7 +94,7 @@ const ComicReader = (props: TProps) => {
     return classNames
   }
 
-  const turnPageForward = () => {
+  const turnToNextPage = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1)
     } else if (currentPage === totalPages && shouldLoop) {
@@ -100,7 +102,7 @@ const ComicReader = (props: TProps) => {
     }
   }
 
-  const turnPageBack = () => {
+  const turnToPreviousPage = () => {
     if (currentPage > 1) {
       setCurrentPage(currentPage - 1)
     } else if (currentPage === 1 && shouldLoop) {
@@ -111,17 +113,25 @@ const ComicReader = (props: TProps) => {
   //TODO: Add logic detector cursor position. Clicking on the left-third of the page = previous page.
   const onPageClick = (e: React.MouseEvent<HTMLElement>) => {
     if (document) {
-      const wrapperBoundaries = document.getElementsByClassName("comic-reader__wrapper")[0].getBoundingClientRect()
+      const wrapperBoundaries = document.getElementsByClassName("comic-reader__document")[0].getBoundingClientRect()
 
       const leftThirdBoundary: number = wrapperBoundaries.width / 3 + wrapperBoundaries.left
 
       if (e.clientX < leftThirdBoundary) {
-        turnPageBack()
+        turnToPreviousPage()
       } else {
-        turnPageForward()
+        turnToNextPage()
       }
     }
   }
+
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => turnToNextPage(),
+    onSwipedUp: turnToNextPage,
+    onSwipedRight: turnToPreviousPage,
+    onSwipedDown: turnToPreviousPage,
+    preventScrollOnSwipe: true,
+  })
 
   const renderPages = () => {
     const pageElements = []
@@ -129,7 +139,7 @@ const ComicReader = (props: TProps) => {
     for (let i = 1; i <= totalPages; i++)
       pageElements.push(
         <Page
-          key={`Page${i}`}
+          key={`page${i}`}
           className={getPageClassName(i)}
           pageNumber={i}
           renderTextLayer={false}
@@ -147,7 +157,7 @@ const ComicReader = (props: TProps) => {
 
     for (let i = 1; i <= totalPages; i++) {
       options.push(
-        <option className="comic-reader__nav-selector--option" value={i}>
+        <option key={`option${i}`} className="comic-reader__nav-selector--option" value={i}>
           Page {i} of {totalPages}
         </option>
       )
@@ -159,11 +169,11 @@ const ComicReader = (props: TProps) => {
   //TODO: Add 'load' button and maybe a loading bar if possible. We DON'T want the pdf to load on page load. It's too big.
 
   return (
-    <>
+    <div className="comic-reader__wrapper" {...swipeHandlers}>
       <Document
         onClick={(e) => onPageClick(e)}
         renderMode="canvas"
-        className="comic-reader__wrapper"
+        className="comic-reader__document"
         file={pages}
         onLoadSuccess={onDocumentLoadSuccess}
       >
@@ -183,7 +193,7 @@ const ComicReader = (props: TProps) => {
             className={getButtonClassNames(!shouldLoop && currentPage <= 1)}
             type="button"
             disabled={!shouldLoop && currentPage <= 1}
-            onClick={() => turnPageBack()}
+            onClick={() => turnToPreviousPage()}
           >
             {"<"}{!isMobile && "\u00A0Previous"}
           </button>
@@ -200,7 +210,7 @@ const ComicReader = (props: TProps) => {
             className={getButtonClassNames(!shouldLoop && currentPage >= totalPages)}
             type="button"
             disabled={!shouldLoop && currentPage >= totalPages}
-            onClick={() => turnPageForward()}
+            onClick={() => turnToNextPage()}
           >
             {!isMobile && "Next\u00A0"}{">"}
           </button>
@@ -214,7 +224,7 @@ const ComicReader = (props: TProps) => {
           </button>
         </div>
       )}
-    </>
+    </div>
   )
 }
 

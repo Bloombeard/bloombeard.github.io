@@ -2,10 +2,6 @@
 const path = require('path')
 
 const nextConfig = {
-    experimental: {
-        appDir: true,
-    },
-    future: { webpack5: true },
     sassOptions: {
         includePaths: [path.join(__dirname, 'app')],
     },
