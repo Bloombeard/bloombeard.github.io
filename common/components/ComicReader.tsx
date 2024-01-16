@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { pdfjs, Document, Page } from 'react-pdf'
 import { PDFDocumentProxy } from 'pdfjs-dist';
 
@@ -59,6 +59,7 @@ const ComicReader = (props: TProps) => {
         for (let i = 1; i <= totalPages; i++) (
             pageElements.push(
                 <Page
+                key={`Page${i}`}
                 className={getPageClassName(i)}
                 pageNumber={i}
                 renderTextLayer={false}
@@ -102,8 +103,18 @@ const ComicReader = (props: TProps) => {
     }
 
     //TODO: Add logic detector cursor position. Clicking on the left-third of the page = previous page.
-    const onPageClick = () => {
-        turnPageForward()
+    const onPageClick = (e: React.MouseEvent<HTMLElement>) => {
+        if (document) {
+            const wrapperBoundaries = document.getElementsByClassName("comic-reader__wrapper")[0].getBoundingClientRect()
+
+            const leftThirdBoundary: number = wrapperBoundaries.width / 3 + wrapperBoundaries.left
+            
+            if (e.clientX < leftThirdBoundary) {
+                turnPageBack()
+            } else {
+                turnPageForward()
+            }
+        }        
     }
 
     //TODO: Add 'load' button and maybe a loading bar if possible. We DON'T want the pdf to load on page load. It's too big.
@@ -111,7 +122,7 @@ const ComicReader = (props: TProps) => {
     return (
         <>
             <Document 
-                onClick={() => onPageClick()}
+                onClick={e => onPageClick(e)}
                 renderMode='canvas'
                 className="comic-reader__wrapper"
                 file={pages}

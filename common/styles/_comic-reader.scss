@@ -34,8 +34,8 @@
     margin-top: 2vw;
 
     .comic-reader__nav-button {
-        padding: 1vw 2vw;
-        height: 5vw;
+        padding: 0 2vw;
+        height: 45px;
 
         &:hover {
             color: $softGreen;
@@ -53,9 +53,9 @@
     }
 
     .comic-reader__nav-selector {
-        padding: 1vw 2vw;
+        padding: 0 2vw;
         margin: 0 1vw;
-        height: 5vw;
+        height: 45px;
         background-color: $offWhite;
         color: $softGreen;
     }
