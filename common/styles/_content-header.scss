@@ -48,7 +48,8 @@
     background-color: $offWhite;
     padding: 5%;
     flex-direction: column;
-    height: fit-content;
+    height: 49vw;
+    max-height: 466px;
     margin-top: 2%;
     
     @media (min-width: $screen-sm-min) {
@@ -78,8 +79,8 @@
         font-size: 14px;
         font-style: normal;
         font-weight: 700;
-        padding-left: 10%;
-        padding-right: 10%;
+        padding: 10%;
+        cursor: pointer;
 
         &:hover {
           // color: $offBlack;

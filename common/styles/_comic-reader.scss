@@ -1,5 +1,11 @@
 @import "_variables";
 
+.comic-reader__progress{
+    background-color: $offWhite;
+    height: 20px;
+    width: 100%;
+}
+
 .comic-reader__document {
     height: fit-content;
     display: grid;

@@ -6,14 +6,15 @@ import { PDFDocumentProxy } from "pdfjs-dist"
 import { useSwipeable } from 'react-swipeable'
 
 interface TProps {
-  shouldLoop?: boolean
+  isLoaded: boolean
   pages: string | File | null
+  shouldLoop?: boolean
 }
 
 pdfjs.GlobalWorkerOptions.workerSrc = new URL("pdfjs-dist/build/pdf.worker.min.js", import.meta.url).toString()
 
 const ComicReader = (props: TProps) => {
-  const { shouldLoop, pages } = props
+  const { isLoaded, pages, shouldLoop } = props
   const desktopBreakpoint = 576
   const mobileBreakpoint = 430
   const desktopcomicPageWidth = 570
@@ -75,7 +76,6 @@ const ComicReader = (props: TProps) => {
 
   const getPageClassName = (i: number) => {
     let className = "comic-reader__page"
-    console.log(i)
 
     if (i < currentPage) {
       return (className += "--hidden")
@@ -167,14 +167,40 @@ const ComicReader = (props: TProps) => {
   }
 
   //TODO: Add 'load' button and maybe a loading bar if possible. We DON'T want the pdf to load on page load. It's too big.
+  const [percentLoadedState, setPercentLoadedState] = useState<number>(0)
+  console.log('percentLoadedState is ', percentLoadedState)
 
-  return (
+
+  const handleLoadProgress = (loaded: number, total: number) => {
+    const progress = (loaded / total) * 100
+
+    if (progress >= percentLoadedState + 10) {
+      setPercentLoadedState(Math.floor(progress / 10) * 10)
+    }
+  }
+
+  const getLoadingBarClassnames = ():string => {
+    let classNames = 'comic-reader__progress'
+
+    if (percentLoadedState > 0) {
+      classNames += (` comic-reader__progress--${percentLoadedState.toString()}percent`)
+    }
+
+    return classNames
+  }
+
+  if (!isLoaded) {
+    return null
+  }  
+  else return (
     <div className="comic-reader__wrapper" {...swipeHandlers}>
+      <div className={getLoadingBarClassnames()} />
       <Document
         onClick={(e) => onPageClick(e)}
         renderMode="canvas"
         className="comic-reader__document"
         file={pages}
+        onLoadProgress={({ loaded, total }) => handleLoadProgress(loaded, total)}
         onLoadSuccess={onDocumentLoadSuccess}
       >
         {renderPages()}

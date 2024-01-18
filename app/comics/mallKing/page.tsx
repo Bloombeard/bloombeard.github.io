@@ -1,4 +1,6 @@
-import React from "react";
+"use client"
+
+import React, { useState } from "react";
 import Image from 'next/image'
 import { pdfjs } from 'react-pdf'
 
@@ -10,10 +12,13 @@ import { comicPDFs } from "@/common/constants/comicPages";
 import ComicReader from "@/common/components/ComicReader";
 
 const MallKing = () => {
+  
+  const [isReaderLoaded, setIsReaderLoaded] = useState<boolean>(false)
+  
   return (
     <main>
-      <ContentHeader block={mallKingHeader} />
-      <ComicReader shouldLoop pages={comicPDFs.mallKingHiRes} />
+      <ContentHeader block={mallKingHeader} isReaderLoaded={isReaderLoaded} openReaderCallback={setIsReaderLoaded} />
+      <ComicReader isLoaded={isReaderLoaded} shouldLoop pages={comicPDFs.mallKingHiRes} />
     </main>
   );
 };

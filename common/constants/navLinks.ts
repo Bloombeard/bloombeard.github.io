@@ -67,27 +67,27 @@ export const aboutPageLinks: TNavLinks = [
 
 export const externalDownloadLinks: TExternalLinks = {
     mallKing: [{
-        label: 'Hi-res download',
+        label: 'Download',
         target: 'https://payhip.com/b/2ZGV',
     }],
     achingHeights: [{
-        label: 'Hi-res download',
+        label: 'Download',
         target: '',
     }],
     devyn: [{
-        label: 'Hi-res download',
+        label: 'Download',
         target: '',
     }],
     glittergym: [{
-        label: 'Hi-res download',
+        label: 'Download',
         target: '',
     }],
     desertBirds: [{
-        label: 'Hi-res download',
+        label: 'Download',
         target: '',
     }],
     redLight: [{
-        label: 'Hi-res download',
+        label: 'Download',
         target: '',
     }],
     wishFactory: [{
