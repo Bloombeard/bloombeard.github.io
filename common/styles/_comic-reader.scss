@@ -14,12 +14,16 @@
 
     .comic-reader__progress {
         background-color: $offWhite;
-        height: 50px;
+        height: fit-content;
         width: 100%;
         transform: translateX(-100%);
         transition: transform 0.25s ease-out;
         z-index: 1;
         overflow: hidden;
+
+        @media (min-width: $screen-sm-min) {
+            height: 50px;
+        }
 
         .comic-reader__progress--content-wrapper {
             display: flex;

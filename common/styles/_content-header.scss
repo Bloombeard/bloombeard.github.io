@@ -54,13 +54,13 @@
     background-color: $offWhite;
     padding: 5%;
     flex-direction: column;
-    height: 49vw;
     max-height: 466px;
     margin-top: 2%;
     
     @media (min-width: $screen-sm-min) {
         width: calc(50% - 1%);
         margin-top: 0;
+        height: 49vw;
     }
 
     .content-header--description__links-wrapper {

@@ -13,21 +13,11 @@ import ComicReader from '@/common/components/ComicReader/ComicReaderComponent'
 
 const MallKing = () => {
     const [isReaderLoaded, setIsReaderLoaded] = useState<boolean>(false)
-    const [isHeaderCollapsed, setIsHeaderCollapsed] = useState<boolean>(false)
-
-    const getMainClassNames = (): string => {
-        if (isHeaderCollapsed) {
-            return 'hidden-content-header'
-        }
-
-        return ''
-    }
 
     return (
-        <main className={getMainClassNames()}>
+        <main>
             <ContentHeader block={mallKingHeader} openReaderCallback={setIsReaderLoaded} />
             <ComicReader
-                collapseHeaderCallback={setIsHeaderCollapsed}
                 closeReaderCallback={setIsReaderLoaded}
                 isLoaded={isReaderLoaded}
                 pages={comicPDFs.mallKingHiRes}
