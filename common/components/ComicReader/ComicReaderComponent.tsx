@@ -31,6 +31,8 @@ const ComicReader = (props: TProps) => {
 
     const [isMobile, setIsMobile] = useState<boolean>(window ? window.innerWidth < desktopBreakpoint : true)
 
+    const readerRef = useRef<HTMLDivElement>(null)
+
     const selectcomicPageWidth = (): number => {
         if (!isMobile) {
             return desktopcomicPageWidth
@@ -177,6 +179,19 @@ const ComicReader = (props: TProps) => {
     //TODO: Add 'load' button and maybe a loading bar if possible. We DON'T want the pdf to load on page load. It's too big.
     const [percentLoadedState, setPercentLoadedState] = useState<number>(0)
 
+    useEffect(() => {
+        if (percentLoadedState === 100 && readerRef?.current) {
+            setTimeout(() => {
+                readerRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }, 250)
+        } else if (percentLoadedState === 0 && window) {
+            setTimeout(() => {
+                window.scrollTo({top: 0, behavior: 'smooth'})
+            }, 250)
+        }
+
+    }, [percentLoadedState])
+
     const handleLoadProgress = (loaded: number, total: number) => {
         const progress = (loaded / total) * 100
 
@@ -222,15 +237,11 @@ const ComicReader = (props: TProps) => {
       }, 600)
     }
 
-    // const loadingBarTestButton = () => {
-    //   setPercentLoadedState(percentLoadedState + 10)
-    // }
-
     if (!isLoaded) {
         return null
     } else
         return (
-            <div className="comic-reader__wrapper" {...swipeHandlers}>
+            <div className="comic-reader__wrapper" {...swipeHandlers} ref={readerRef}>
                 <div className={getLoadingBarClassnames()}>
                     <div className={getProgressContentClasses()}>
                         <h1>{title}</h1>

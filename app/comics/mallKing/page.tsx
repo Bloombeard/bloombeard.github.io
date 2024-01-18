@@ -16,7 +16,7 @@ const MallKing = () => {
 
     return (
         <main>
-            <ContentHeader block={mallKingHeader} openReaderCallback={setIsReaderLoaded} />
+            <ContentHeader block={mallKingHeader} isReaderLoaded={isReaderLoaded} openReaderCallback={setIsReaderLoaded} />
             <ComicReader
                 closeReaderCallback={setIsReaderLoaded}
                 isLoaded={isReaderLoaded}
