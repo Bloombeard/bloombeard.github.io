@@ -7,18 +7,24 @@
   align-items: center;
   justify-content: space-between;
   max-width: 396px;
+  transition: transform 0.25s ease-in-out 0.25s;
 
   @media (min-width: $screen-sm-min) {
     flex-direction: row;
-    width: 100rem;
+    width: 100%;
+    min-width: 525px;
     max-width: 720px;
     height: 440px;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
     align-items: flex-start;
   }
 
   @media (min-width: $screen-md-min) {
     margin-top: 4rem;
+  }
+
+  &.content-header--wrapper__hidden {
+    transform: translateY(-135%);
   }
 
   .content-header--cover-wrapper { 

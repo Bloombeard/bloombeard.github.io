@@ -17,12 +17,11 @@ const courierPrime = Courier_Prime({
 
 interface TProps {
   block: TDescriptionBlock
-  isReaderLoaded?: boolean
   openReaderCallback?: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 const ContentHeader = (props: TProps) => {
-  const { block, isReaderLoaded, openReaderCallback } = props;
+  const { block, openReaderCallback } = props;
 
   return (
     <div className={`${oswald.className} content-header--wrapper`}>
@@ -38,7 +37,7 @@ const ContentHeader = (props: TProps) => {
             {block.links.map((link, i) => {
               return (
                 <div className='content-header--description__link-wrapper' key={link.label}>
-                  { openReaderCallback && !isReaderLoaded && (
+                  { openReaderCallback && (
                     <div onClick={() => openReaderCallback(true)} className="content-header--description__link">Read</div>
                   )}
                   <Link
