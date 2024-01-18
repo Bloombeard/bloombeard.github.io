@@ -28,6 +28,7 @@ const MallKing = () => {
             <ContentHeader block={mallKingHeader} openReaderCallback={setIsReaderLoaded} />
             <ComicReader
                 collapseHeaderCallback={setIsHeaderCollapsed}
+                closeReaderCallback={setIsReaderLoaded}
                 isLoaded={isReaderLoaded}
                 pages={comicPDFs.mallKingHiRes}
                 shouldLoop

@@ -12,6 +12,7 @@ const oswald = Oswald({
 
 interface TProps {
     collapseHeaderCallback: React.Dispatch<React.SetStateAction<boolean>>
+    closeReaderCallback: React.Dispatch<React.SetStateAction<boolean>>
     isLoaded: boolean
     pages: string | File | null
     shouldLoop?: boolean
@@ -21,7 +22,7 @@ interface TProps {
 pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.js', import.meta.url).toString()
 
 const ComicReader = (props: TProps) => {
-    const { collapseHeaderCallback, isLoaded, pages, shouldLoop, title } = props
+    const { collapseHeaderCallback, closeReaderCallback, isLoaded, pages, shouldLoop, title } = props
 
     const desktopBreakpoint = 576
     const mobileBreakpoint = 430
@@ -224,6 +225,9 @@ const ComicReader = (props: TProps) => {
     const onCloseButtonClick = () => {
       collapseHeaderCallback(false)
       setPercentLoadedState(0)
+      setTimeout(() => {
+        closeReaderCallback(false)
+      }, 600)
     }
 
     // const loadingBarTestButton = () => {
