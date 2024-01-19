@@ -3,12 +3,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { pdfjs, Document, Page } from 'react-pdf'
 import { PDFDocumentProxy } from 'pdfjs-dist'
-import { Oswald } from 'next/font/google'
 import { useSwipeable } from 'react-swipeable'
 
-const oswald = Oswald({
-    subsets: ['latin'],
-})
+import ComicReaderProgressBar from './ComicReaderProgressBar'
 
 interface TProps {
     closeReaderCallback: React.Dispatch<React.SetStateAction<boolean>>
@@ -46,6 +43,20 @@ const ComicReader = (props: TProps) => {
     const [totalPages, setTotalPages] = useState<number>(0)
     const [currentPage, setCurrentPage] = useState<number>(1)
     const [comicPageWidth, setComicPageWidth] = useState<number>(selectcomicPageWidth())
+    const [percentLoadedState, setPercentLoadedState] = useState<number>(0)
+
+    useEffect(() => {
+        if (percentLoadedState === 100 && readerRef?.current) {
+            setTimeout(() => {
+                readerRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }, 250)
+        } else if (percentLoadedState === 0 && window) {
+            setTimeout(() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+            }, 250)
+        }
+
+    }, [percentLoadedState])
 
     useEffect(() => {
         const onResize = () => {
@@ -84,26 +95,6 @@ const ComicReader = (props: TProps) => {
         setCurrentPage(1)
     }
 
-    const getPageClassName = (i: number) => {
-        let className = 'comic-reader__page'
-
-        if (i < currentPage) {
-            return (className += '--hidden')
-        }
-
-        return (className += '--visible')
-    }
-
-    const getButtonClassNames = (isDisabled: boolean) => {
-        let classNames = 'comic-reader__nav-button '
-
-        if (isDisabled) {
-            classNames += 'comic-reader__nav-button--disabled'
-        }
-
-        return classNames
-    }
-
     const turnToNextPage = () => {
         if (currentPage < totalPages) {
             setCurrentPage(currentPage + 1)
@@ -120,7 +111,6 @@ const ComicReader = (props: TProps) => {
         }
     }
 
-    //TODO: Add logic detector cursor position. Clicking on the left-third of the page = previous page.
     const onPageClick = (e: React.MouseEvent<HTMLElement>) => {
         if (document) {
             const wrapperBoundaries = document.getElementsByClassName('comic-reader__document')[0].getBoundingClientRect()
@@ -176,22 +166,6 @@ const ComicReader = (props: TProps) => {
         return options
     }
 
-    //TODO: Add 'load' button and maybe a loading bar if possible. We DON'T want the pdf to load on page load. It's too big.
-    const [percentLoadedState, setPercentLoadedState] = useState<number>(0)
-
-    useEffect(() => {
-        if (percentLoadedState === 100 && readerRef?.current) {
-            setTimeout(() => {
-                readerRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
-            }, 250)
-        } else if (percentLoadedState === 0 && window) {
-            setTimeout(() => {
-                window.scrollTo({top: 0, behavior: 'smooth'})
-            }, 250)
-        }
-
-    }, [percentLoadedState])
-
     const handleLoadProgress = (loaded: number, total: number) => {
         const progress = (loaded / total) * 100
 
@@ -200,11 +174,21 @@ const ComicReader = (props: TProps) => {
         }
     }
 
-    const getLoadingBarClassnames = (): string => {
-        let classNames = `${oswald.className} comic-reader__progress`
+    const getPageClassName = (i: number) => {
+        let className = 'comic-reader__page'
 
-        if (percentLoadedState > 0) {
-            classNames += ` comic-reader__progress--${percentLoadedState.toString()}percent`
+        if (i < currentPage) {
+            return (className += '--hidden')
+        }
+
+        return (className += '--visible')
+    }
+
+    const getButtonClassNames = (isDisabled: boolean) => {
+        let classNames = 'comic-reader__nav-button '
+
+        if (isDisabled) {
+            classNames += 'comic-reader__nav-button--disabled'
         }
 
         return classNames
@@ -220,34 +204,18 @@ const ComicReader = (props: TProps) => {
         return classNames
     }
 
-    const getProgressContentClasses = (): string => {
-      let classNames = 'comic-reader__progress--content-wrapper '
-
-      if (percentLoadedState === 100) {
-        classNames += 'comic-reader__progress--content-wrapper-visible'
-      }
-
-      return classNames
-    }
-
-    const onCloseButtonClick = () => {
-      setPercentLoadedState(0)
-      setTimeout(() => {
-        closeReaderCallback(false)
-      }, 600)
-    }
-
     if (!isLoaded) {
         return null
     } else
         return (
             <div className="comic-reader__wrapper" {...swipeHandlers} ref={readerRef}>
-                <div className={getLoadingBarClassnames()}>
-                    <div className={getProgressContentClasses()}>
-                        <h1>{title}</h1>
-                        <button className="comic-reader__progress--close" onClick={() => onCloseButtonClick()}>X</button>
-                    </div>
-                </div>
+                <ComicReaderProgressBar
+                    closeReaderCallback={closeReaderCallback}
+                    readerRef={readerRef}
+                    percentLoadedState={percentLoadedState}
+                    percentLoadedCallback={setPercentLoadedState}
+                    title={title}
+                />
                 <div className={getReaderDropdownClasses()}>
                     <Document
                         onClick={e => onPageClick(e)}
