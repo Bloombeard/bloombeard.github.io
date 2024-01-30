@@ -57,5 +57,4 @@ export type TComicPage = {
 export type TComicPages = TComicPage[]
 export type TComicPDFs = {
     mallKing: string
-    mallKingHiRes: string
 }

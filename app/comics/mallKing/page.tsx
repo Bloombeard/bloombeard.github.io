@@ -16,7 +16,7 @@ const MallKing = () => {
             <ComicReader
                 closeReaderCallback={setIsReaderLoaded}
                 isLoaded={isReaderLoaded}
-                pages={comicPDFs.mallKingHiRes}
+                pages={comicPDFs.mallKing}
                 title={mallKingHeader.title ? mallKingHeader.title : ''}
             />
         </main>
