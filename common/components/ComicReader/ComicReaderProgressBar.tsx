@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Oswald } from 'next/font/google'
 
 const oswald = Oswald({
@@ -18,21 +18,29 @@ interface TProps {
 const ComicReaderProgressBar = (props: TProps) => {
     const { closeReaderCallback, percentLoadedState, percentLoadedCallback, readerRef, title } = props
 
+    const [hasScrolledToProgressBar, setHasScrolledToProgressBar] = useState<boolean>(false)
+
     useEffect(() => {
+        if (percentLoadedState > 0 && !hasScrolledToProgressBar && readerRef?.current) {
+            readerRef?.current.scrollIntoView({behavior: 'smooth', block: 'start' })
+            setHasScrolledToProgressBar(true)
+        }
         if (percentLoadedState === 100 && readerRef?.current) {
             setTimeout(() => {
                 readerRef?.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
             }, 250)
-        } else if (percentLoadedState === 0 && window) {
-            setTimeout(() => {
-                window.scrollTo({ top: 0, behavior: 'smooth' })
-            }, 250)
         }
-
-    }, [percentLoadedState])
+    }, [hasScrolledToProgressBar, percentLoadedState, readerRef])
 
     const onCloseButtonClick = () => {
         percentLoadedCallback(0)
+
+        setHasScrolledToProgressBar(false)
+        
+        setTimeout(() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' })
+        }, 400)
+
         setTimeout(() => {
             closeReaderCallback(false)
         }, 600)
