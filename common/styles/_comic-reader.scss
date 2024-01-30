@@ -95,8 +95,12 @@
     }
 
     .comic-reader__dropdown {
-        transform: translateY(-175%);
         transition: transform 0.5s ease-out 0.25s;
+        transform: translateY(-150%);
+
+        @media (min-width: $screen-sm-min) {
+            transform: translateY(-175%);
+        }
 
         &.comic-reader__dropdown--visible {
             transform: translateY(0);

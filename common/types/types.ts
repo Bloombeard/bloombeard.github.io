@@ -49,12 +49,11 @@ export type TStoryTypes = {
     comic: string
 }
 
-export type TComicPage = {
+export type TCoverImage = {
     altText: string
     image: StaticImageData
 }
 
-export type TComicPages = TComicPage[]
 export type TComicPDFs = {
     mallKing: string
 }

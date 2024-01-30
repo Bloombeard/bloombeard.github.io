@@ -1,7 +1,8 @@
 import { TDescriptionBlock } from '../types/types'
 import { aboutPageLinks, externalDownloadLinks } from './navLinks'
 
-import Headshot from '@/public/assets/Headshot.png'
+import Headshot from '@/public/assets/coverImages/Headshot.png'
+import MallKingCover from '@/public/assets/coverImages/MallKingCover.png'
 
 export const aboutHeader: TDescriptionBlock = {
     title: 'Forrest Storrs',
@@ -17,7 +18,7 @@ export const mallKingHeader: TDescriptionBlock = {
     subtitle: '16 pages, black & white',
     bodyText: 'Illustrated by Shelby Criswell',
     links: externalDownloadLinks.mallKing,
-    coverImage: Headshot,
+    coverImage: MallKingCover,
     coverAltText: 'Mall King cover',
 }
 

@@ -1,5 +1,5 @@
 import { TExternalLinks, TNavLinks } from '../types/types'
-import MallKing00 from '@/public/assets/mallKingPages/MallKing00.png'
+import MallKingCover from '@/public/assets/coverImages/MallKingCover.png'
 
 const _externalLinks = {
     blog: 'https://bloombeard.tumblr.com/',
@@ -10,7 +10,7 @@ export const comicLinks: TNavLinks = [
     {
         label: `The Curse of the Mall\xa0King`,
         target: '/comics/mallKing',
-        previewImage: MallKing00,
+        previewImage: MallKingCover,
         previewAltText: 'The Curse of the Mall King',
     },
     {
