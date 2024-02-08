@@ -1,8 +1,13 @@
 import { TDescriptionBlock } from '../types/types'
 import { aboutPageLinks, externalDownloadLinks } from './navLinks'
 
+import AchingHeightsCover from '@/public/assets/coverImages/AchingHeightsCover.png'
+import DesertBirdsCover from '@/public/assets/coverImages/DesertBirdsCover.png'
+import DevynCover from '@/public/assets/coverImages/DevynCover.jpeg'
+import GlittergymCover from '@/public/assets/coverImages/GlittergymCover.png'
 import Headshot from '@/public/assets/coverImages/Headshot.png'
 import MallKingCover from '@/public/assets/coverImages/MallKingCover.png'
+import RedLightCover from '@/public/assets/coverImages/RedLightCover.png'
 
 export const aboutHeader: TDescriptionBlock = {
     title: 'Forrest Storrs',
@@ -27,7 +32,7 @@ export const achingHeightsHeader: TDescriptionBlock = {
     subtitle: '12 pages, black & white',
     bodyText: 'Illustrated by Conner Herbison',
     links: externalDownloadLinks.achingHeights,
-    coverImage: Headshot,
+    coverImage: AchingHeightsCover,
     coverAltText: 'Aching Heights cover',
 }
 
@@ -36,7 +41,7 @@ export const devynHeader: TDescriptionBlock = {
     subtitle: '3 pages, black & white',
     bodyText: 'Illustrated by Yang Zhen Lee',
     links: externalDownloadLinks.devyn,
-    coverImage: Headshot,
+    coverImage: DevynCover,
     coverAltText: 'Devyn cover',
 }
 
@@ -45,7 +50,7 @@ export const glittergymHeader: TDescriptionBlock = {
     subtitle: '24 pages, color',
     bodyText: 'Illustrated by Greg Lyons',
     links: externalDownloadLinks.glittergym,
-    coverImage: Headshot,
+    coverImage: GlittergymCover,
     coverAltText: 'Glittergym cover',
 }
 
@@ -54,7 +59,7 @@ export const redLightHeader: TDescriptionBlock = {
     subtitle: '6 pages, partial color',
     bodyText: 'Illustrated by Jackarais',
     links: externalDownloadLinks.redLight,
-    coverImage: Headshot,
+    coverImage: RedLightCover,
     coverAltText: 'Red Light cover',
 }
 
@@ -63,7 +68,7 @@ export const desertBirdsHeader: TDescriptionBlock = {
     subtitle: '26 pages, partial color',
     bodyText: 'Illustrated by Jackarais',
     links: externalDownloadLinks.desertBirds,
-    coverImage: Headshot,
+    coverImage: DesertBirdsCover,
     coverAltText: 'Desert Birds cover',
 }
 

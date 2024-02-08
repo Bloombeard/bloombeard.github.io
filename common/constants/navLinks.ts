@@ -1,5 +1,11 @@
 import { TExternalLinks, TNavLinks } from '../types/types'
+
+import AchingHeightsCover from '@/public/assets/coverImages/AchingHeightsCover.png'
+import DesertBirdsCover from '@/public/assets/coverImages/DesertBirdsCover.png'
+import DevynCover from '@/public/assets/coverImages/DevynCover.jpeg'
+import GlittergymCover from '@/public/assets/coverImages/GlittergymCover.png'
 import MallKingCover from '@/public/assets/coverImages/MallKingCover.png'
+import RedLightCover from '@/public/assets/coverImages/RedLightCover.png'
 
 const _externalLinks = {
     blog: 'https://bloombeard.tumblr.com/',
@@ -16,22 +22,32 @@ export const comicLinks: TNavLinks = [
     {
         label: 'Desert Birds',
         target: '/comics/desertBirds',
+        previewImage: DesertBirdsCover,
+        previewAltText: 'Desert Birds'
     },
     {
         label: 'Red Light',
         target: '/comics/redLight',
+        previewImage: RedLightCover,
+        previewAltText: 'Red Light',
     },
     {
         label: 'Devyn',
         target: '/comics/devyn',
+        previewImage: DevynCover,
+        previewAltText: 'Devyn'
     },
     {
         label: 'Aching Heights',
         target: '/comics/achingHeights',
+        previewImage: AchingHeightsCover,
+        previewAltText: 'Aching Heights',
     },
     {
         label: 'Glittergym',
         target: '/comics/glittergym',
+        previewImage: GlittergymCover,
+        previewAltText: 'Glittergym',
     },
 ]
 
@@ -78,10 +94,20 @@ export const externalDownloadLinks: TExternalLinks = {
         label: 'Download',
         target: '',
     }],
-    glittergym: [{
-        label: 'Download',
-        target: '',
-    }],
+    glittergym: [
+        {
+            label: 'Issue\xa01',
+            target: 'https://entervoid.com/view/6609/2/1',
+        },
+        {
+            label: 'Issue\xa02',
+            target: 'https://entervoid.com/view/6628/1/1',
+        },
+        {
+            label: 'Issue\xa03',
+            target: 'https://entervoid.com/view/6639/1/1',
+        },
+    ],
     desertBirds: [{
         label: 'Download',
         target: '',

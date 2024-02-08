@@ -1,13 +1,27 @@
-import ContentHeader from "@/common/components/ContentHeader"
-import { achingHeightsHeader } from "@/common/constants/headerBlocks"
-import React from "react"
+'use client'
+
+import React, { useState } from 'react'
+
+import ContentHeader from '@/common/components/ContentHeader'
+import ComicReader from '@/common/components/ComicReader/ComicReaderComponent'
+
+import { achingHeightsHeader } from '@/common/constants/headerBlocks'
+import { comicPDFs } from '@/common/constants/comicPages'
 
 const AchingHeights = () => {
-  return (
-    <main>
-      <ContentHeader block={achingHeightsHeader} />
-    </main>
-  )
+    const [isReaderLoaded, setIsReaderLoaded] = useState<boolean>(false)
+
+    return (
+        <main>
+            <ContentHeader block={achingHeightsHeader} isReaderLoaded={isReaderLoaded} openReaderCallback={setIsReaderLoaded} />
+            <ComicReader
+                closeReaderCallback={setIsReaderLoaded}
+                isLoaded={isReaderLoaded}
+                pages={comicPDFs.achingHeights}
+                title={achingHeightsHeader.title ? achingHeightsHeader.title : ''}
+            />
+        </main>
+    )
 }
 
 export default AchingHeights

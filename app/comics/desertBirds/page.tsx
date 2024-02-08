@@ -1,13 +1,26 @@
+'use client'
+
+import React, { useState } from 'react'
 import ContentHeader from '@/common/components/ContentHeader'
+import ComicReader from '@/common/components/ComicReader/ComicReaderComponent'
+
 import { desertBirdsHeader } from '@/common/constants/headerBlocks'
-import React from 'react'
+import { comicPDFs } from '@/common/constants/comicPages'
 
 const DesertBirds = () => {
-  return (
-    <main>
-      <ContentHeader block={desertBirdsHeader} />
-    </main>
-  )
+    const [isReaderLoaded, setIsReaderLoaded] = useState<boolean>(false)
+
+    return (
+        <main>
+            <ContentHeader block={desertBirdsHeader} isReaderLoaded={isReaderLoaded} openReaderCallback={setIsReaderLoaded} />
+            <ComicReader
+                closeReaderCallback={setIsReaderLoaded}
+                isLoaded={isReaderLoaded}
+                pages={comicPDFs.desertBirds}
+                title={desertBirdsHeader.title ? desertBirdsHeader.title : ''}
+            />
+        </main>
+    )
 }
 
 export default DesertBirds

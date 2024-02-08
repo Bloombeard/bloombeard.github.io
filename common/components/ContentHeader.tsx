@@ -47,10 +47,6 @@ const ContentHeader = (props: TProps) => {
                   >
                     {link.label}
                   </Link>
-                  {/* @ts-expect-error - can't get here if undefined */}
-                  {i < block.links.length - 1 && (
-                    <div className="content-header-v2--description__links-spacer">|&nbsp;</div>
-                  )}
                 </div>
               );
             })}

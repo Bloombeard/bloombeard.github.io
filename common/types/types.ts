@@ -55,5 +55,9 @@ export type TCoverImage = {
 }
 
 export type TComicPDFs = {
+    achingHeights: string
+    desertBirds: string
+    devyn: string
     mallKing: string
+    redLight: string
 }

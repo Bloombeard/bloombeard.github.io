@@ -1,13 +1,26 @@
-import ContentHeader from "@/common/components/ContentHeader"
-import { redLightHeader } from "@/common/constants/headerBlocks"
-import React from "react"
+'use client'
+
+import React, { useState } from 'react'
+
+import ComicReader from '@/common/components/ComicReader/ComicReaderComponent'
+import ContentHeader from '@/common/components/ContentHeader'
+import { redLightHeader } from '@/common/constants/headerBlocks'
+import { comicPDFs } from '@/common/constants/comicPages'
 
 const RedLight = () => {
-  return (
-    <main>
-      <ContentHeader block={redLightHeader} />
-    </main>
-  )
+    const [isReaderLoaded, setIsReaderLoaded] = useState<boolean>(false)
+
+    return (
+        <main>
+            <ContentHeader block={redLightHeader} isReaderLoaded={isReaderLoaded} openReaderCallback={setIsReaderLoaded} />
+            <ComicReader
+                closeReaderCallback={setIsReaderLoaded}
+                isLoaded={isReaderLoaded}
+                pages={comicPDFs.redLight}
+                title={redLightHeader.title ? redLightHeader.title : ''}
+            />
+        </main>
+    )
 }
 
 export default RedLight
