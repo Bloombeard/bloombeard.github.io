@@ -1,8 +1,10 @@
 import { TExternalLinks, TNavLinks } from '../types/types'
 
 import AchingHeightsCover from '@/public/assets/coverImages/AchingHeightsCover.png'
+import AuditCover from '@/public/assets/coverImages/AuditCover.png'
 import DesertBirdsCover from '@/public/assets/coverImages/DesertBirdsCover.png'
 import DevynCover from '@/public/assets/coverImages/DevynCover.jpeg'
+import FurnitureCover from '@/public/assets/coverImages/FurnitureCover.png'
 import GlittergymCover from '@/public/assets/coverImages/GlittergymCover.png'
 import MallKingCover from '@/public/assets/coverImages/MallKingCover.png'
 import RedLightCover from '@/public/assets/coverImages/RedLightCover.png'
@@ -23,7 +25,7 @@ export const comicLinks: TNavLinks = [
         label: 'Desert Birds',
         target: '/comics/desertBirds',
         previewImage: DesertBirdsCover,
-        previewAltText: 'Desert Birds'
+        previewAltText: 'Desert Birds',
     },
     {
         label: 'Red Light',
@@ -35,7 +37,7 @@ export const comicLinks: TNavLinks = [
         label: 'Devyn',
         target: '/comics/devyn',
         previewImage: DevynCover,
-        previewAltText: 'Devyn'
+        previewAltText: 'Devyn',
     },
     {
         label: 'Aching Heights',
@@ -54,15 +56,19 @@ export const comicLinks: TNavLinks = [
 export const gameLinks: TNavLinks = [
     {
         label: "Madame Bassitor's Catalogue of Curious Elixers",
-        target: '/games/elixers'
+        target: '/games/elixers',
     },
     {
         label: 'The Audit',
-        target: '/games/audit'
+        target: '/games/audit',
+        previewImage: AuditCover,
+        previewAltText: 'The Audit',
     },
     {
         label: 'Your Living Room is Full of Furniture',
         target: '/games/furniture',
+        previewImage: FurnitureCover,
+        previewAltText: 'Your Living Room is Full of Furniture',
     },
 ]
 
@@ -78,18 +84,24 @@ export const aboutPageLinks: TNavLinks = [
 ]
 
 export const externalDownloadLinks: TExternalLinks = {
-    mallKing: [{
-        label: 'Download',
-        target: 'https://payhip.com/b/2ZGV',
-    }],
-    achingHeights: [{
-        label: 'Download',
-        target: 'https://forreststorrs.itch.io/aching-heights',
-    }],
-    devyn: [{
-        label: 'Full\xa0Anthology',
-        target: 'https://issuu.com/acdhsoee/docs/drawntohome_final',
-    }],
+    mallKing: [
+        {
+            label: 'Download',
+            target: 'https://payhip.com/b/2ZGV',
+        },
+    ],
+    achingHeights: [
+        {
+            label: 'Download',
+            target: 'https://forreststorrs.itch.io/aching-heights',
+        },
+    ],
+    devyn: [
+        {
+            label: 'Full\xa0Anthology',
+            target: 'https://issuu.com/acdhsoee/docs/drawntohome_final',
+        },
+    ],
     glittergym: [
         {
             label: 'Issue\xa01',
@@ -104,26 +116,36 @@ export const externalDownloadLinks: TExternalLinks = {
             target: 'https://entervoid.com/view/6639/1/1',
         },
     ],
-    desertBirds: [{
-        label: 'Download',
-        target: 'https://forreststorrs.itch.io/desert-birds',
-    }],
-    redLight: [{
-        label: 'Download',
-        target: '',
-    }],
-    elixers: [{
-        label: 'Download',
-        target: '',
-    }],
-    audit: [{
-        label: 'Download',
-        target: 'https://forreststorrs.itch.io/the-audit',
-    }],
-    furniture: [{
-        label: 'Download',
-        target: 'https://forreststorrs.itch.io/new-furniture',
-    }],
+    desertBirds: [
+        {
+            label: 'Download',
+            target: 'https://forreststorrs.itch.io/desert-birds',
+        },
+    ],
+    redLight: [
+        {
+            label: 'Download',
+            target: '',
+        },
+    ],
+    elixers: [
+        {
+            label: 'Download',
+            target: '',
+        },
+    ],
+    audit: [
+        {
+            label: 'Download',
+            target: 'https://forreststorrs.itch.io/the-audit',
+        },
+    ],
+    furniture: [
+        {
+            label: 'Download',
+            target: 'https://forreststorrs.itch.io/new-furniture',
+        },
+    ],
 }
 
 export const navBarLinks: TNavLinks = [

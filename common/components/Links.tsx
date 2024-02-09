@@ -22,6 +22,8 @@ const renderLinks = (props: TProps) => {
     return toggleCallback ? toggleCallback() : {};
   };
 
+  console.log('links is ', links)
+
   return (
     <div className={wrapperClass}>
       {links.map((link: TNavLink) => (

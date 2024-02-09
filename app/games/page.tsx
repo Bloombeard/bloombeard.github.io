@@ -5,7 +5,7 @@ import Links from '@/common/components/Links'
 
 const Games = () => {
     return (
-        <Links wrapperClass='hub-page--links-wrapper' linkClass='hub-page--link' links={gameLinks} />
+        <Links wrapperClass='hub-page--links-wrapper' linkClass='hub-page--link' links={gameLinks} isHubPage />
     )
 }
 

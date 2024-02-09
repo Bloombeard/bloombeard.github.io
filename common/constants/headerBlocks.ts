@@ -5,6 +5,7 @@ import AchingHeightsCover from '@/public/assets/coverImages/AchingHeightsCover.p
 import AuditCover from '@/public/assets/coverImages/AuditCover.png'
 import DesertBirdsCover from '@/public/assets/coverImages/DesertBirdsCover.png'
 import DevynCover from '@/public/assets/coverImages/DevynCover.jpeg'
+import FurnitureCover from '@/public/assets/coverImages/FurnitureCover.png'
 import GlittergymCover from '@/public/assets/coverImages/GlittergymCover.png'
 import Headshot from '@/public/assets/coverImages/Headshot.png'
 import MallKingCover from '@/public/assets/coverImages/MallKingCover.png'
@@ -87,7 +88,7 @@ export const furnitureHeader: TDescriptionBlock = {
     subtitle: 'sound and text based horror game',
     bodyText: 'Made with musician and sound designer Echo Reece. This is a short game about finding a new piece of a furniture in your living room. It is also about our relationship with discomfort.',
     links: externalDownloadLinks.furniture,
-    coverImage: Headshot,
+    coverImage: FurnitureCover,
     coverAltText: 'Furniture game cover image',
 }
 
