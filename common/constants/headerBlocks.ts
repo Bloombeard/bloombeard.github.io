@@ -2,6 +2,7 @@ import { TDescriptionBlock } from '../types/types'
 import { aboutPageLinks, externalDownloadLinks } from './navLinks'
 
 import AchingHeightsCover from '@/public/assets/coverImages/AchingHeightsCover.png'
+import AuditCover from '@/public/assets/coverImages/AuditCover.png'
 import DesertBirdsCover from '@/public/assets/coverImages/DesertBirdsCover.png'
 import DevynCover from '@/public/assets/coverImages/DevynCover.jpeg'
 import GlittergymCover from '@/public/assets/coverImages/GlittergymCover.png'
@@ -72,15 +73,6 @@ export const desertBirdsHeader: TDescriptionBlock = {
     coverAltText: 'Desert Birds cover',
 }
 
-export const wishFactoryHeader: TDescriptionBlock = {
-    title: "Stuart Bidding's Wish-Granting Factory",
-    subtitle: 'one-page tabletop RPG',
-    bodyText: 'Co-written with Echo Reece. A 1-page 1-shot tabletop RPG in which players balance making wishes with as few words as possible against a factory which grants their wishes as literally as possible.',
-    links: externalDownloadLinks.wishFactory,
-    coverImage: Headshot,
-    coverAltText: 'Wish Factory cover image',
-}
-
 export const elixersHeader: TDescriptionBlock = {
     title: "Madame Bassitor's Catalogue of Curious Elixers",
     subtitle: 'tabletop RPG supplement pamphlet',
@@ -104,6 +96,6 @@ export const auditHeader: TDescriptionBlock = {
     subtitle: "original adventure for the tabletop RPG, 'Dread,' by Epidiah Ravachol",
     bodyText: "Up to five characters explore an abandoned mech hangar in order to complete an audit for a galactic megacorp. Written for the 'Dread' one-shot RPG system, in which players perform actions by pulling blocks from a Jenga tower.",
     links: externalDownloadLinks.audit,
-    coverImage: Headshot,
+    coverImage: AuditCover,
     coverAltText: 'The Audit cover image',
 }

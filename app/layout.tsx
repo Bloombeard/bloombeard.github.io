@@ -4,7 +4,6 @@ import { Courier_Prime } from "next/font/google";
 
 import "@/common/styles/style.scss";
 import Navbar from '@/common/components/Navbar'
-import SlidePanel from '@/common/components/SlidePanel'
 
 const courierPrime = Courier_Prime({ 
   subsets: ['latin'],

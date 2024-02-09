@@ -17,7 +17,6 @@ export type TExternalLinks = {
     glittergym: TNavLinks,
     desertBirds: TNavLinks,
     redLight: TNavLinks,
-    wishFactory: TNavLinks,
     elixers: TNavLinks,
     audit: TNavLinks,
     furniture: TNavLinks,

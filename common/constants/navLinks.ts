@@ -53,10 +53,6 @@ export const comicLinks: TNavLinks = [
 
 export const gameLinks: TNavLinks = [
     {
-        label: `Stuart Bidding's Wish${String.fromCharCode(8209)}Granting Factory`,
-        target: '/games/factory',
-    },
-    {
         label: "Madame Bassitor's Catalogue of Curious Elixers",
         target: '/games/elixers'
     },
@@ -88,11 +84,11 @@ export const externalDownloadLinks: TExternalLinks = {
     }],
     achingHeights: [{
         label: 'Download',
-        target: '',
+        target: 'https://forreststorrs.itch.io/aching-heights',
     }],
     devyn: [{
-        label: 'Download',
-        target: '',
+        label: 'Full\xa0Anthology',
+        target: 'https://issuu.com/acdhsoee/docs/drawntohome_final',
     }],
     glittergym: [
         {
@@ -110,13 +106,9 @@ export const externalDownloadLinks: TExternalLinks = {
     ],
     desertBirds: [{
         label: 'Download',
-        target: '',
+        target: 'https://forreststorrs.itch.io/desert-birds',
     }],
     redLight: [{
-        label: 'Download',
-        target: '',
-    }],
-    wishFactory: [{
         label: 'Download',
         target: '',
     }],
@@ -126,11 +118,11 @@ export const externalDownloadLinks: TExternalLinks = {
     }],
     audit: [{
         label: 'Download',
-        target: '',
+        target: 'https://forreststorrs.itch.io/the-audit',
     }],
     furniture: [{
         label: 'Download',
-        target: '',
+        target: 'https://forreststorrs.itch.io/new-furniture',
     }],
 }
 
