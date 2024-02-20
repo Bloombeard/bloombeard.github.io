@@ -41,7 +41,7 @@ export const achingHeightsHeader: TDescriptionBlock = {
 export const devynHeader: TDescriptionBlock = {
     title: 'Devyn',
     subtitle: '3 pages, black & white',
-    bodyText: 'Illustrated by Yang Zhen Lee',
+    bodyText: `Illustration and interview by Yang Zhen Lee.\n‘Devyn’ is a non-fiction comic about a queer, non-binary homeless person living in Pittsburgh. It is part of the Drawn to Home comics anthology, edited by Nathaniel Taylor.`,
     links: externalDownloadLinks.devyn,
     coverImage: DevynCover,
     coverAltText: 'Devyn cover',
