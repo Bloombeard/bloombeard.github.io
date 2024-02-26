@@ -4,6 +4,7 @@ import AchingHeightsCover from '@/public/assets/coverImages/AchingHeightsCover.p
 import AuditCover from '@/public/assets/coverImages/AuditCover.png'
 import DesertBirdsCover from '@/public/assets/coverImages/DesertBirdsCover.png'
 import DevynCover from '@/public/assets/coverImages/DevynCover.jpeg'
+import ElixersCover from '@/public/assets/coverImages/ElixersCover.png'
 import FurnitureCover from '@/public/assets/coverImages/FurnitureCover.png'
 import GlittergymCover from '@/public/assets/coverImages/GlittergymCover.png'
 import MallKingCover from '@/public/assets/coverImages/MallKingCover.png'
@@ -57,6 +58,7 @@ export const gameLinks: TNavLinks = [
     {
         label: "Madame Bassitor's Catalogue of Curious Elixers",
         target: '/games/elixers',
+        previewImage: ElixersCover,
     },
     {
         label: 'The Audit',

@@ -4,8 +4,6 @@ import Image from "next/image";
 import { Courier_Prime, Oswald } from "next/font/google";
 import { TDescriptionBlock } from "../types/types";
 
-import Headshot from '../assets/Headshot.png'
-
 const oswald = Oswald({
   subsets: ["latin"],
 });
@@ -25,24 +23,24 @@ const ContentHeader = (props: TProps) => {
   const { block, isReaderLoaded, openReaderCallback } = props;
 
   return (
-    <div className={`${oswald.className} content-header-v2--wrapper`}>
-      <div className="content-header-v2--cover-wrapper">
-        <Image className='content-header-v2--cover-image' src={block.coverImage} alt={block.coverAltText} fill={false} />
+    <div className={`${oswald.className} content-header-v3--wrapper`}>
+      <div className="content-header-v3--cover-wrapper">
+        <Image className='content-header-v3--cover-image' src={block.coverImage} alt={block.coverAltText} fill={false} />
       </div>
-      <div className="content-header-v2--description">
+      <div className="content-header-v3--description">
         {block.title && <h1>{block.title}</h1>}
         {block.subtitle && <h2>{block.subtitle}</h2>}
         {block.bodyText && <p>{block.bodyText}</p>}
         {block.links && (
-          <div className={`${courierPrime.className} content-header-v2--description__links-wrapper`}>
+          <div className={`${courierPrime.className} content-header-v3--description__links-wrapper`}>
             {block.links.map((link, i) => {
               return (
-                <div className='content-header-v2--description__link-wrapper' key={link.label}>
+                <div className='content-header-v3--description__link-wrapper' key={link.label}>
                   { openReaderCallback && !isReaderLoaded && (
-                    <div onClick={() => openReaderCallback(true)} className="content-header-v2--description__link">Read</div>
+                    <div onClick={() => openReaderCallback(true)} className="content-header-v3--description__link">Read</div>
                   )}
                   <Link
-                    className="content-header-v2--description__link"
+                    className="content-header-v3--description__link"
                     href={link.target}
                   >
                     {link.label}

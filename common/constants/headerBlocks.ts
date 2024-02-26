@@ -5,6 +5,7 @@ import AchingHeightsCover from '@/public/assets/coverImages/AchingHeightsCover.p
 import AuditCover from '@/public/assets/coverImages/AuditCover.png'
 import DesertBirdsCover from '@/public/assets/coverImages/DesertBirdsCover.png'
 import DevynCover from '@/public/assets/coverImages/DevynCover.jpeg'
+import ElixersCover from '@/public/assets/coverImages/ElixersCover.png'
 import FurnitureCover from '@/public/assets/coverImages/FurnitureCover.png'
 import GlittergymCover from '@/public/assets/coverImages/GlittergymCover.png'
 import Headshot from '@/public/assets/coverImages/Headshot.png'
@@ -21,7 +22,7 @@ export const aboutHeader: TDescriptionBlock = {
 }
 
 export const mallKingHeader: TDescriptionBlock = {
-    title: 'The Curse of the Mall King',
+    title: 'The Curse of the Mall\xa0King',
     subtitle: '16 pages, black & white',
     bodyText: 'Illustrated by Shelby Criswell',
     links: externalDownloadLinks.mallKing,
@@ -75,16 +76,16 @@ export const desertBirdsHeader: TDescriptionBlock = {
 }
 
 export const elixersHeader: TDescriptionBlock = {
-    title: "Madame Bassitor's Catalogue of Curious Elixers",
+    title: "Madame Bassitor's Catalogue of Curious\xa0Elixers",
     subtitle: 'tabletop RPG supplement pamphlet',
     bodyText: 'Illustrations by Yang Zhen Lee. A tri-fold pamphlet detailing twelve, horror-themed potions. Intended as a system-agnostic supplement for tabletop RPGs.',
     links: externalDownloadLinks.elixers,
-    coverImage: Headshot,
+    coverImage: ElixersCover,
     coverAltText: 'Elixer Catalogue cover image',
 }
 
 export const furnitureHeader: TDescriptionBlock = {
-    title: "Your Living Room Is Full of Furniture",
+    title: "Your Living Room Is Full of\xa0Furniture",
     subtitle: 'sound and text based horror game',
     bodyText: 'Made with musician and sound designer Echo Reece. This is a short game about finding a new piece of a furniture in your living room. It is also about our relationship with discomfort.',
     links: externalDownloadLinks.furniture,
