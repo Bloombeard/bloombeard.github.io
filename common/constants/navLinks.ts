@@ -56,7 +56,7 @@ export const comicLinks: TNavLinks = [
 
 export const gameLinks: TNavLinks = [
     {
-        label: "Madame Bassitor's Catalogue of Curious Elixers",
+        label: "Madame Bassitor's Catalogue of Curious\xa0Elixers",
         target: '/games/elixers',
         previewImage: ElixersCover,
     },
@@ -67,7 +67,7 @@ export const gameLinks: TNavLinks = [
         previewAltText: 'The Audit',
     },
     {
-        label: 'Your Living Room is Full of Furniture',
+        label: 'Your Living Room is Full of\xa0Furniture',
         target: '/games/furniture',
         previewImage: FurnitureCover,
         previewAltText: 'Your Living Room is Full of Furniture',

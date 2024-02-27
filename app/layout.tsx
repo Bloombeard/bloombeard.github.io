@@ -1,11 +1,11 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Courier_Prime } from "next/font/google";
+import { Lusitana } from "next/font/google";
 
 import "@/common/styles/style.scss";
 import Navbar from '@/common/components/Navbar'
 
-const courierPrime = Courier_Prime({ 
+const lusitana = Lusitana({
   subsets: ['latin'],
   weight: '400',
 })
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
-      <body className={courierPrime.className}>
+      <body className={lusitana.className}>
         <Navbar />
         {children}
       </body>

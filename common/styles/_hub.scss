@@ -17,14 +17,15 @@
   .hub-page--link {
     color: $offWhite;
     display: flex;
-    padding: 20% 10%;
+    padding: 15%;
     height: 50vw;
     width: 85vw;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     background-color: $softGreen;
     position: relative;
-    font-size: 1em;
+    font-size: 1.3em;
+    // font-weight: 700;
     text-shadow: 1px 1px 1px $offBlack;
     text-align: center;
     margin: 4%;
@@ -36,7 +37,7 @@
     }
 
     @media (min-width: $screen-md-min) {
-        font-size: 1.3em;
+        font-size: 1.6em;
     }
 
     .hub-page--image-overlay {
@@ -69,6 +70,9 @@
         transition-timing-function: ease-out;
         z-index: 9;
         text-shadow: 1px 2px 5px black;
+        text-decoration: none;
+        text-underline-offset: auto;
+        transform: none;
     }
 
     &:hover {

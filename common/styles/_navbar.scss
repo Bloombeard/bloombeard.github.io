@@ -20,6 +20,14 @@
 
   .navbar--title__clickable {
     display: none;
+    
+    a {
+      text-decoration: none;
+      text-underline-offset: auto;
+      &:hover {
+        text-underline-offset: auto;
+      }
+    }
 
     @media (min-width: $screen-sm-min) {
       display: flex;
