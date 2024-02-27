@@ -15,7 +15,7 @@ import RedLightCover from '@/public/assets/coverImages/RedLightCover.png'
 export const aboutHeader: TDescriptionBlock = {
     title: 'Forrest Storrs',
     subtitle: 'he / she / they',
-    bodyText: 'Forrest Storrs is a queer, agendered writer living in Pittsburgh. He mostly writes comics and short stories, and his work has appeared in a handful of magazines and literary journals under his legal name, Joshua Storrs. He is a pushcart nominee and a finalist for the Barry Hannah Prize. When he’s not writing stories or making comics with his friends, he’s probably playing tabletop RPGs or saying hello to other people’s dogs.',
+    bodyText: "Forrest Storrs is a queer, agendered writer living in Pittsburgh. They mostly write comics and short stories, and their work has appeared in a handful of magazines and literary journals under their legal name, Joshua Storrs. They are a pushcart nominee and a finalist for the Barry Hannah Prize. When they're not writing stories or making comics with their friends, they're probably playing tabletop RPGs or saying hello to other people’s dogs.",
     links: aboutPageLinks,
     coverImage: Headshot,
     coverAltText: 'Guggenheim Grin',
@@ -78,7 +78,7 @@ export const desertBirdsHeader: TDescriptionBlock = {
 export const elixersHeader: TDescriptionBlock = {
     title: "Madame Bassitor's Catalogue of Curious\xa0Elixers",
     subtitle: 'tabletop RPG supplement pamphlet',
-    bodyText: 'Illustrations by Yang Zhen Lee. A tri-fold pamphlet detailing twelve, horror-themed potions. Intended as a system-agnostic supplement for tabletop RPGs.',
+    bodyText: 'Illustrations by <a className="external-link" href="https://www.instagram.com/yangzhenlee">Yang Zhen Lee</a>. A tri-fold pamphlet detailing twelve, horror-themed potions. Intended as a system-agnostic supplement for tabletop RPGs.',
     links: externalDownloadLinks.elixers,
     coverImage: ElixersCover,
     coverAltText: 'Elixer Catalogue cover image',

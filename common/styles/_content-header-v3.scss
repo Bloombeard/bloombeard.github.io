@@ -24,7 +24,7 @@
             height: auto;
 
             @media (min-width: $screen-sm-min) {
-              padding-bottom: 50px;
+                padding-bottom: 50px;
             }
         }
     }
@@ -69,7 +69,6 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
-                color: $softGreen;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 700;
@@ -77,10 +76,13 @@
                 cursor: pointer;
                 margin-right: 15px;
 
-                &:hover {
-                    // color: $offBlack;
-                    color: $offWhite;
-                    background-color: $softGreen;
+                &.read-button {
+                    color: $softGreen;
+
+                    &:hover {
+                        color: $offWhite;
+                        background-color: $softGreen;
+                    }
                 }
             }
         }

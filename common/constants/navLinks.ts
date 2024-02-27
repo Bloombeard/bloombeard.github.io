@@ -78,10 +78,12 @@ export const aboutPageLinks: TNavLinks = [
     {
         label: 'Blog',
         target: _externalLinks.blog,
+        isExternal: true,
     },
     {
         label: 'Instagram',
         target: _externalLinks.instagram,
+        isExternal: true,
     },
 ]
 
@@ -90,62 +92,73 @@ export const externalDownloadLinks: TExternalLinks = {
         {
             label: 'Download',
             target: 'https://payhip.com/b/2ZGV',
+            isExternal: true,
         },
     ],
     achingHeights: [
         {
             label: 'Download',
             target: 'https://forreststorrs.itch.io/aching-heights',
+            isExternal: true,
         },
     ],
     devyn: [
         {
             label: 'Full\xa0Anthology',
             target: 'https://issuu.com/acdhsoee/docs/drawntohome_final',
+            isExternal: true,
         },
     ],
     glittergym: [
         {
             label: 'Issue\xa01',
             target: 'https://entervoid.com/view/6609/2/1',
+            isExternal: true,
         },
         {
             label: 'Issue\xa02',
             target: 'https://entervoid.com/view/6628/1/1',
+            isExternal: true,
         },
         {
             label: 'Issue\xa03',
             target: 'https://entervoid.com/view/6639/1/1',
+            isExternal: true,
         },
     ],
     desertBirds: [
         {
             label: 'Download',
             target: 'https://forreststorrs.itch.io/desert-birds',
+            isExternal: true,
         },
     ],
     redLight: [
         {
             label: 'Download',
             target: '',
+            isExternal: true,
         },
     ],
     elixers: [
         {
             label: 'Download',
-            target: '',
+            target: 'https://forreststorrs.itch.io/elixers',
+            isExternal: true,
         },
     ],
     audit: [
         {
             label: 'Download',
             target: 'https://forreststorrs.itch.io/the-audit',
+            isExternal: true,
         },
     ],
     furniture: [
         {
             label: 'Download',
             target: 'https://forreststorrs.itch.io/new-furniture',
+            isExternal: true,
         },
     ],
 }
@@ -168,6 +181,7 @@ export const navBarLinks: TNavLinks = [
     {
         label: 'Blog',
         target: _externalLinks.blog,
+        isExternal: true,
     },
     {
         label: 'About',

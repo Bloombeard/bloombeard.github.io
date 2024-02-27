@@ -6,6 +6,7 @@ export type TNavLink = {
     expansion?: TNavLinks
     previewImage?: any
     previewAltText?: string
+    isExternal?: boolean
 }
 
 export type TNavLinks = TNavLink[]

@@ -1,4 +1,4 @@
-@import "_variables";
+@import '_variables';
 
 .publications__wrapper {
     display: flex;
@@ -12,35 +12,37 @@
         margin: 20px 0 80px 0;
     }
 
-    .pub__link {
-        .pub {
-            &:hover {
-                color: $softGreen;
-                background-color: $offWhite;
-                border-left: 1vw solid $offWhite;
-                border-right: 1vw solid $offWhite;
-            }
+    a {
+        color: $offWhite;
 
-            .pub__title {
-                text-decoration: underline;
+        .pub__link {
+            .pub {
+                &:hover {
+                    border-left: 1vw solid $offWhite;
+                    border-right: 1vw solid $offWhite;
+                }
 
-                @media (min-width: $screen-sm-min) {
-                    text-decoration: none;
+                .pub__title {
+                    text-decoration: underline;
+
+                    @media (min-width: $screen-sm-min) {
+                        text-decoration: none;
+                    }
                 }
             }
         }
     }
 
-    .pub__no-link{
-        &:hover {
-            .pub__detail--availability {
-                color: $softGreen;
-                background-color: $offWhite;
-                border-left: 1vw solid $offWhite;
-                border-right: 1vw solid $offWhite;
+        .pub__no-link {
+            &:hover {
+                .pub__detail--availability {
+                    color: $softGreen;
+                    background-color: $offWhite;
+                    border-left: 1vw solid $offWhite;
+                    border-right: 1vw solid $offWhite;
+                }
             }
         }
-    }
 
     .pub {
         display: flex;
@@ -52,12 +54,11 @@
             flex-direction: row;
         }
 
-
         .pub__title {
             display: flex;
             width: fit-content;
             font-size: 2em;
-            
+
             @media (min-width: $screen-sm-min) {
                 width: 20vw;
                 margin: 11px 32px 17px 0;
@@ -70,7 +71,7 @@
             font-size: 1.2em;
             letter-spacing: 0.05em;
             margin-left: 10vw;
-            
+
             @media (min-width: $screen-sm-min) {
                 margin: 11px 0 17px 32px;
             }

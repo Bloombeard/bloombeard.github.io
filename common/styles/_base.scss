@@ -30,6 +30,24 @@ main {
     }
 }
 
+a {
+    color: $softGreen;
+    
+    &:hover {
+        color: $offWhite;
+        background-color: $softGreen;
+    }
+
+    &.external-link {
+        &:hover {
+            color: $offWhite;
+            background-color: $rust;
+        }
+    }
+
+
+}
+
 h1 {
     font-weight: 700;
     font-size: 33px;
