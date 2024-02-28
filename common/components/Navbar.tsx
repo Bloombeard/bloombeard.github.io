@@ -12,9 +12,7 @@ import { hamburgerColors } from "@/common/constants/hamburgerColors";
 const Navbar = () => {
   const [isSlidePanelOpen, setIsSlidePanelOpen] = useState(false);
 
-  const hamburgerColorFill = isSlidePanelOpen
-    ? hamburgerColors.slidePanelOpen
-    : hamburgerColors.slidePanelClosed;
+  const hamburgerColorFill = hamburgerColors.slidePanelClosed
 
   return (
     <div>
@@ -33,10 +31,10 @@ const Navbar = () => {
           links={navBarLinks}
         />
         <button
-          className="navbar--hamburger__button"
+          className="navbar--hamburger-button"
           onClick={() => setIsSlidePanelOpen(!isSlidePanelOpen)}
         >
-          <HamburgerIcon colorFill={hamburgerColorFill} />
+          <HamburgerIcon colorFill={hamburgerColors.slidePanelClosed} />
         </button>
       </div>
     </div>
