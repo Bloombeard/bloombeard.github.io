@@ -33,23 +33,13 @@ main {
 a {
     color: $softGreen;
     text-decoration: underline;
-    // text-decoration-color: rgba(92, 129, 97, 0);
     text-underline-offset: 0.1em;
     transition: text-underline-offset 300ms ease-in-out, transform 300ms ease-in-out, color 300ms ease-in-out;
 
     &:hover {
-        // text-decoration-color: rgba(92, 129, 97, 1);
+        color: $rust;
         text-underline-offset: 0.4em;
         transform: translateY(-4px);
-        // color: $offWhite;
-        // background-color: $softGreen;
-    }
-
-    &.external-link {
-        &:hover {
-            color: $rust;
-            // background-color: $rust;
-        }
     }
 }
 

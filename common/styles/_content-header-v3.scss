@@ -78,10 +78,14 @@
 
                 &.read-button {
                     color: $softGreen;
+                    text-decoration: underline;
+                    text-underline-offset: 0.1em;
+                    transition: text-underline-offset 300ms ease-in-out, transform 300ms ease-in-out, color 300ms ease-in-out;
 
                     &:hover {
-                        color: $offWhite;
-                        background-color: $softGreen;
+                        color: $rust;
+                        text-underline-offset: 0.4em;
+                        transform: translateY(-4px);
                     }
                 }
             }

@@ -1,12 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
-import { Oswald } from 'next/font/google'
+import { Oswald, Lusitana } from 'next/font/google'
 
 import { TPublicationBlock } from '@/common/types/types'
 import { publications, nameChangeExplainer } from '@/common/constants/publications'
 
 const oswald = Oswald({
     subsets: ['latin'],
+})
+
+const lusitana = Lusitana({
+    subsets: ['latin'],
+    weight: '400',
 })
 
 const Publications = () => {
@@ -35,7 +40,7 @@ const Publications = () => {
         if (pub.target) {
             return (
                 <>
-                    <Link className="pub__link external-link" href={pub.target}>
+                    <Link className="pub__link" href={pub.target}>
                         <div className="pub">
                             <div className="pub__title">{pub.title}</div>
                             {_renderPubDetails(pub, true)}
@@ -60,7 +65,7 @@ const Publications = () => {
     return (
         <main className={oswald.className}>
             <div className="publications__wrapper">
-                <div className="publications__header">
+                <div className={`${lusitana.className} publications__header`}>
                     Forrest changed their name in 2020. Earlier publications appear under their old name,
                     &apos;Joshua&nbsp;Storrs.&apos;
                 </div>

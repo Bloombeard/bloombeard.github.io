@@ -78,7 +78,7 @@ export const desertBirdsHeader: TDescriptionBlock = {
 export const elixersHeader: TDescriptionBlock = {
     title: "Madame Bassitor's Catalogue of Curious\xa0Elixers",
     subtitle: 'tabletop RPG supplement pamphlet',
-    bodyText: 'Illustrations by <a className="external-link" href="https://www.instagram.com/yangzhenlee">Yang Zhen Lee</a>. A tri-fold pamphlet detailing twelve, horror-themed potions. Intended as a system-agnostic supplement for tabletop RPGs.',
+    bodyText: 'Illustrations by <a href="https://www.instagram.com/yangzhenlee">Yang Zhen Lee</a>. A tri-fold pamphlet detailing twelve, horror-themed potions. Intended as a system-agnostic supplement for tabletop RPGs.',
     links: externalDownloadLinks.elixers,
     coverImage: ElixersCover,
     coverAltText: 'Elixer Catalogue cover image',

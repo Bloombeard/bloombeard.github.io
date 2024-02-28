@@ -3,46 +3,45 @@
 .publications__wrapper {
     display: flex;
     flex-direction: column;
+    text-shadow: rgba(27, 27, 27, 0.3) 0 2px 15px;
 
     .publications__header {
-        font-size: 1.5em;
-        color: $softGreen;
-        background-color: $offWhite;
-        padding: 2vw;
+        display: flex;
+        font-size: 1.8em;
         margin: 20px 0 80px 0;
+        justify-content: center;
+        text-align: center;
+        letter-spacing: 0.02em;
     }
 
     a {
         color: $offWhite;
+        transition: text-shadow 300ms ease-in-out, transform 300ms ease-in-out,;
+        text-decoration: none;
+        text-underline-offset: unset;
 
-        .pub__link {
-            .pub {
-                &:hover {
-                    border-left: 1vw solid $offWhite;
-                    border-right: 1vw solid $offWhite;
-                }
+        &:hover {
+            text-decoration: none;
+            text-underline-offset: unset;
+            transform: translateY(-4px);
+            transform: scale(1.02);
+            text-shadow: rgba(27, 27, 27, 0.6) 0 2px 15px;
 
-                .pub__title {
-                    text-decoration: underline;
-
-                    @media (min-width: $screen-sm-min) {
-                        text-decoration: none;
-                    }
+            .pub__title {
+                @media (min-width: $screen-sm-min) {
+                    text-decoration: none;
                 }
             }
         }
     }
 
-        .pub__no-link {
-            &:hover {
-                .pub__detail--availability {
-                    color: $softGreen;
-                    background-color: $offWhite;
-                    border-left: 1vw solid $offWhite;
-                    border-right: 1vw solid $offWhite;
-                }
+    .pub__no-link {
+        &:hover {
+            .pub__detail--availability {
+                text-decoration: underline;
             }
         }
+    }
 
     .pub {
         display: flex;

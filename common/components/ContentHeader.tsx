@@ -42,7 +42,7 @@ const ContentHeader = (props: TProps) => {
                                             Read
                                         </div>
                                     )}
-                                    <Link className="content-header-v3--description__link external-link" href={link.target}>
+                                    <Link className="content-header-v3--description__link" href={link.target}>
                                         {link.label}
                                     </Link>
                                 </div>

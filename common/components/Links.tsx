@@ -22,21 +22,11 @@ const renderLinks = (props: TProps) => {
     return toggleCallback ? toggleCallback() : {};
   };
 
-  const getLinkClasses = (link: TNavLink): string => {
-    let linkClasses = linkClass
-    
-    if (link.isExternal) {
-      linkClasses += (' external-link')
-    }
-    
-    return linkClasses
-  }
-
   return (
     <div className={wrapperClass}>
       {links.map((link: TNavLink) => (
         <Link
-          className={getLinkClasses(link)}
+          className={linkClass}
           key={link.label}
           href={link.target}
           onClick={() => onLinkClick()}
