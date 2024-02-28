@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 import React, { useEffect, useRef, useState } from 'react'
 import { pdfjs, Document, Page } from 'react-pdf'
@@ -98,6 +98,22 @@ const ComicReader = (props: TProps) => {
         }
     }
 
+    const getVerticalPositionOffset = () => {
+        if (document) {
+            const contentHeaderBoundaries = document.getElementsByClassName('content-header-v3--wrapper')[0]?.getBoundingClientRect()
+
+            if (contentHeaderBoundaries) {
+                return Math.ceil(contentHeaderBoundaries.bottom)
+            }
+        }
+    }
+
+    const [verticalPositionOffset, setVerticalPositionOffset] = useState<number | undefined>(getVerticalPositionOffset())
+
+    useEffect(() => {
+        setVerticalPositionOffset(getVerticalPositionOffset())
+    }, [])
+
     const onPageClick = (e: React.MouseEvent<HTMLElement>) => {
         if (document) {
             const wrapperBoundaries = document.getElementsByClassName('comic-reader__document')[0].getBoundingClientRect()
@@ -195,7 +211,7 @@ const ComicReader = (props: TProps) => {
         return null
     } else
         return (
-            <div className="comic-reader__wrapper" {...swipeHandlers} ref={readerRef}>
+            <div className="comic-reader__wrapper" style={{ top: verticalPositionOffset || '1000px' }} {...swipeHandlers} ref={readerRef}>
                 <ComicReaderProgressBar
                     closeReaderCallback={closeReaderCallback}
                     readerRef={readerRef}

@@ -11,6 +11,10 @@
     display: grid;
     grid-template-rows: 40% 40% 40% 40%;
     grid-template-columns: 50% 50%;
+    padding: 5% 5% 51vh 5%;
+  }
+
+  @media (min-width: $screen-md-min) {
     padding: 5%;
   }
 
@@ -31,6 +35,14 @@
     text-align: center;
     margin: 4%;
     overflow: hidden;
+
+    &:nth-of-type(odd) {
+      justify-self: end;
+    }
+
+    &:nth-of-type(even) {
+      justify-self: start;
+    }
 
     @media (min-width: $screen-sm-min) {
       height: 22vw;

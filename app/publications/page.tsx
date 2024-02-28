@@ -52,13 +52,15 @@ const Publications = () => {
         }
 
         return (
-            <div className="pub__no-link">
-                <div className="pub">
-                    <div className="pub__title">{pub.title}</div>
-                    {_renderPubDetails(pub, false)}
+            <>
+                <div className="pub__no-link">
+                    <div className="pub">
+                        <div className="pub__title">{pub.title}</div>
+                        {_renderPubDetails(pub, false)}
+                    </div>
                 </div>
                 {publications.length - 1 > i && <div className="pub__divider-line" />}
-            </div>
+            </>
         )
     }
 

@@ -12,6 +12,9 @@
         justify-content: center;
         text-align: center;
         letter-spacing: 0.02em;
+        border: solid $offWhite 1px;
+        border-radius: 2px;
+        padding: 5px;
     }
 
     a {
@@ -19,6 +22,7 @@
         transition: text-shadow 300ms ease-in-out, transform 300ms ease-in-out,;
         text-decoration: none;
         text-underline-offset: unset;
+        width: fit-content;
 
         &:hover {
             text-decoration: none;
@@ -36,6 +40,8 @@
     }
 
     .pub__no-link {
+        width: fit-content;
+        
         &:hover {
             .pub__detail--availability {
                 text-decoration: underline;
@@ -48,6 +54,7 @@
         flex-direction: column;
         border-left: 1vw solid transparent;
         border-right: 1vw solid transparent;
+        width: fit-content;
 
         @media (min-width: $screen-sm-min) {
             flex-direction: row;
