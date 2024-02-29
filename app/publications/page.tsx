@@ -1,17 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
-import { Oswald, Lusitana } from 'next/font/google'
+import { IM_Fell_English_SC, Oswald } from 'next/font/google'
 
 import { TPublicationBlock } from '@/common/types/types'
 import { publications, nameChangeExplainer } from '@/common/constants/publications'
 
-const oswald = Oswald({
-    subsets: ['latin'],
-})
-
-const lusitana = Lusitana({
+const imFell = IM_Fell_English_SC({
     subsets: ['latin'],
     weight: '400',
+})
+
+const oswald = Oswald({
+    subsets: ['latin'],
 })
 
 const Publications = () => {
@@ -67,9 +67,9 @@ const Publications = () => {
     return (
         <main className={oswald.className}>
             <div className="publications__wrapper">
-                <div className={`${lusitana.className} publications__header`}>
+                <div className={`${imFell.className} publications__header`}>
                     Forrest changed their name in 2020. Earlier publications appear under their old name,
-                    &apos;Joshua&nbsp;Storrs.&apos;
+                    &lsquo;Joshua&nbsp;Storrs.&rsquo;
                 </div>
                 {publications.map((pub: TPublicationBlock, i) => {
                     return _renderPublication(pub, i)

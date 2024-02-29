@@ -1,17 +1,17 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-import { Lusitana, Oswald } from 'next/font/google'
+import { IM_Fell_English_SC, Oswald } from 'next/font/google'
 import parse from 'html-react-parser'
 import { TDescriptionBlock } from '../types/types'
 
-const oswald = Oswald({
+const imFell = IM_Fell_English_SC({
     subsets: ['latin'],
+    weight: '400',
 })
 
-const lusitana = Lusitana({
+const oswald = Oswald({
     subsets: ['latin'],
-    weight: ['400', '700'],
 })
 
 interface TProps {
@@ -33,7 +33,7 @@ const ContentHeader = (props: TProps) => {
                 {block.subtitle && <h2>{block.subtitle}</h2>}
                 {block.bodyText && <p>{parse(block.bodyText)}</p>}
                 {block.links && (
-                    <div className={`${lusitana.className} content-header-v3--description__links-wrapper`}>
+                    <div className={`${imFell.className} content-header-v3--description__links-wrapper`}>
                         {block.links.map((link, i) => {
                             return (
                                 <div className="content-header-v3--description__link-wrapper" key={link.label}>

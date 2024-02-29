@@ -1,9 +1,13 @@
 @import '_variables';
 
 /* base styles */
+
 body {
     color: $offWhite;
-    background-color: $softGreen;
+    // background-color: $softGreen;
+    // background: linear-gradient(to top left, $fadedGreen, $charcoal);
+    background: linear-gradient(to top right, $charcoal, $fadedGreen);
+    background-attachment: fixed;
 }
 
 main {
@@ -12,6 +16,7 @@ main {
     flex-direction: column;
     padding: 17px;
     transition: transform 0.5s ease-out 0.25s;
+    // background: linear-gradient(to top, $fadedGreen, $charcoal);
 
     &.hidden-content-header {
         transform: translateY(-55%);
@@ -31,15 +36,17 @@ main {
 }
 
 a {
-    color: $softGreen;
-    text-decoration: underline;
-    text-underline-offset: 0.1em;
-    transition: text-underline-offset 300ms ease-in-out, transform 300ms ease-in-out, color 300ms ease-in-out;
+    color: $offWhite;
+    transition: color 300ms ease-out, transform 300ms ease-in-out, text-shadow 300ms ease-in-out;
 
     &:hover {
-        color: $rust;
-        text-underline-offset: 0.4em;
-        transform: translateY(-4px);
+        color: $tan;
+        transform: translateY(-2px);
+    }
+
+    .current {
+        color: $red;
+        cursor: default;
     }
 }
 

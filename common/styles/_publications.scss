@@ -19,14 +19,11 @@
 
     a {
         color: $offWhite;
-        transition: text-shadow 300ms ease-in-out, transform 300ms ease-in-out,;
-        text-decoration: none;
-        text-underline-offset: unset;
+        transition: text-shadow 300ms ease-in-out, transform 300ms ease-in-out, color 300ms ease-out;
         width: fit-content;
 
         &:hover {
-            text-decoration: none;
-            text-underline-offset: unset;
+            color: $tan;
             transform: translateY(-4px);
             transform: scale(1.02);
             text-shadow: rgba(27, 27, 27, 0.6) 0 2px 15px;
@@ -41,10 +38,19 @@
 
     .pub__no-link {
         width: fit-content;
-        
+
         &:hover {
-            .pub__detail--availability {
-                text-decoration: underline;
+            .pub__details-wrapper {
+                color: inherit;
+                transform: inherit;
+                text-shadow: inherit;
+                transition: text-shadow 300ms ease-in-out, transform 300ms ease-in-out, color 300ms ease-out;
+             
+                .pub__detail--availability {
+                    color: $tan;
+                    transform: scale(1.02);
+                    text-shadow: rgba(27, 27, 27, 0.6) 0 2px 15px;
+                }
             }
         }
     }
