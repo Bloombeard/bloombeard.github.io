@@ -1,4 +1,4 @@
 export const hamburgerColors = {
-    slidePanelClosed: 'rgba(59, 104, 66, 0.83)',
-    slidePanelOpen: '#f2f2f2',
+    slidePanelClosed: '#f2f2f2',
+    slidePanelOpen: '#3e3e3e',
 }

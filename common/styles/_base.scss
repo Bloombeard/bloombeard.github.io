@@ -4,8 +4,6 @@
 
 body {
     color: $offWhite;
-    // background-color: $softGreen;
-    // background: linear-gradient(to top left, $fadedGreen, $charcoal);
     background: linear-gradient(to top right, $charcoal, $fadedGreen);
     background-attachment: fixed;
 }
@@ -16,7 +14,6 @@ main {
     flex-direction: column;
     padding: 17px;
     transition: transform 0.5s ease-out 0.25s;
-    // background: linear-gradient(to top, $fadedGreen, $charcoal);
 
     &.hidden-content-header {
         transform: translateY(-55%);
