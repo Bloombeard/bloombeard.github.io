@@ -27,18 +27,18 @@
     width: 85vw;
     max-width: 500px;
     justify-content: center;
-    align-items: end;
-    background-color: $softGreen;
+    align-items: flex-end;
+    background-color: $charcoal;
     position: relative;
     font-size: 1.3em;
     // font-weight: 700;
-    text-shadow: 1px 1px 1px $offBlack;
+    text-shadow: 1px 1px 1px $charcoal;
     text-align: center;
     margin: 4%;
     overflow: hidden;
 
     &:nth-of-type(odd) {
-      justify-self: end;
+      justify-self: flex-end;
     }
 
     &:nth-of-type(even) {

@@ -24,7 +24,7 @@ export const aboutHeader: TDescriptionBlock = {
 export const mallKingHeader: TDescriptionBlock = {
     title: 'The Curse of the Mall\xa0King',
     subtitle: '16 pages, black & white',
-    bodyText: 'Illustrated by Shelby Criswell',
+    bodyText: `Illustrated by <a href="https://www.shelbycriswell.com/">Shelby Criswell</a><br/> <br/>'A trio of traveling kids have to go beat up a mall king to stop an old lady's house from getting turned into a parking lot.`,
     links: externalDownloadLinks.mallKing,
     coverImage: MallKingCover,
     coverAltText: 'Mall King cover',
@@ -33,7 +33,7 @@ export const mallKingHeader: TDescriptionBlock = {
 export const achingHeightsHeader: TDescriptionBlock = {
     title: 'Aching Heights',
     subtitle: '12 pages, black & white',
-    bodyText: 'Illustrated by Conner Herbison',
+    bodyText: 'Illustrated by <a href="https://connerherbison.com/">Conner Herbison</a><br/><br/>A short comic about hiking, dying, and regret.',
     links: externalDownloadLinks.achingHeights,
     coverImage: AchingHeightsCover,
     coverAltText: 'Aching Heights cover',
@@ -42,7 +42,7 @@ export const achingHeightsHeader: TDescriptionBlock = {
 export const devynHeader: TDescriptionBlock = {
     title: 'Devyn',
     subtitle: '3 pages, black & white',
-    bodyText: `Illustration and interview by Yang Zhen Lee.\n‘Devyn’ is a non-fiction comic about a queer, non-binary homeless person living in Pittsburgh. It is part of the Drawn to Home comics anthology, edited by Nathaniel Taylor.`,
+    bodyText: `Illustration and interview by <a href="https://www.instagram.com/yangzhenlee">Yang Zhen Lee</a>.<br/><br/>A non-fiction comic about a queer, non-binary homeless person living in Pittsburgh. It is part of the Drawn to Home comics anthology, edited by <a href="https://www.illustratornate.com/">Nathaniel Taylor.</a>`,
     links: externalDownloadLinks.devyn,
     coverImage: DevynCover,
     coverAltText: 'Devyn cover',
@@ -51,7 +51,7 @@ export const devynHeader: TDescriptionBlock = {
 export const glittergymHeader: TDescriptionBlock = {
     title: 'Glittergym',
     subtitle: '24 pages, color',
-    bodyText: 'Illustrated by Greg Lyons',
+    bodyText: `Illustrated by <a href"https://www.instagram.com/greglypoo/">Greg Lyons</a><br/><br/>Glittergym was made on very tight deadlines for a comics tournament on <a href="https://www.EnterVoid.com/">EnterVoid.com</a>. The goal of the tournament is to create a comic depicting your characters fighting those of other users.`,
     links: externalDownloadLinks.glittergym,
     coverImage: GlittergymCover,
     coverAltText: 'Glittergym cover',
@@ -60,7 +60,7 @@ export const glittergymHeader: TDescriptionBlock = {
 export const redLightHeader: TDescriptionBlock = {
     title: 'Red Light',
     subtitle: '6 pages, partial color',
-    bodyText: 'Illustrated by Jackarais',
+    bodyText: 'Illustrated by <a href="https://www.bicycleboy.net/">Jackarais</a><br/><br/>Sam wakes up from a head wound on a dirt road, staring down a pair of headlights.',
     links: externalDownloadLinks.redLight,
     coverImage: RedLightCover,
     coverAltText: 'Red Light cover',
@@ -69,7 +69,7 @@ export const redLightHeader: TDescriptionBlock = {
 export const desertBirdsHeader: TDescriptionBlock = {
     title: 'Desert Birds',
     subtitle: '26 pages, partial color',
-    bodyText: 'Illustrated by Jackarais',
+    bodyText: `Illustrated by <a href="https://www.bicycleboy.net/">Jackarais</a><br/><br/>Two people try to kill each other while a talking vulture heckles them.`,
     links: externalDownloadLinks.desertBirds,
     coverImage: DesertBirdsCover,
     coverAltText: 'Desert Birds cover',
@@ -87,7 +87,7 @@ export const elixersHeader: TDescriptionBlock = {
 export const furnitureHeader: TDescriptionBlock = {
     title: "Your Living Room Is Full of\xa0Furniture",
     subtitle: 'sound and text based horror game',
-    bodyText: 'Made with musician and sound designer Echo Reece. This is a short game about finding a new piece of a furniture in your living room. It is also about our relationship with discomfort.',
+    bodyText: 'Made with musician and sound designer <a href="https://trashmaker.bandcamp.com/">Echo&nbsp;Reece</a>. This is a short game about finding a new piece of a furniture in your living room. It is also about our relationship with discomfort.',
     links: externalDownloadLinks.furniture,
     coverImage: FurnitureCover,
     coverAltText: 'Furniture game cover image',

@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 import Links from "@/common/components/Links";
 import SlidePanel from "@/common/components/SlidePanel";
@@ -12,7 +13,7 @@ import { hamburgerColors } from "@/common/constants/hamburgerColors";
 const Navbar = () => {
   const [isSlidePanelOpen, setIsSlidePanelOpen] = useState(false);
 
-  const hamburgerColorFill = hamburgerColors.slidePanelClosed
+  const pathName = usePathname()
 
   return (
     <div>

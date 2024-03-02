@@ -6,6 +6,8 @@ import '@/common/styles/style.scss'
 import Navbar from '@/common/components/Navbar'
 
 const imFell = IM_Fell_English_SC({
+    adjustFontFallback: false,
+    display: 'swap',
     subsets: ['latin'],
     weight: '400',
 })

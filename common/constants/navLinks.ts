@@ -136,7 +136,7 @@ export const externalDownloadLinks: TExternalLinks = {
     redLight: [
         {
             label: 'Download',
-            target: '',
+            target: 'https://forreststorrs.itch.io/red-light',
             isExternal: true,
         },
     ],

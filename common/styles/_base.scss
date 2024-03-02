@@ -24,7 +24,7 @@ main {
     }
 
     @media (min-width: $screen-sm-min) {
-        padding: 50px;
+        margin: 60px;
     }
 
     @media (min-width: $screen-md-min) {
@@ -54,7 +54,7 @@ h1 {
 }
 
 h2 {
-    color: $offBlack;
+    color: $charcoal;
     font-weight: 300;
     font-size: 14px;
     font-style: normal;
@@ -64,7 +64,7 @@ h2 {
 }
 
 p {
-    color: $offBlack;
+    color: $charcoal;
     font-style: normal;
     font-size: 16px;
     letter-spacing: 0.05em;
