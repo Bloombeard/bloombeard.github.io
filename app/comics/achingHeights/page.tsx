@@ -14,12 +14,13 @@ const AchingHeights = () => {
     return (
         <main>
             <ContentHeader block={achingHeightsHeader} isReaderLoaded={isReaderLoaded} openReaderCallback={setIsReaderLoaded} />
-            <ComicReader
-                closeReaderCallback={setIsReaderLoaded}
-                isLoaded={isReaderLoaded}
-                pages={comicPDFs.achingHeights}
-                title={achingHeightsHeader.title ? achingHeightsHeader.title : ''}
-            />
+            {isReaderLoaded &&
+                <ComicReader
+                    closeReaderCallback={setIsReaderLoaded}
+                    pages={comicPDFs.achingHeights}
+                    title={achingHeightsHeader.title ? achingHeightsHeader.title : ''}
+                />
+            }
         </main>
     )
 }

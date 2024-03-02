@@ -9,7 +9,6 @@ import ComicReaderProgressBar from './ComicReaderProgressBar'
 
 interface TProps {
     closeReaderCallback: React.Dispatch<React.SetStateAction<boolean>>
-    isLoaded: boolean
     pages: string | File | null
     shouldLoop?: boolean
     title: string
@@ -18,7 +17,7 @@ interface TProps {
 pdfjs.GlobalWorkerOptions.workerSrc = new URL('pdfjs-dist/build/pdf.worker.min.js', import.meta.url).toString()
 
 const ComicReader = (props: TProps) => {
-    const { closeReaderCallback, isLoaded, pages, shouldLoop, title } = props
+    const { closeReaderCallback, pages, shouldLoop, title } = props
 
     const desktopBreakpoint = 576
     const mobileBreakpoint = 430
@@ -99,11 +98,14 @@ const ComicReader = (props: TProps) => {
     }
 
     const getVerticalPositionOffset = () => {
-        if (document) {
-            const contentHeaderBoundaries = document.getElementsByClassName('content-header-v3--wrapper')[0]?.getBoundingClientRect()
+        if (document && window) {
+            const contentHeaderBoundaries = document.getElementsByClassName('content-header-v3--cover-image')[0]?.getBoundingClientRect()
+            const viewportVerticalOffset = window.scrollY
 
             if (contentHeaderBoundaries) {
-                return Math.ceil(contentHeaderBoundaries.bottom)
+                const verticalPositionOffset = Math.ceil(contentHeaderBoundaries.bottom + viewportVerticalOffset) + 25
+
+                return verticalPositionOffset
             }
         }
     }
@@ -111,8 +113,10 @@ const ComicReader = (props: TProps) => {
     const [verticalPositionOffset, setVerticalPositionOffset] = useState<number | undefined>(getVerticalPositionOffset())
 
     useEffect(() => {
-        setVerticalPositionOffset(getVerticalPositionOffset())
-    }, [])
+        if (window) {
+            setVerticalPositionOffset(getVerticalPositionOffset())
+        }
+    }, [window])
 
     const onPageClick = (e: React.MouseEvent<HTMLElement>) => {
         if (document) {
@@ -207,81 +211,78 @@ const ComicReader = (props: TProps) => {
         return classNames
     }
 
-    if (!isLoaded) {
-        return null
-    } else
-        return (
-            <div className="comic-reader__wrapper" style={{ top: verticalPositionOffset || '1000px' }} {...swipeHandlers} ref={readerRef}>
-                <ComicReaderProgressBar
-                    closeReaderCallback={closeReaderCallback}
-                    readerRef={readerRef}
-                    percentLoadedState={percentLoadedState}
-                    percentLoadedCallback={setPercentLoadedState}
-                    title={title}
-                />
-                <div className={getReaderDropdownClasses()}>
-                    <Document
-                        onClick={e => onPageClick(e)}
-                        renderMode="canvas"
-                        className="comic-reader__document"
-                        file={pages}
-                        onLoadProgress={({ loaded, total }) => handleLoadProgress(loaded, total)}
-                        onLoadSuccess={onDocumentLoadSuccess}
-                    >
-                        {renderPages()}
-                    </Document>
-                    {totalPages && (
-                        <div className="comic-reader__navigation">
-                            <button
-                                className={getButtonClassNames(currentPage === 1)}
-                                type="button"
-                                disabled={currentPage === 1}
-                                onClick={() => setCurrentPage(1)}
+    return (
+        <div className="comic-reader__wrapper" style={{ top: verticalPositionOffset || '1000px' }} {...swipeHandlers} ref={readerRef}>
+            <ComicReaderProgressBar
+                closeReaderCallback={closeReaderCallback}
+                readerRef={readerRef}
+                percentLoadedState={percentLoadedState}
+                percentLoadedCallback={setPercentLoadedState}
+                title={title}
+            />
+            <div className={getReaderDropdownClasses()}>
+                <Document
+                    onClick={e => onPageClick(e)}
+                    renderMode="canvas"
+                    className="comic-reader__document"
+                    file={pages}
+                    onLoadProgress={({ loaded, total }) => handleLoadProgress(loaded, total)}
+                    onLoadSuccess={onDocumentLoadSuccess}
+                >
+                    {renderPages()}
+                </Document>
+                {totalPages && (
+                    <div className="comic-reader__navigation">
+                        <button
+                            className={getButtonClassNames(currentPage === 1)}
+                            type="button"
+                            disabled={currentPage === 1}
+                            onClick={() => setCurrentPage(1)}
+                        >
+                            {'<<'}
+                            {!isMobile && '\u00A0First'}
+                        </button>
+                        <button
+                            className={getButtonClassNames(!shouldLoop && currentPage <= 1)}
+                            type="button"
+                            disabled={!shouldLoop && currentPage <= 1}
+                            onClick={() => turnToPreviousPage()}
+                        >
+                            {'<'}
+                            {!isMobile && '\u00A0Previous'}
+                        </button>
+                        {!isMobile && (
+                            <select
+                                id="readerNavSelector"
+                                className="comic-reader__nav-selector"
+                                onChange={e => setCurrentPage(Number(e.target.value))}
                             >
-                                {'<<'}
-                                {!isMobile && '\u00A0First'}
-                            </button>
-                            <button
-                                className={getButtonClassNames(!shouldLoop && currentPage <= 1)}
-                                type="button"
-                                disabled={!shouldLoop && currentPage <= 1}
-                                onClick={() => turnToPreviousPage()}
-                            >
-                                {'<'}
-                                {!isMobile && '\u00A0Previous'}
-                            </button>
-                            {!isMobile && (
-                                <select
-                                    id="readerNavSelector"
-                                    className="comic-reader__nav-selector"
-                                    onChange={e => setCurrentPage(Number(e.target.value))}
-                                >
-                                    {renderPageSelectOptions()}
-                                </select>
-                            )}
-                            <button
-                                className={getButtonClassNames(!shouldLoop && currentPage >= totalPages)}
-                                type="button"
-                                disabled={!shouldLoop && currentPage >= totalPages}
-                                onClick={() => turnToNextPage()}
-                            >
-                                {!isMobile && 'Next\u00A0'}
-                                {'>'}
-                            </button>
-                            <button
-                                className={getButtonClassNames(currentPage === totalPages)}
-                                type="button"
-                                disabled={currentPage === totalPages}
-                                onClick={() => setCurrentPage(totalPages)}
-                            >
-                                {!isMobile && 'Last\u00A0'}
-                                {'>>'}
-                            </button>
-                        </div>
-                    )}
-                </div>
+                                {renderPageSelectOptions()}
+                            </select>
+                        )}
+                        <button
+                            className={getButtonClassNames(!shouldLoop && currentPage >= totalPages)}
+                            type="button"
+                            disabled={!shouldLoop && currentPage >= totalPages}
+                            onClick={() => turnToNextPage()}
+                        >
+                            {!isMobile && 'Next\u00A0'}
+                            {'>'}
+                        </button>
+                        <button
+                            className={getButtonClassNames(currentPage === totalPages)}
+                            type="button"
+                            disabled={currentPage === totalPages}
+                            onClick={() => setCurrentPage(totalPages)}
+                        >
+                            {!isMobile && 'Last\u00A0'}
+                            {'>>'}
+                        </button>
+                    </div>
+                )}
             </div>
-        )
+        </div>
+    )
 }
 
 export default ComicReader

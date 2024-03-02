@@ -13,12 +13,13 @@ const RedLight = () => {
     return (
         <main>
             <ContentHeader block={redLightHeader} isReaderLoaded={isReaderLoaded} openReaderCallback={setIsReaderLoaded} />
-            <ComicReader
-                closeReaderCallback={setIsReaderLoaded}
-                isLoaded={isReaderLoaded}
-                pages={comicPDFs.redLight}
-                title={redLightHeader.title ? redLightHeader.title : ''}
-            />
+            {isReaderLoaded &&
+                <ComicReader
+                    closeReaderCallback={setIsReaderLoaded}
+                    pages={comicPDFs.redLight}
+                    title={redLightHeader.title ? redLightHeader.title : ''}
+                />
+            }
         </main>
     )
 }

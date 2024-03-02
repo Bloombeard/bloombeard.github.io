@@ -13,12 +13,13 @@ const DesertBirds = () => {
     return (
         <main>
             <ContentHeader block={desertBirdsHeader} isReaderLoaded={isReaderLoaded} openReaderCallback={setIsReaderLoaded} />
-            <ComicReader
-                closeReaderCallback={setIsReaderLoaded}
-                isLoaded={isReaderLoaded}
-                pages={comicPDFs.desertBirds}
-                title={desertBirdsHeader.title ? desertBirdsHeader.title : ''}
-            />
+            {isReaderLoaded &&
+                <ComicReader
+                    closeReaderCallback={setIsReaderLoaded}
+                    pages={comicPDFs.desertBirds}
+                    title={desertBirdsHeader.title ? desertBirdsHeader.title : ''}
+                />
+            }
         </main>
     )
 }

@@ -37,7 +37,7 @@ main {
 
 a {
     color: $offWhite;
-    transition: color 300ms ease-out, transform 300ms ease-in-out, text-shadow 300ms ease-in-out;
+    transition: color 300ms ease-out, transform 300ms ease-in-out;
 
     &:hover {
         color: $tan;

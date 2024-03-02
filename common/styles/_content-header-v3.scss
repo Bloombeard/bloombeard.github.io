@@ -22,10 +22,6 @@
         .content-header-v3--cover-image {
             object-fit: contain;
             height: auto;
-
-            @media (min-width: $screen-sm-min) {
-                padding-bottom: 50px;
-            }
         }
     }
 

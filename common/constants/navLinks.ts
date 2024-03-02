@@ -91,7 +91,7 @@ export const externalDownloadLinks: TExternalLinks = {
     mallKing: [
         {
             label: 'Download',
-            target: 'https://payhip.com/b/2ZGV',
+            target: 'https://forreststorrs.itch.io/mall-king',
             isExternal: true,
         },
     ],
