@@ -6,6 +6,8 @@ import HamburgerIcon from "@/common/components/HamburgerIcon";
 import Links from '@/common/components/Links'
 import { navBarLinks } from '@/common/constants/navLinks'
 import { hamburgerColors } from "@/common/constants/hamburgerColors";
+import { usePathname } from 'next/navigation';
+
 
 interface TProps {
     isOpen: boolean
@@ -16,6 +18,8 @@ const SlidePanel = (props: TProps) => {
     const { isOpen, toggleCallback } = props
     const classNamesConstant = ['slide-panel', 'slide-panel--open']
     const [classNames, setClassNames] = useState(classNamesConstant[0])
+
+    const pathname = usePathname()
 
     useEffect(() => {
         const slidePanelElement = document.getElementById('slide-panel')

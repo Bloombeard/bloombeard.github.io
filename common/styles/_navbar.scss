@@ -10,6 +10,34 @@
   align-items: center;
   position: relative;
 
+  &.homepage {
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (min-width: $screen-sm-min) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .navbar--links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: 24px;
+      margin: 10% 0;
+      height: 50%;
+      justify-content: space-between;
+
+      @media (min-width: $screen-sm-min) {
+        flex-direction: row;
+        margin: inherit;
+        height: unset;
+        justify-content: center;
+      }
+    }
+  }
+
   @media (min-width: $screen-sm-min) {
     flex-direction: column;
   }
@@ -20,10 +48,11 @@
 
   .navbar--title__clickable {
     display: none;
-    
+
     a {
       text-decoration: none;
       text-underline-offset: auto;
+
       &:hover {
         text-underline-offset: auto;
       }
@@ -31,7 +60,7 @@
 
     @media (min-width: $screen-sm-min) {
       display: flex;
-      
+
       font-size: 40px;
       font-style: normal;
       font-weight: 700;
@@ -42,7 +71,7 @@
       line-height: 1em;
       margin: 2vw 3vw 0 3vw;
     }
-    
+
     @media (min-width: $screen-md-min) {
       letter-spacing: 15px;
       font-size: 106px;
@@ -59,7 +88,7 @@
     margin-top: 1%;
 
     @media (min-width: $screen-sm-min) {
-        display: none;
+      display: none;
     }
   }
 
@@ -75,8 +104,8 @@
     }
 
     @media (min-width: $screen-md-min) {
-        flex-direction: column;
-        font-size: 2em;
+      flex-direction: column;
+      font-size: 2em;
     }
 
     .navbar--link {
@@ -87,9 +116,9 @@
   .navbar--hamburger-button {
     padding: 0 5vw;
     // z-index: 10;
-    
+
     @media (min-width: $screen-sm-min) {
-        display: none;
+      display: none;
     }
   }
 

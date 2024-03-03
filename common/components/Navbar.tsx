@@ -13,15 +13,25 @@ import { hamburgerColors } from "@/common/constants/hamburgerColors";
 const Navbar = () => {
   const [isSlidePanelOpen, setIsSlidePanelOpen] = useState(false);
 
-  const pathName = usePathname()
+  const pathname = usePathname()
+
+  const getWrapperClassNames = () => {
+    let classNames = 'navbar'
+
+    if (pathname === '/') {
+      classNames += ' homepage'
+    }
+
+    return classNames
+  }
 
   return (
-    <div>
+    <div >
       <SlidePanel
         isOpen={isSlidePanelOpen}
         toggleCallback={() => setIsSlidePanelOpen(!isSlidePanelOpen)}
       />
-      <div className="navbar">
+      <div className={getWrapperClassNames()}>
         <div className="navbar--title__clickable">
           <Link href="/">Forrest Storrs</Link>
         </div>
@@ -31,12 +41,14 @@ const Navbar = () => {
           linkClass="navbar--link"
           links={navBarLinks}
         />
-        <button
-          className="navbar--hamburger-button"
-          onClick={() => setIsSlidePanelOpen(!isSlidePanelOpen)}
-        >
-          <HamburgerIcon colorFill={hamburgerColors.slidePanelClosed} />
-        </button>
+        {pathname !== '/' &&
+          <button
+            className="navbar--hamburger-button"
+            onClick={() => setIsSlidePanelOpen(!isSlidePanelOpen)}
+          >
+            <HamburgerIcon colorFill={hamburgerColors.slidePanelClosed} />
+          </button>
+        }
       </div>
     </div>
   );
