@@ -17,7 +17,6 @@ const Devyn = () => {
             {isReaderLoaded &&
                 <ComicReader
                     closeReaderCallback={setIsReaderLoaded}
-                    isLoaded={isReaderLoaded} d
                     pages={comicPDFs.devyn}
                     title={devynHeader.title ? devynHeader.title : ''}
                 />
