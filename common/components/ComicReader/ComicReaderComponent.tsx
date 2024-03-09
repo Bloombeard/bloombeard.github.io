@@ -99,7 +99,7 @@ const ComicReader = (props: TProps) => {
 
     const getVerticalPositionOffset = () => {
         if (document && window) {
-            const contentHeaderBoundaries = document.getElementsByClassName('content-header-v3--cover-image')[0]?.getBoundingClientRect()
+            const contentHeaderBoundaries = document.getElementsByClassName('content-header--wrapper')[0]?.getBoundingClientRect()
             const viewportVerticalOffset = window.scrollY
 
             if (contentHeaderBoundaries) {

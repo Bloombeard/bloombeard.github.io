@@ -1,7 +1,7 @@
 @import '_variables';
 
 /* content header styles */
-.content-header-v3--wrapper {
+.content-header--wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,24 +9,27 @@
     max-width: 396px;
     transition: transform 0.25s ease-in-out 0.25s;
 
-    @media (min-width: $screen-sm-min) {
-        position: absolute;
-        right: 40%;
+    @media (min-width: $screen-md-min) {
         flex-direction: row;
-        justify-content: center;
+        min-width: 75vw;
     }
 
-    .content-header-v3--cover-wrapper {
+    .content-header--cover-wrapper {
         max-height: 70vh;
+        position: relative;
 
-        .content-header-v3--cover-image {
+        @media (min-width: $screen-md-min) {
+            left: 5%; 
+        }
+
+        .content-header--cover-image {
             object-fit: contain;
             height: auto;
             margin-bottom: 75px;
         }
     }
 
-    .content-header-v3--description {
+    .content-header--description {
         display: flex;
         justify-content: center;
         align-items: flex-start;
@@ -47,25 +50,22 @@
             }
         }
 
-        @media (min-width: $screen-sm-min) {
-            position: absolute;
-            left: 60%;
-            box-shadow: #000 -5px 5px 10px;
-            margin-top: 0;
-            max-height: none;
-            width: 400px;
+        @media (min-width: $screen-md-min) {
+            z-index: 1;
+            position: relative;
+            right: 5%;
         }
 
-        .content-header-v3--description__links-wrapper {
+        .content-header--description__links-wrapper {
             display: flex;
             flex-direction: row;
 
-            .content-header-v3--description__link-wrapper {
+            .content-header--description__link-wrapper {
                 display: flex;
                 flex-direction: row;
             }
 
-            .content-header-v3--description__link {
+            .content-header--description__link {
                 display: flex;
                 flex-direction: row;
                 align-items: center;

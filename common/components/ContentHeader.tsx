@@ -24,25 +24,25 @@ const ContentHeader = (props: TProps) => {
     const { block, isReaderLoaded, openReaderCallback } = props
 
     return (
-        <div className={`${oswald.className} content-header-v3--wrapper`}>
-            <div className="content-header-v3--cover-wrapper">
-                <Image className="content-header-v3--cover-image" src={block.coverImage} alt={block.coverAltText} fill={false} />
+        <div className={`${oswald.className} content-header--wrapper`}>
+            <div className="content-header--cover-wrapper">
+                <Image className="content-header--cover-image" src={block.coverImage} alt={block.coverAltText} fill={false} />
             </div>
-            <div className="content-header-v3--description">
+            <div className="content-header--description">
                 {block.title && <h1>{block.title}</h1>}
                 {block.subtitle && <h2>{block.subtitle}</h2>}
                 {block.bodyText && <p>{parse(block.bodyText)}</p>}
                 {block.links && (
-                    <div className={`${imFell.className} content-header-v3--description__links-wrapper`}>
+                    <div className={`${imFell.className} content-header--description__links-wrapper`}>
                         {block.links.map((link, i) => {
                             return (
-                                <div className="content-header-v3--description__link-wrapper" key={link.label}>
+                                <div className="content-header--description__link-wrapper" key={link.label}>
                                     {openReaderCallback && !isReaderLoaded && (
-                                        <div onClick={() => openReaderCallback(true)} className="content-header-v3--description__link read-button">
+                                        <div onClick={() => openReaderCallback(true)} className="content-header--description__link read-button">
                                             Read
                                         </div>
                                     )}
-                                    <Link className="content-header-v3--description__link" href={link.target}>
+                                    <Link className="content-header--description__link" href={link.target}>
                                         {link.label}
                                     </Link>
                                 </div>
