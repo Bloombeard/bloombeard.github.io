@@ -8,16 +8,16 @@ import DevynCover from '@/public/assets/coverImages/DevynCover.jpeg'
 import ElixersCover from '@/public/assets/coverImages/ElixersCover.png'
 import FurnitureCover from '@/public/assets/coverImages/FurnitureCover.png'
 import GlittergymCover from '@/public/assets/coverImages/GlittergymCover.png'
-import Headshot from '@/public/assets/coverImages/Headshot.png'
+import Scapes from '@/public/assets/coverImages/Scapes.png'
 import MallKingCover from '@/public/assets/coverImages/MallKingCover.png'
 import RedLightCover from '@/public/assets/coverImages/RedLightCover.png'
 
 export const aboutHeader: TDescriptionBlock = {
     title: 'Forrest Storrs',
     subtitle: 'he / she / they',
-    bodyText: "Forrest Storrs is a queer, agendered writer living in Pittsburgh. They mostly write comics and short stories, and their work has appeared in a handful of magazines and literary journals under their legal name, Joshua Storrs. They are a pushcart nominee and a finalist for the Barry Hannah Prize. When they're not writing stories or making comics with their friends, they're probably playing tabletop RPGs or saying hello to other people’s dogs.",
+    bodyText: "Forrest Storrs is a queer, agendered writer living in Pittsburgh. When they're not writing stories or making comics with their friends, they're probably playing tabletop RPGs or saying hello to other people’s dogs.",
     links: aboutPageLinks,
-    coverImage: Headshot,
+    coverImage: Scapes,
     coverAltText: 'Guggenheim Grin',
 }
 

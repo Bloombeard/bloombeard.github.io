@@ -32,18 +32,19 @@ const ContentHeader = (props: TProps) => {
                     {block.bodyText && <p>{parse(block.bodyText)}</p>}
                     {block.links && (
                         <div className={`${imFell.className} content-header-v2--description__links-wrapper`}>
+                            {openReaderCallback && !isReaderLoaded && (
+                                <div
+                                    onClick={() => openReaderCallback(true)}
+                                    className="content-header-v2--description__link read-button"
+                                >
+                                    Read
+                                </div>
+                            )}
                             {block.links.map((link, i) => {
                                 return (
-                                    <div className="content-header-v2--description__link-wrapper" key={link.label}>
-                                        {openReaderCallback && !isReaderLoaded && (
-                                            <div onClick={() => openReaderCallback(true)} className="content-header-v2--description__link read-button">
-                                                Read
-                                            </div>
-                                        )}
-                                        <Link className="content-header-v2--description__link" href={link.target}>
-                                            {link.label}
-                                        </Link>
-                                    </div>
+                                    <Link className="content-header-v2--description__link" href={link.target} key={link.label}>
+                                        {link.label}
+                                    </Link>
                                 )
                             })}
                         </div>
@@ -53,7 +54,7 @@ const ContentHeader = (props: TProps) => {
             <div className="content-header-v2--cover-wrapper">
                 <Image className="content-header-v2--cover-image" src={block.coverImage} alt={block.coverAltText} fill={false} />
             </div>
-        </div >
+        </div>
     )
 }
 

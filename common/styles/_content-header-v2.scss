@@ -2,24 +2,32 @@
 
 .content-header-v2--wrapper {
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
 
-
-
+    @media (min-width: $screen-sm-min) {
+        flex-direction: row;
+    }
 
     .content-header-v2--cover-wrapper {
-
+        
         .content-header-v2--cover-image {
-
+            @media (min-width: $screen-md-min) {
+                max-width: 620px;
+            }
         }
     }
 
     .content-header-v2--description {
         background-color: $offWhite;
         padding: 10px;
-        margin-right: 20px;
-        width: 200px;
-        min-width: 200px;
+        margin-top: 20px;
+        
+        @media (min-width: $screen-sm-min) {
+            margin-top: 0;
+            margin-right: 20px;
+            width: 200px;
+            min-width: 200px;
+        }
 
         a {
             color: $charcoal;
@@ -32,18 +40,24 @@
 
         h1 {
             color: $charcoal;
-            text-orientation: mixed;
-            writing-mode: vertical-lr;
-            margin: 10px 0 20px 0;
+            
+            @media (min-width: $screen-sm-min) {
+                text-orientation: mixed;
+                writing-mode: vertical-lr;
+                margin: 10px 0 20px 0;
+            }
         }
 
         .content-header-v2--description__links-wrapper {
             display: flex;
-            flex-direction: column;
-
-            .content-header-v2--description__link-wrapper {
-                display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 10px;
+            
+            @media (min-width: $screen-sm-min) {
                 flex-direction: column;
+                justify-content: flex-start;
+                margin-top: 0;
             }
 
             .content-header-v2--description__link {
@@ -53,7 +67,7 @@
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 700;
-                padding: 4% 0;
+                padding: 8px 0;
                 cursor: pointer;
                 margin-right: 15px;
                 color: $charcoal;

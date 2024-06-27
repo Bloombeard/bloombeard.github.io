@@ -13,6 +13,9 @@ import RedLightCover from '@/public/assets/coverImages/RedLightCover.png'
 const _externalLinks = {
     blog: 'https://bloombeard.tumblr.com/',
     instagram: 'https://www.instagram.com/bloombeard/',
+    elixers: 'https://forreststorrs.itch.io/elixers',
+    audit: 'https://forreststorrs.itch.io/the-audit',
+    furniture: 'https://forreststorrs.itch.io/new-furniture',
 }
 
 export const comicLinks: TNavLinks = [
@@ -57,18 +60,18 @@ export const comicLinks: TNavLinks = [
 export const gameLinks: TNavLinks = [
     {
         label: "Madame Bassitor's Catalogue of Curious\xa0Elixers",
-        target: '/games/elixers',
+        target: _externalLinks.elixers,
         previewImage: ElixersCover,
     },
     {
         label: 'The Audit',
-        target: '/games/audit',
+        target: _externalLinks.audit,
         previewImage: AuditCover,
         previewAltText: 'The Audit',
     },
     {
         label: 'Your Living Room is Full of\xa0Furniture',
-        target: '/games/furniture',
+        target: _externalLinks.furniture,
         previewImage: FurnitureCover,
         previewAltText: 'Your Living Room is Full of Furniture',
     },
