@@ -24,11 +24,11 @@ main {
     }
 
     @media (min-width: $screen-sm-min) {
-        margin: 60px;
+        // margin: 60px;
     }
 
     @media (min-width: $screen-md-min) {
-        padding: 75px 150px;
+        // padding: 75px 150px;
     }
 }
 
@@ -68,5 +68,5 @@ p {
     font-style: normal;
     font-size: 16px;
     letter-spacing: 0.05em;
-    margin-bottom: 1.6em;
+    margin-bottom: 10px;
 }

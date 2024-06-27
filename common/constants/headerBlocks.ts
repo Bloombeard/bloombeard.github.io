@@ -22,7 +22,7 @@ export const aboutHeader: TDescriptionBlock = {
 }
 
 export const mallKingHeader: TDescriptionBlock = {
-    title: 'The Curse of the Mall\xa0King',
+    title: 'The Curse of\nthe Mall\xa0King',
     subtitle: '16 pages, black & white',
     bodyText: `Illustrated by <a href="https://www.shelbycriswell.com/">Shelby Criswell</a><br/> <br/>'A trio of traveling kids have to go beat up a mall king to stop an old lady's house from getting turned into a parking lot.`,
     links: externalDownloadLinks.mallKing,
