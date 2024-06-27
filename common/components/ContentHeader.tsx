@@ -24,32 +24,35 @@ const ContentHeader = (props: TProps) => {
     const { block, isReaderLoaded, openReaderCallback } = props
 
     return (
-        <div className={`${oswald.className} content-header--wrapper`}>
-            <div className="content-header--cover-wrapper">
-                <Image className="content-header--cover-image" src={block.coverImage} alt={block.coverAltText} fill={false} />
-            </div>
-            <div className="content-header--description">
+        <div className={`${oswald.className} content-header-v2--wrapper`}>
+            <div className="content-header-v2--description">
                 {block.title && <h1>{block.title}</h1>}
-                {block.subtitle && <h2>{block.subtitle}</h2>}
-                {block.bodyText && <p>{parse(block.bodyText)}</p>}
-                {block.links && (
-                    <div className={`${imFell.className} content-header--description__links-wrapper`}>
-                        {block.links.map((link, i) => {
-                            return (
-                                <div className="content-header--description__link-wrapper" key={link.label}>
-                                    {openReaderCallback && !isReaderLoaded && (
-                                        <div onClick={() => openReaderCallback(true)} className="content-header--description__link read-button">
-                                            Read
-                                        </div>
-                                    )}
-                                    <Link className="content-header--description__link" href={link.target}>
+                <div className="content-header-v2--description__details">
+                    {block.subtitle && <h2>{block.subtitle}</h2>}
+                    {block.bodyText && <p>{parse(block.bodyText)}</p>}
+                    {block.links && (
+                        <div className={`${imFell.className} content-header-v2--description__links-wrapper`}>
+                            {openReaderCallback && !isReaderLoaded && (
+                                <div
+                                    onClick={() => openReaderCallback(true)}
+                                    className="content-header-v2--description__link read-button"
+                                >
+                                    Read
+                                </div>
+                            )}
+                            {block.links.map((link, i) => {
+                                return (
+                                    <Link className="content-header-v2--description__link" href={link.target} key={link.label}>
                                         {link.label}
                                     </Link>
-                                </div>
-                            )
-                        })}
-                    </div>
-                )}
+                                )
+                            })}
+                        </div>
+                    )}
+                </div>
+            </div>
+            <div className="content-header-v2--cover-wrapper">
+                <Image className="content-header-v2--cover-image" src={block.coverImage} alt={block.coverAltText} fill={false} />
             </div>
         </div>
     )
