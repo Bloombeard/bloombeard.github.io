@@ -1,45 +1,33 @@
 @import '_variables';
 
-/* content header styles */
 .content-header--wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 396px;
-    transition: transform 0.25s ease-in-out 0.25s;
+    flex-direction: column-reverse;
 
-    @media (min-width: $screen-md-min) {
+    @media (min-width: $screen-sm-min) {
         flex-direction: row;
-        min-width: 75vw;
     }
 
     .content-header--cover-wrapper {
-        max-height: 70vh;
-        position: relative;
-
-        @media (min-width: $screen-md-min) {
-            left: 5%; 
-        }
-
+        
         .content-header--cover-image {
-            object-fit: contain;
-            height: auto;
-            margin-bottom: 75px;
+            @media (min-width: $screen-md-min) {
+                max-width: 620px;
+            }
         }
     }
 
     .content-header--description {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        color: #000;
         background-color: $offWhite;
-        padding: 25px;
-        flex-direction: column;
-        margin-top: -25px;
-        box-shadow: #000 0 -5px 15px;
-        min-width: 250px;
+        padding: 10px;
+        margin-top: 20px;
+        
+        @media (min-width: $screen-sm-min) {
+            margin-top: 0;
+            margin-right: 20px;
+            width: 200px;
+            min-width: 200px;
+        }
 
         a {
             color: $charcoal;
@@ -50,19 +38,26 @@
             }
         }
 
-        @media (min-width: $screen-md-min) {
-            z-index: 1;
-            position: relative;
-            right: 5%;
+        h1 {
+            color: $charcoal;
+            
+            @media (min-width: $screen-sm-min) {
+                text-orientation: mixed;
+                writing-mode: vertical-lr;
+                margin: 10px 0 20px 0;
+            }
         }
 
         .content-header--description__links-wrapper {
             display: flex;
             flex-direction: row;
-
-            .content-header--description__link-wrapper {
-                display: flex;
-                flex-direction: row;
+            justify-content: space-evenly;
+            margin-top: 10px;
+            
+            @media (min-width: $screen-sm-min) {
+                flex-direction: column;
+                justify-content: flex-start;
+                margin-top: 0;
             }
 
             .content-header--description__link {
@@ -72,7 +67,7 @@
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 700;
-                padding: 10%;
+                padding: 8px 0;
                 cursor: pointer;
                 margin-right: 15px;
                 color: $charcoal;
