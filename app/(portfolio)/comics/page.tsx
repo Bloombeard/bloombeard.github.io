@@ -1,6 +1,6 @@
 import React from "react";
-import { comicLinks } from '../../common/constants/navLinks'
-import Links from '../../common/components/Links'
+import { comicLinks } from '../../../common/constants/navLinks'
+import Links from '../../../common/components/Links'
 
 const Comics = () => {  
   return (

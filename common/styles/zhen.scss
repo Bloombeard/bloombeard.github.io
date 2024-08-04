@@ -1,0 +1,66 @@
+@import '_variables';
+
+body {
+    color: $charcoal;
+    background: linear-gradient(to top right, #E0FFEA, $offWhite);
+    background-attachment: fixed;
+}
+
+.poem-overlay {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: transparent;
+}
+
+.poem-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10%;
+    font-size: 14px;
+
+    @media(min-width: $screen-sm-min) {
+        font-size: 16px;
+    }
+
+    .poem-title {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .poem-stanza {
+        margin-bottom: 20px;
+    }
+
+    .poem-line {
+        display: flex;
+        user-select: none;
+        text-align: center;
+        opacity: 0;
+        transition: opacity .5s ease-in-out;
+
+        &.poem-line__visible {
+            display: flex;
+            justify-content: center;
+            opacity: 1;
+        }
+    }
+
+    .poem-click-prompt {
+        display: flex;
+        justify-content: center;
+        font-style: italic;
+        opacity: 70%;
+        user-select: none;
+        opacity: 1;
+        transition: opacity .2s ease-in-out;
+
+        &.poem-click-prompt__hidden {
+            opacity: 0;
+        }
+    }
+}
+
