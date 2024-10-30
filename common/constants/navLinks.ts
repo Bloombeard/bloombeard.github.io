@@ -10,6 +10,7 @@ import GlittergymCover from '@/public/assets/coverImages/GlittergymCover.png'
 import MallKingCover from '@/public/assets/coverImages/MallKingCover.png'
 import RedLightCover from '@/public/assets/coverImages/RedLightCover.png'
 import CampCover from '@/public/assets/coverImages/CampCover.png'
+import WhiskersCover from '@/public/assets/coverImages/WhiskersCover.png'
 
 const _externalLinks = {
     blog: 'https://bloombeard.tumblr.com/',
@@ -18,6 +19,7 @@ const _externalLinks = {
     audit: 'https://forreststorrs.itch.io/the-audit',
     furniture: 'https://forreststorrs.itch.io/new-furniture',
     camp: 'https://forreststorrs.itch.io/jesus-camp',
+    whiskers: 'https://forreststorrs.itch.io/mrs-whiskers',
 }
 
 export const comicLinks: TNavLinks = [
@@ -60,6 +62,11 @@ export const comicLinks: TNavLinks = [
 ]
 
 export const gameLinks: TNavLinks = [
+    {
+        label: "The Vile & Wicked Mrs. Whiskers",
+        target: _externalLinks.whiskers,
+        previewImage: WhiskersCover,
+    },
     {
         label: "Three Wishes at Jesus Camp",
         target: _externalLinks.camp,
