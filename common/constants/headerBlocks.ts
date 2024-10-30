@@ -11,6 +11,7 @@ import GlittergymCover from '@/public/assets/coverImages/GlittergymCover.png'
 import Scapes from '@/public/assets/coverImages/Scapes.png'
 import MallKingCover from '@/public/assets/coverImages/MallKingCover.png'
 import RedLightCover from '@/public/assets/coverImages/RedLightCover.png'
+import CampCover from '@/public/assets/coverImages/CampCover.png'
 
 export const aboutHeader: TDescriptionBlock = {
     title: 'Forrest Storrs',
@@ -100,4 +101,13 @@ export const auditHeader: TDescriptionBlock = {
     links: externalDownloadLinks.audit,
     coverImage: AuditCover,
     coverAltText: 'The Audit cover image',
+}
+
+export const campHeader: TDescriptionBlock = {
+    title: 'Three Wishes at Jesus Camp',
+    subtitle: "A one-shot RPG about getting exactly what you wish for",
+    bodyText: 'Welcome to Jesus Camp.\nYour parents sent you here. It’s a week away from anyone who knows you, but things have not gone well. Thankfully, you just met the groundskeeper.\nThe groundskeeper is the devil.\nThe devil gives you three wishes.\nThree Wishes at Jesus Camp is a game about getting exactly what you wish for. It was written by Forrest Storrs and Echo Reece. The PDF is designed to be printed on both sides of an 11"x17" (ledger) sheet of paper, then folded into a pamphlet.',
+    links: externalDownloadLinks.camp,
+    coverImage: CampCover,
+    coverAltText: 'Three Wishes at Jesus Camp cover image',
 }

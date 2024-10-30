@@ -9,6 +9,7 @@ import FurnitureCover from '@/public/assets/coverImages/FurnitureCover.png'
 import GlittergymCover from '@/public/assets/coverImages/GlittergymCover.png'
 import MallKingCover from '@/public/assets/coverImages/MallKingCover.png'
 import RedLightCover from '@/public/assets/coverImages/RedLightCover.png'
+import CampCover from '@/public/assets/coverImages/CampCover.png'
 
 const _externalLinks = {
     blog: 'https://bloombeard.tumblr.com/',
@@ -16,6 +17,7 @@ const _externalLinks = {
     elixers: 'https://forreststorrs.itch.io/elixers',
     audit: 'https://forreststorrs.itch.io/the-audit',
     furniture: 'https://forreststorrs.itch.io/new-furniture',
+    camp: 'https://forreststorrs.itch.io/jesus-camp',
 }
 
 export const comicLinks: TNavLinks = [
@@ -58,6 +60,11 @@ export const comicLinks: TNavLinks = [
 ]
 
 export const gameLinks: TNavLinks = [
+    {
+        label: "Three Wishes at Jesus Camp",
+        target: _externalLinks.camp,
+        previewImage: CampCover,
+    },
     {
         label: "Madame Bassitor's Catalogue of Curious\xa0Elixers",
         target: _externalLinks.elixers,
@@ -161,6 +168,13 @@ export const externalDownloadLinks: TExternalLinks = {
         {
             label: 'Download',
             target: 'https://forreststorrs.itch.io/new-furniture',
+            isExternal: true,
+        },
+    ],
+    camp: [
+        {
+            label: 'Download',
+            target: 'https://forreststorrs.itch.io/jesus-camp',
             isExternal: true,
         },
     ],

@@ -21,6 +21,7 @@ export type TExternalLinks = {
     elixers: TNavLinks,
     audit: TNavLinks,
     furniture: TNavLinks,
+    camp: TNavLinks,
 }
 
 export type TDescriptionBlock = {
