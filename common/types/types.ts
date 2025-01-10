@@ -62,3 +62,33 @@ export type TComicPDFs = {
     mallKing: string
     redLight: string
 }
+
+export type TCardSuits = {
+    clubs: string
+    diamonds: string
+    hearts: string
+    spades: string
+}
+
+export type TCardRanks = {
+    ace: string
+    two: string
+    three: string
+    four: string
+    five: string
+    six: string
+    seven: string
+    eight: string
+    nine: string
+    ten: string
+    jack: string
+    queen: string
+    king: string
+}
+
+export type TCardImages = {
+    clubs: TCardRanks
+    diamonds: TCardRanks
+    hearts: TCardRanks
+    spades: TCardRanks
+}
