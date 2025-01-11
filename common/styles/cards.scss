@@ -1,3 +1,43 @@
 .cards-wrapper {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5rem;
+    
+    .card-selects--wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+
+        .card-select--wrapper{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 80%;
+            
+            .card-select--label {
+                margin: 3px;
+            }
+            
+            .card-select--selector {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 3px;
+                width: 125px;
+                height: 3rem;
+            }
+
+            .card-select--option {
+            }
+        }
+    }
+
+    .card-submit {
+        margin: 10px;
+        width: 275px;
+        height: 3rem;
+    }
+
 }

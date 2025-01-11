@@ -85,10 +85,3 @@ export type TCardRanks = {
     queen: string
     king: string
 }
-
-export type TCardImages = {
-    clubs: TCardRanks
-    diamonds: TCardRanks
-    hearts: TCardRanks
-    spades: TCardRanks
-}
