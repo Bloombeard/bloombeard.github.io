@@ -85,3 +85,22 @@ export type TCardRanks = {
     queen: string
     king: string
 }
+
+export type TDevInfoBlockKeys = 'about' | 'skills' | 'experience' | 'contact' | 'none'
+
+export type TDevInfoBlock = {
+    [key in TDevInfoBlockKeys]: TDevInfoBlockContent
+}
+
+export type TDevInfoBlockContent = {
+    header?: string
+    sections?: TDevInfoBlockContentSection[]
+}
+
+export type TDevInfoBlockContentSection = {
+    preHeader?: string
+    subHeader?: string
+    sectionHeader?: string
+    bodyText?: string
+    bullets?: string[]
+}
