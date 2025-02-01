@@ -17,36 +17,76 @@ button {
     cursor: pointer;
 }
 
-.dev-header {
+.dev-header-and-buttons-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: center;
     width: 100%;
 
-    .dev-header__title {
-        font-size: 4rem;
-        font-weight: 900;
-        text-align: center;
+    @media (max-width: 450px) {
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: dotted 2px black;
     }
 
-    .dev-header__subtitle {
-        font-size: 1.5rem;
-        font-weight: 400;
+    .dev-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+
+        @media (max-width: 450px) {
+            align-items: flex-start;
+            padding-left: 1rem;
+        }
+
+        .dev-header__title {
+            font-size: 4em;
+            font-weight: 900;
+            text-align: center;
+
+            @media (max-width: 450px) {
+                text-align: left;
+                font-size: 3em;
+            }
+        }
+
+        .dev-header__subtitle {
+            font-size: 1.5em;
+            font-weight: 400;
+
+            @media (max-width: 450px) {
+                font-size: 1em;
+            }
+        }
+
     }
 
     .dev-header__buttons {
         display: flex;
         flex-direction: row;
         justify-content: center;
-        gap: 30px;
-        height: 3rem;
-        width: 100%;
-        margin: 30px 0 30px 0;
+        width: auto;
+        margin: 30px 0;
         background-color: black;
+
+        @media (max-width: 450px) {
+            background-color: whitesmoke;
+            gap: 30px;
+            flex-direction: column;
+            margin: 15px 0 0 0;
+        }
 
 
         .dev-header__button {
             color: whitesmoke;
+            height: auto;
+            padding: 15px 30px;
+
+            @media (max-width: 450px) {
+                background-color: black;
+                padding: 15px;
+            }
 
             &:hover {
                 background-color: whitesmoke;
@@ -63,14 +103,14 @@ button {
     width: 60%;
     border: solid 3px black;
     box-shadow: 6px 6px black;
-    // border-top: solid 3px black;
-    // border-right: solid 6px black;
-    // border-bottom: solid 6px black;
-    // border-left: solid 3px black;
     margin: 20px;
     padding: 25px 20px 30px 20px;
 
-    .dev-info-block--close-button {
+    @media (max-width: 450px) {
+        width: unset;
+    }
+
+    .dev-info-block__close-button {
         background-color: black;
         color: whitesmoke;
         position: relative;
@@ -78,7 +118,7 @@ button {
         margin-top: 5%;
     }
 
-    .dev-info-block--header {
+    .dev-info-block__header {
         font-size: 1.5em;
         font-weight: 600;
         width: 100%;
@@ -89,25 +129,25 @@ button {
     .dev-block-section {
         width: 100%;
 
-        .dev-block-section--pre-header {
+        .dev-block-section__pre-header {
             font-size: 0.9em;
         }
 
-        .dev-block-section--header {
+        .dev-block-section__header {
             font-size: 1.2em;
             font-weight: 600;
         }
 
-        .dev-block-section--sub-header {
+        .dev-block-section__sub-header {
             font-size: 0.9em;
         }
 
-        .dev-block-section--body-text {
+        .dev-block-section__body-text {
             padding-left: 40px;
             margin: 16px 0 32px 0;
         }
 
-        .dev-block-section--bullet-list {
+        .dev-block-section__bullet-list {
             margin: 16px 0 32px 0;
         }
     }
