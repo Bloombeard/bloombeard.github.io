@@ -6,6 +6,8 @@ import { TPublicationBlock } from '@/common/types/types'
 import { publications, nameChangeExplainer } from '@/common/constants/publications'
 
 const imFell = IM_Fell_English_SC({
+    adjustFontFallback: false,
+    display: 'swap',
     subsets: ['latin'],
     weight: '400',
 })

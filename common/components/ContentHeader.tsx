@@ -6,6 +6,8 @@ import parse from 'html-react-parser'
 import { TDescriptionBlock } from '../types/types'
 
 const imFell = IM_Fell_English_SC({
+    adjustFontFallback: false,
+    display: 'swap',
     subsets: ['latin'],
     weight: '400',
 })
