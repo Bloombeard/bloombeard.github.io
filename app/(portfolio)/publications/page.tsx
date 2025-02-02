@@ -14,6 +14,8 @@ const imFell = IM_Fell_English_SC({
 
 const oswald = Oswald({
     subsets: ['latin'],
+    adjustFontFallback: false,
+    display: 'swap',
 })
 
 const Publications = () => {

@@ -5,6 +5,8 @@ import { Oswald } from 'next/font/google'
 
 const oswald = Oswald({
     subsets: ['latin'],
+    adjustFontFallback: false,
+    display: 'swap',
 })
 
 interface TProps {
