@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Image, { StaticImageData } from 'next/image'
 import { cardRanks, cardSuits, cardImages } from '@/common/constants/cards'
+import faceLogo from '@/public/assets/cards/faceLogo.png'
 
 
 const CardsAppCardPicker = () => {
@@ -24,11 +25,24 @@ const CardsAppCardPicker = () => {
 
     return (
         <span className="cards-wrapper">
-            <Image
-                className="cards-card"
-                src={currentRank && currentSuit ? cardImages[`${currentSuit}${currentRank}`] : cardImages.cardBack}
-                alt={`${currentRank} of ${currentSuit}`}
-            />
+            <span className="cards-card--wrapper">
+                {currentRank && currentSuit ?
+                    <Image
+                        className="cards-card"
+                        src={cardImages[`${currentSuit}${currentRank}`]}
+                        alt={`${currentRank} of ${currentSuit}`}
+                    />
+                    :
+                    <span className="cards-blank">
+                        <Image
+                            className="cards-blank--logo"
+                            src={faceLogo}
+                            alt={'face logo'}
+                        />
+                        <span className="cards-blank--description">reveal a card from the deck, select its suit and rank below, and hit “draw”</span>
+                    </span>
+                }
+            </span>
             <span className="card-selects--wrapper">
                 <span className="card-select--wrapper">
                     <label className="card-select--label" htmlFor="suits">Suit</label>

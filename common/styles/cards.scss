@@ -50,6 +50,34 @@ main {
     flex-direction: column;
     align-items: center;
     margin: 5rem;
+    gap: 20px;
+
+    .cards-card--wrapper {
+        width: 350px;
+        height: 490px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+        .cards-blank {
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            padding: 150px 40px;
+            
+            .cards-blank--logo {
+                
+            }
+            
+            .cards-blank--description {
+                text-align: center;
+            }
+        }
+    }
     
     .card-selects--wrapper {
         display: flex;
