@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { Libre_Baskerville } from 'next/font/google'
+import { Averia_Serif_Libre } from 'next/font/google'
 
 import '@/common/styles/cards.scss'
 
-const baskerville = Libre_Baskerville({
+const averia = Averia_Serif_Libre({
   adjustFontFallback: false,
   display: 'swap',
   subsets: ['latin'],
@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={baskerville.className}>{children}</body>
+      <body className={averia.className}>{children}</body>
     </html>
   )
 }

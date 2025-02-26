@@ -52,6 +52,7 @@ import spades10 from '@/public/assets/cards/spades_10.png'
 import spadesJ from '@/public/assets/cards/spades_jack.png'
 import spadesQ from '@/public/assets/cards/spades_queen.png'
 import spadesK from '@/public/assets/cards/spades_king.png'
+import headerImage from '@/public/asses/cards/headerImage'
 import { StaticImageData } from 'next/image'
 
 
