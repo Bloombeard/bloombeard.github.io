@@ -84,6 +84,7 @@ export type TCardRanks = {
     jack: string
     queen: string
     king: string
+    joker: string
 }
 
 export type TDevInfoBlockKeys = 'about' | 'skills' | 'experience' | 'contact' | 'none'

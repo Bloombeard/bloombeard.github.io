@@ -16,6 +16,7 @@ const Cards = () => {
                 :
                 <CardsAppAbout />
             }
+            <span className="cards-app--copyright-footer">Created in 2025 by <a href="https://www.forreststorrs.com">Forrest Storrs</a> and <a href="https://www.illustratornate.com/">Nate Taylor</a></span>
         </main>
     )
 }

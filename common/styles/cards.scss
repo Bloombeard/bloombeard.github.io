@@ -1,7 +1,7 @@
 $cardsRed: #D22F00;
 
 body {
-    background-color:#E8DFE2;
+    background-color: #E8DFE2;
 }
 
 main {
@@ -11,16 +11,27 @@ main {
     font-size: 18px;
 }
 
+select {
+    background-color: transparent;
+    border: 4px solid black;
+    border-radius: 4%;
+    margin: 0;
+    height: 40px;
+    width: 150px;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    line-height: inherit;
+}
+
 .cards-app--header-wrapper {
     display: flex;
     justify-content: space-between;
-    padding: 24px 30px;
-    gap: 200px;
+    padding: 24px 0;
     align-items: flex-end;
+    width: 354px;
 
-    .cards-app--header-image {
-
-    }
+    .cards-app--header-image {}
 
     .cards-app--header-buttons {
         display: flex;
@@ -45,11 +56,23 @@ main {
     }
 }
 
+.cards-app--about-wrapper {
+    max-width: 354px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.cards-app--copyright-footer {
+    margin-top: 70px;
+    font-size: small;
+}
+
 .cards-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5rem;
+    margin: 67px 5rem;
     gap: 20px;
 
     .cards-card--wrapper {
@@ -59,7 +82,7 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
+
         .cards-blank {
             background-color: rgba(255, 255, 255, 1);
             border-radius: 20px;
@@ -68,52 +91,78 @@ main {
             align-items: center;
             gap: 10px;
             padding: 150px 40px;
-            
-            .cards-blank--logo {
-                
-            }
-            
+
+            .cards-blank--logo {}
+
             .cards-blank--description {
                 text-align: center;
             }
         }
     }
-    
+
     .card-selects--wrapper {
         display: flex;
         flex-direction: row;
         align-items: center;
-        justify-content: center;
-        gap: 25px;
+        justify-content: space-between;
+        width: 100%;
 
-        .card-select--wrapper{
+        .card-selects--conjunction {
+            padding: 0 30px;
+        }
+        .card-select--selector {
             display: flex;
-            flex-direction: column;
+            justify-content: center;
             align-items: center;
-            width: 80%;
+            padding: 0 10px;
+        }
+
+        .card--joker-select__wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            gap: 20px;
             
-            .card-select--label {
-                margin: 3px;
-            }
-            
-            .card-select--selector {
-                display: flex;
-                justify-content: center;
-                margin-bottom: 3px;
-                width: 125px;
+            .card--joker-select {
+                border: none;
+                color: white;
+                font: inherit;
+                cursor: pointer;
+                transition: color 200ms ease-out;
+                width: 100%;
                 height: 3rem;
-            }
+        
+                border-radius: 4px;
+                box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.2);
+                opacity: 1;
+                background-color: rgba(210, 47, 0, 1);
+                border:rgba(210, 47, 0, 1) 3px solid;
 
-            .card-select--option {
-
+                &.card--joker-select__disabled {
+                    border: black 3px solid;
+                }
             }
         }
+
+        .card-select--option {}
+
     }
 
     .card-submit {
+        border: none;
+        color: white;
+        font: inherit;
+        cursor: pointer;
+        transition: color 200ms ease-out;
         margin: 10px;
-        width: 275px;
+        width: 100%;
         height: 3rem;
+
+        border-radius: 4px;
+        box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.2);
+        opacity: 1;
+        background-color: rgba(210, 47, 0, 1);
     }
 
 }
