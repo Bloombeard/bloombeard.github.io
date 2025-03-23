@@ -142,7 +142,7 @@ const CardsAppCardPicker = () => {
                 }
 
             </span>
-            <button className="card-submit" onClick={onSubmit}>Submit</button>
+            {shouldShowSuitSelect && <button className="card-submit" onClick={onSubmit}>Submit</button>}
         </span>
     )
 }
