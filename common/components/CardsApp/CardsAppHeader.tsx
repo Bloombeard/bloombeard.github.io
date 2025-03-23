@@ -18,6 +18,7 @@ const CardsAppHeader = (props: TProps) => {
                 className="cards-app--header-image"
                 src={headerImage}
                 alt="A Road that Knows Your Name"
+                onClick={() => setIsPlayViewCallback(true)}
             />
             <span className="cards-app--header-buttons">
                 <button className={isPlayView ? "cards-app--header-button cards-app--header-button__selected" : "cards-app--header-button"} onClick={() => setIsPlayViewCallback(true)}>play</button>

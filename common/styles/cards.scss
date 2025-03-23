@@ -31,7 +31,9 @@ select {
     align-items: flex-end;
     width: 354px;
 
-    .cards-app--header-image {}
+    .cards-app--header-image {
+        cursor: pointer;
+    }
 
     .cards-app--header-buttons {
         display: flex;
