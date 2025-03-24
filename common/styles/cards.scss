@@ -6,8 +6,8 @@ body {
 
 main {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
     font-size: 18px;
 }
 
@@ -22,6 +22,28 @@ select {
     font-size: inherit;
     cursor: pointer;
     line-height: inherit;
+}
+
+.cards-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 60px;
+
+    @media (max-width: 786) {
+        margin: 0;
+    }
+}
+
+.cards-border {
+    height: 840px;
+    width: 110px;
+    mix-blend-mode: multiply;
+    opacity: 20%;
+
+    @media (max-width: 786px) {
+        display: none;
+    }
 }
 
 .cards-app--header-wrapper {
@@ -74,20 +96,25 @@ select {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 67px 5rem;
+    margin: 67px 0;
     gap: 20px;
 
     .cards-card--wrapper {
-        width: 350px;
-        height: 490px;
+        width: 362px;
+        height: 492px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        background-color: rgba(255, 255, 255, 1);
+        border-radius: 20px;
+
+        .cards-card {
+            width: 350px;
+            height: 480px;
+        }
 
         .cards-blank {
-            background-color: rgba(255, 255, 255, 1);
-            border-radius: 20px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -112,6 +139,7 @@ select {
         .card-selects--conjunction {
             padding: 0 30px;
         }
+
         .card-select--selector {
             display: flex;
             justify-content: center;
@@ -125,7 +153,7 @@ select {
             align-items: center;
             width: 100%;
             gap: 20px;
-            
+
             .card--joker-select {
                 border: none;
                 color: white;
@@ -134,12 +162,12 @@ select {
                 transition: color 200ms ease-out;
                 width: 100%;
                 height: 3rem;
-        
+
                 border-radius: 4px;
                 box-shadow: 0px 4px 0px rgba(0, 0, 0, 0.2);
                 opacity: 1;
                 background-color: rgba(210, 47, 0, 1);
-                border:rgba(210, 47, 0, 1) 3px solid;
+                border: rgba(210, 47, 0, 1) 3px solid;
 
                 &.card--joker-select__disabled {
                     border: black 3px solid;
