@@ -4,7 +4,7 @@ export const devInfoBlocks: TDevInfoBlock = {
     about: {
         header: 'About',
         sections: [{
-            bodyText: "Forrest is a highly motivated software engineer looking to expand beyond the front end, and seeking opportunities to make a grater impact with his work. In his off hours, Forrest can usually be found writing stories, baking, or saying hello to other people's dogs.",
+            bodyText: "Forrest is a highly motivated software engineer looking to expand beyond the front end, and seeking opportunities to make a greater impact with his work. In his off hours, Forrest can usually be found writing stories, baking, or saying hello to other people's dogs.",
         }],
     },
     skills: {
