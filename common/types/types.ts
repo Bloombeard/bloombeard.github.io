@@ -105,3 +105,9 @@ export type TDevInfoBlockContentSection = {
     bodyText?: string
     bullets?: string[]
 }
+
+export type TAslSign = {
+    label: string
+    link: string
+}
+export type TAslSigns = TAslSign[]

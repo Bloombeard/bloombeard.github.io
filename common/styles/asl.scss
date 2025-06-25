@@ -1,0 +1,82 @@
+$pale-blue: #e1f2fe;
+$baby-blue: #98d2eb;
+$lavender: #b2b1cf;
+$light-brown: #77625c;
+$dark-brown: #49392c;
+
+body {
+    margin: 0;
+    background-color: $baby-blue;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: $baby-blue;
+}
+
+.asl-sign--wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $pale-blue;
+    border: 5px solid $dark-brown;
+    border-radius: 10px;
+    width: 80vw;
+    height: 65vh;
+    margin: 50px;
+    padding: 20px;
+
+    .asl-sign--label {
+        font-size: 5rem;
+        padding: 50px;
+        text-shadow: 3px 3px 6px $lavender;
+    }
+
+}
+
+.asl-sign-buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+    .asl-sign--link {
+        background-color: $lavender;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        width: 100px;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+        &:hover {
+            box-shadow: 1px 1px 8px gray;
+            transform: scale(1.03);
+        }
+    }
+    
+    .asl-sign--randomize-button {
+        background-color: $pale-blue;
+        border: none;
+        font-size: 1.5rem;
+        padding: 10px 20px;
+        border-radius: 5px;
+        width: 200px;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
+        transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+
+        &:hover {
+            box-shadow: 1px 1px 8px gray;
+            transform: scale(1.03);
+        }
+    }
+}
