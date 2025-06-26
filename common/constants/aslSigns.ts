@@ -253,4 +253,128 @@ export const aslSigns: TAslSign[] = [
         label: "I love signing ASL",
         link: "https://www.youtube.com/watch?v=gXtdsO_6RQY&t=418s",
     },
+    {
+        label: "Bathroom",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=59s",
+    },
+    {
+        label: "Buy",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=69s",
+    },
+    {
+        label: "Car",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=79s",
+    },
+    {
+        label: "Clean",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=86s",
+    },
+    {
+        label: "Home",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=93s",
+    },
+    {
+        label: "House",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=103s",
+    },
+    {
+        label: "Kitchen",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=112s",
+    },
+    {
+        label: "Living room",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=130s",
+    },
+    {
+        label: "Room",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=144s",
+    },
+    {
+        label: "Telephone",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=153s",
+    },
+    {
+        label: "Text",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=161s",
+    },
+    {
+        label: "Walk",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=167s",
+    },
+    {
+        label: "Bread",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=190s",
+    },
+    {
+        label: "Candy",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=198s",
+    },
+    {
+        label: "Cheese",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=207s",
+    },
+    {
+        label: "Cook",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=215s",
+    },
+    {
+        label: "Cookies",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=223s",
+    },
+    {
+        label: "Drink",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=231s",
+    },
+    {
+        label: "Eat",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=238s",
+    },
+    {
+        label: "Food",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=238s",
+    },
+    {
+        label: "Hamburger",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=253s",
+    },
+    {
+        label: "Ice cream",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=260s",
+    },
+    {
+        label: "Milk",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=267s",
+    },
+    {
+        label: "Sandwich",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=260s",
+    },
+    {
+        label: "Soda, Pop, or Coke",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=282s",
+    },
+    {
+        label: "Water",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=295s",
+    },
+    {
+        label: "Hungry",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=304s",
+    },
+    {
+        label: "The house cleaning is done",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=313s",
+    },
+    {
+        label: "Do you want some milk and cookies?",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=326s",
+    },
+    {
+        label: "I like sprite",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=347s",
+    },
+    {
+        label: "I'm done with my hamburger. Now I want some ice cream",
+        link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=373s",
+    },
 ]
