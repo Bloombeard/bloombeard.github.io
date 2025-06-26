@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { Libre_Baskerville } from 'next/font/google'
+import { Roboto } from 'next/font/google'
 
 import '@/common/styles/asl.scss'
 
-const baskerville = Libre_Baskerville({
+const roboto = Roboto({
   adjustFontFallback: false,
   display: 'swap',
   subsets: ['latin'],
@@ -23,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={baskerville.className}>{children}</body>
+      <body className={roboto.className}>{children}</body>
     </html>
   )
 }
