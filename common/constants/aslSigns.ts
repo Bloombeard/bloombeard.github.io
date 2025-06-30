@@ -377,4 +377,232 @@ export const aslSigns: TAslSign[] = [
         label: "I'M DONE WITH MY HAMBURGER. NOW I WANT SOME ICE CREAM",
         link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=373s",
     },
+    {
+        label: "Sign",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=72s",
+    },
+    {
+        label: "Book",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=81s",
+    },
+    {
+        label: "Paper",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=88s",
+    },
+    {
+        label: "Draw",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=96s",
+    },
+    {
+        label: "Write",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=105s",
+    },
+    {
+        label: "Sentence",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=114s",
+    },
+    {
+        label: "Know",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=124s",
+    },
+    {
+        label: "Learn",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=139s",
+    },
+    {
+        label: "Study",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=147s",
+    },
+    {
+        label: "Student",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=157s",
+    },
+    {
+        label: "Teacher",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=165s",
+    },
+    {
+        label: "Class",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=177s",
+    },
+    {
+        label: "Play",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=185s",
+    },
+    {
+        label: "Bus",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=193s",
+    },
+    {
+        label: "Black",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=211s",
+    },
+    {
+        label: "Blue",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=220s",
+    },
+    {
+        label: "Brown",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=228s",
+    },
+    {
+        label: "Green",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=236s",
+    },
+    {
+        label: "Grey",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=244s",
+    },
+    {
+        label: "Orange",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=252s",
+    },
+    {
+        label: "Pink",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=261s",
+    },
+    {
+        label: "Purple",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=269s",
+    },
+    {
+        label: "Red",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=277s",
+    },
+    {
+        label: "White",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=285s",
+    },
+    {
+        label: "Yellow",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=293s",
+    },
+    {
+        label: "Violet",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=300s",
+    },
+    {
+        label: "I'm learning ASL",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=320s",
+    },
+    {
+        label: "Can you give me the red book please?",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=339s",
+    },
+    {
+        label: "My favorite color is teal",
+        link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=363s",
+    },
+    {
+        label: "For For",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=73s",
+    },
+    {
+        label: "Who",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=85s",
+    },
+    {
+        label: "What",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=95s",
+    },
+    {
+        label: "When",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=103s",
+    },
+    {
+        label: "Where",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=112s",
+    },
+    {
+        label: "Why",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=123s",
+    },
+    {
+        label: "Which",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=134s",
+    },
+    {
+        label: "How",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=144s",
+    },
+    {
+        label: "How much",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=157s",
+    },
+    {
+        label: "Again or Repeat",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=182s",
+    },
+    {
+        label: "Always",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=191s",
+    },
+    {
+        label: "Never",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=198s",
+    },
+    {
+        label: "Noon",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=208s",
+    },
+    {
+        label: "Time",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=216s",
+    },
+    {
+        label: "Minutes or Minute",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=223s",
+    },
+    {
+        label: "Hour",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=233s",
+    },
+    {
+        label: "Past",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=245s",
+    },
+    {
+        label: "Future",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=256s",
+    },
+    {
+        label: "Day",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=265s",
+    },
+    {
+        label: "Week",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=276s",
+    },
+    {
+        label: "Month",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=285s",
+    },
+    {
+        label: "Year",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=295s",
+    },
+    {
+        label: "What time is it?",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=310s",
+    },
+    {
+        label: "It's three fifteen",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=322s",
+    },
+    {
+        label: "See you next week",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=333s",
+    },
+    {
+        label: "How much time do you need?",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=344s",
+    },
+    {
+        label: "When will you be home?",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=358s",
+    },
+    {
+        label: "I'll be home at nine o'clock",
+        link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=374s",
+    },
 ]
