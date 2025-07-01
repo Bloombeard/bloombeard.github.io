@@ -605,4 +605,141 @@ export const aslSigns: TAslSign[] = [
         label: "I'll be home at nine o'clock",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=374s",
     },
+    {
+        label: "Aunt",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=65s",
+    },
+    {
+        label: "Baby",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=72s",
+    },
+    {
+        label: "Boyfriend",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=80s",
+    },
+    {
+        label: "Brother",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=90s",
+    },
+    {
+        label: "Cat",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=99s",
+    },
+    {
+        label: "Children",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=106s",
+    },
+    {
+        label: "Dating",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=113s",
+    },
+    {
+        label: "Divorced",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=122s",
+    },
+    {
+        label: "Dog",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=130s",
+    },
+    {
+        label: "Family",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=139s",
+    },
+    {
+        label: "Father/Dad",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=148s",
+    },
+    {
+        label: "Girlfriend",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=158s",
+    },
+    {
+        label: "Grandfather",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=167s",
+    },
+    {
+        label: "Grandmother",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=175s",
+    },
+    {
+        label: "Husband",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=183s",
+    },
+    {
+        label: "Mother/Mom",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=192s",
+    },
+    {
+        label: "Nephew",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=199s",
+    },
+    {
+        label: "Niece",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=208s",
+    },
+    {
+        label: "Sister",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=216s",
+    },
+    {
+        label: "Uncle",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=225s",
+    },
+    {
+        label: "Wife",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=234s",
+    },
+    {
+        label: "Spell again",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=256s",
+    },
+    {
+        label: "Understand",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=268s",
+    },
+    {
+        label: "Don't understand",
+        link: "hhttps://www.youtube.com/watch?v=S4phzFQKzAc&t=276s",
+    },
+    {
+        label: "No, I don't understand",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=286s",
+    },
+    {
+        label: "Please sign again",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=302s",
+    },
+    {
+        label: "Sign slow please",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=321s",
+    },
+    {
+        label: "Sorry, don't understand",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=337s",
+    },
+    {
+        label: "Yes",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=355s",
+    },
+    {
+        label: "In my family is my husband, my daughter, and my son",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=370s",
+    },
+    {
+        label: "My dog's name is Bennet",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=403s",
+    },
+    {
+        label: "What is your grandma's name?",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=420s",
+    },
+    {
+        label: "Please sign that again",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=439s",
+    },
+    {
+        label: "Yes, I understand",
+        link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=450s",
+    },
+
 ]
