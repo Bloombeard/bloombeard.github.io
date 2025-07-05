@@ -23,7 +23,7 @@ export const aslSigns: TAslSign[] = [
     },
     {
         label: "HELP",
-        link: "https://www.youtube.com/watch?v=4Ll3OtqAzyw&list=PLMN7QCuj6dfaUwmtdKhINGZzyGwp7Q1&index=2&t=128s",
+        link: "https://www.youtube.com/watch?v=4Ll3OtqAzyw&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=2&t=128s",
     },
     {
         label: "HOW ARE YOU?",
@@ -378,367 +378,367 @@ export const aslSigns: TAslSign[] = [
         link: "https://www.youtube.com/watch?v=4QOuEOi_KsY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=4&t=373s",
     },
     {
-        label: "Sign",
+        label: "SIGN",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=72s",
     },
     {
-        label: "Book",
+        label: "BOOK",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=81s",
     },
     {
-        label: "Paper",
+        label: "PAPER",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=88s",
     },
     {
-        label: "Draw",
+        label: "DRAW",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=96s",
     },
     {
-        label: "Write",
+        label: "WRITE",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=105s",
     },
     {
-        label: "Sentence",
+        label: "SENTENCE",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=114s",
     },
     {
-        label: "Know",
+        label: "KNOW",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=124s",
     },
     {
-        label: "Learn",
+        label: "LEARN",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=139s",
     },
     {
-        label: "Study",
+        label: "STUDY",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=147s",
     },
     {
-        label: "Student",
+        label: "STUDENT",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=157s",
     },
     {
-        label: "Teacher",
+        label: "TEACHER",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=165s",
     },
     {
-        label: "Class",
+        label: "CLASS",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=177s",
     },
     {
-        label: "Play",
+        label: "PLAY",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=185s",
     },
     {
-        label: "Bus",
+        label: "BUS",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=193s",
     },
     {
-        label: "Black",
+        label: "BLACK",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=211s",
     },
     {
-        label: "Blue",
+        label: "BLUE",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=220s",
     },
     {
-        label: "Brown",
+        label: "BROWN",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=228s",
     },
     {
-        label: "Green",
+        label: "GREEN",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=236s",
     },
     {
-        label: "Grey",
+        label: "GREY",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=244s",
     },
     {
-        label: "Orange",
+        label: "ORANGE",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=252s",
     },
     {
-        label: "Pink",
+        label: "PINK",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=261s",
     },
     {
-        label: "Purple",
+        label: "PURPLE",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=269s",
     },
     {
-        label: "Red",
+        label: "RED",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=277s",
     },
     {
-        label: "White",
+        label: "WHITE",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=285s",
     },
     {
-        label: "Yellow",
+        label: "YELLOW",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=293s",
     },
     {
-        label: "Violet",
+        label: "VIOLET",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=300s",
     },
     {
-        label: "I'm learning ASL",
+        label: "I'M LEARNING ASL",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=320s",
     },
     {
-        label: "Can you give me the red book please?",
+        label: "CAN YOU GIVE ME THE RED BOOK PLEASE?",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=339s",
     },
     {
-        label: "My favorite color is teal",
+        label: "MY FAVORITE COLOR IS TEAL",
         link: "https://www.youtube.com/watch?v=J5H_HDSipbY&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=5&t=363s",
     },
     {
-        label: "For For",
+        label: "FOR FOR",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=73s",
     },
     {
-        label: "Who",
+        label: "WHO",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=85s",
     },
     {
-        label: "What",
+        label: "WHAT",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=95s",
     },
     {
-        label: "When",
+        label: "WHEN",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=103s",
     },
     {
-        label: "Where",
+        label: "WHERE",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=112s",
     },
     {
-        label: "Why",
+        label: "WHY",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=123s",
     },
     {
-        label: "Which",
+        label: "WHICH",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=134s",
     },
     {
-        label: "How",
+        label: "HOW",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=144s",
     },
     {
-        label: "How much",
+        label: "HOW MUCH",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=157s",
     },
     {
-        label: "Again or Repeat",
+        label: "AGAIN OR REPEAT",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=182s",
     },
     {
-        label: "Always",
+        label: "ALWAYS",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=191s",
     },
     {
-        label: "Never",
+        label: "NEVER",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=198s",
     },
     {
-        label: "Noon",
+        label: "NOON",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=208s",
     },
     {
-        label: "Time",
+        label: "TIME",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=216s",
     },
     {
-        label: "Minutes or Minute",
+        label: "MINUTES OR MINUTE",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=223s",
     },
     {
-        label: "Hour",
+        label: "HOUR",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=233s",
     },
     {
-        label: "Past",
+        label: "PAST",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=245s",
     },
     {
-        label: "Future",
+        label: "FUTURE",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=256s",
     },
     {
-        label: "Day",
+        label: "DAY",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=265s",
     },
     {
-        label: "Week",
+        label: "WEEK",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=276s",
     },
     {
-        label: "Month",
+        label: "MONTH",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=285s",
     },
     {
-        label: "Year",
+        label: "YEAR",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=295s",
     },
     {
-        label: "What time is it?",
+        label: "WHAT TIME IS IT?",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=310s",
     },
     {
-        label: "It's three fifteen",
+        label: "IT'S THREE FIFTEEN",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=322s",
     },
     {
-        label: "See you next week",
+        label: "SEE YOU NEXT WEEK",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=333s",
     },
     {
-        label: "How much time do you need?",
+        label: "HOW MUCH TIME DO YOU NEED?",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=344s",
     },
     {
-        label: "When will you be home?",
+        label: "WHEN WILL YOU BE HOME?",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=358s",
     },
     {
-        label: "I'll be home at nine o'clock",
+        label: "I'LL BE HOME AT NINE O'CLOCK",
         link: "https://www.youtube.com/watch?v=mgLolQA1AZI&list=PLMN7QCuj6dfaUwmtdkdKhINGZzyGwp7Q1&index=6&t=374s",
     },
     {
-        label: "Aunt",
+        label: "AUNT",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=65s",
     },
     {
-        label: "Baby",
+        label: "BABY",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=72s",
     },
     {
-        label: "Boyfriend",
+        label: "BOYFRIEND",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=80s",
     },
     {
-        label: "Brother",
+        label: "BROTHER",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=90s",
     },
     {
-        label: "Cat",
+        label: "CAT",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=99s",
     },
     {
-        label: "Children",
+        label: "CHILDREN",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=106s",
     },
     {
-        label: "Dating",
+        label: "DATING",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=113s",
     },
     {
-        label: "Divorced",
+        label: "DIVORCED",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=122s",
     },
     {
-        label: "Dog",
+        label: "DOG",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=130s",
     },
     {
-        label: "Family",
+        label: "FAMILY",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=139s",
     },
     {
-        label: "Father/Dad",
+        label: "FATHER/DAD",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=148s",
     },
     {
-        label: "Girlfriend",
+        label: "GIRLFRIEND",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=158s",
     },
     {
-        label: "Grandfather",
+        label: "GRANDFATHER",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=167s",
     },
     {
-        label: "Grandmother",
+        label: "GRANDMOTHER",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=175s",
     },
     {
-        label: "Husband",
+        label: "HUSBAND",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=183s",
     },
     {
-        label: "Mother/Mom",
+        label: "MOTHER/MOM",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=192s",
     },
     {
-        label: "Nephew",
+        label: "NEPHEW",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=199s",
     },
     {
-        label: "Niece",
+        label: "NIECE",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=208s",
     },
     {
-        label: "Sister",
+        label: "SISTER",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=216s",
     },
     {
-        label: "Uncle",
+        label: "UNCLE",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=225s",
     },
     {
-        label: "Wife",
+        label: "WIFE",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=234s",
     },
     {
-        label: "Spell again",
+        label: "SPELL AGAIN",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=256s",
     },
     {
-        label: "Understand",
+        label: "UNDERSTAND",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=268s",
     },
     {
-        label: "Don't understand",
+        label: "DON'T UNDERSTAND",
         link: "hhttps://www.youtube.com/watch?v=S4phzFQKzAc&t=276s",
     },
     {
-        label: "No, I don't understand",
+        label: "NO, I DON'T UNDERSTAND",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=286s",
     },
     {
-        label: "Please sign again",
+        label: "PLEASE SIGN AGAIN",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=302s",
     },
     {
-        label: "Sign slow please",
+        label: "SIGN SLOW PLEASE",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=321s",
     },
     {
-        label: "Sorry, don't understand",
+        label: "SORRY, DON'T UNDERSTAND",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=337s",
     },
     {
-        label: "Yes",
+        label: "YES",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=355s",
     },
     {
-        label: "In my family is my husband, my daughter, and my son",
+        label: "IN MY FAMILY IS MY HUSBAND, MY DAUGHTER, AND MY SON",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=370s",
     },
     {
-        label: "My dog's name is Bennet",
+        label: "MY DOG'S NAME IS BENNETT",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=403s",
     },
     {
-        label: "What is your grandma's name?",
+        label: "WHAT IS YOUR GRANDMA'S NAME?",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=420s",
     },
     {
-        label: "Please sign that again",
+        label: "PLEASE SIGN THAT AGAIN",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=439s",
     },
     {
-        label: "Yes, I understand",
+        label: "YES, I UNDERSTAND",
         link: "https://www.youtube.com/watch?v=S4phzFQKzAc&t=450s",
     },
 

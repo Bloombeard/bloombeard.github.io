@@ -13,6 +13,10 @@ const Asl = () => {
         setCurrentSign(aslSigns[randomIndex])
     }
 
+    // TODO: Add a session tracker so you don't get sent the same sign twice
+
+    // TODO: Add a back button so you can go back to the previous sign (use tracker array)
+
     return (
         <main>
             {currentSign &&
