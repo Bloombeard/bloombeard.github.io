@@ -71,7 +71,7 @@ const Publications = () => {
     return (
         <main className={oswald.className}>
             <div className="publications__wrapper">
-                <div className={`${imFell.className} publications__header`}>
+                <div className={'publications__header'}>
                     Forrest changed their name in 2020. Earlier publications appear under their old name,
                     &lsquo;Joshua&nbsp;Storrs.&rsquo;
                 </div>

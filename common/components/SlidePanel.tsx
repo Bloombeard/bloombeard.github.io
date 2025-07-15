@@ -5,7 +5,6 @@ import React, { useEffect, useState } from 'react'
 import HamburgerIcon from "@/common/components/HamburgerIcon";
 import Links from '@/common/components/Links'
 import { navBarLinks } from '@/common/constants/navLinks'
-import { hamburgerColors } from "@/common/constants/hamburgerColors";
 import { usePathname } from 'next/navigation';
 
 
@@ -48,7 +47,7 @@ const SlidePanel = (props: TProps) => {
                 toggleCallback={toggleCallback}
             />
             <button className="slide-panel--hamburger-button" onClick={() => toggleCallback()}>
-                <HamburgerIcon colorFill={hamburgerColors.slidePanelOpen} />
+                <HamburgerIcon colorFill='#222222' />
             </button>
         </div>
     )

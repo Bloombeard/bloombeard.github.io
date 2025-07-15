@@ -3,8 +3,7 @@
 /* base styles */
 
 body {
-    color: $offWhite;
-    background: linear-gradient(to top right, $charcoal, $fadedGreen);
+    color: $charcoal;
     background-attachment: fixed;
 }
 
@@ -24,25 +23,25 @@ main {
     }
 
     @media (min-width: $screen-sm-min) {
-        // margin: 60px;
+        padding: 50px 100px;
     }
 
     @media (min-width: $screen-md-min) {
-        // padding: 75px 150px;
+        padding: 75px 150px;
     }
 }
 
 a {
-    color: $offWhite;
+    color: $charcoal;
     transition: color 300ms ease-out, transform 300ms ease-in-out;
 
     &:hover {
-        color: $tan;
+        color: $orange;
         transform: translateY(-2px);
     }
 
     .current {
-        color: $red;
+        color: $fadedGreen;
         cursor: default;
     }
 }

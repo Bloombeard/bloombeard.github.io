@@ -55,54 +55,54 @@
                 transition: color 300ms ease-out;
 
                 &:hover {
-                    color: $red;
+                    color: $orange;
                 }
             }
         }
 
         &.comic-reader__progress--10percent {
             transform: translateX(-90%);
-            background: linear-gradient(to left, rgba(0, 0, 0, 0), $tan 15%);
+            background: linear-gradient(to left, rgba(0, 0, 0, 0), $orange 15%);
         }
 
         &.comic-reader__progress--20percent {
             transform: translateX(-80%);
-            background: linear-gradient(to left, rgba(0, 0, 0, 0), $tan 15%);
+            background: linear-gradient(to left, rgba(0, 0, 0, 0), $orange 15%);
         }
 
         &.comic-reader__progress--30percent {
             transform: translateX(-70%);
-            background: linear-gradient(to left, rgba(0, 0, 0, 0), $tan 15%);
+            background: linear-gradient(to left, rgba(0, 0, 0, 0), $orange 15%);
         }
 
         &.comic-reader__progress--40percent {
             transform: translateX(-60%);
-            background: linear-gradient(to left, rgba(0, 0, 0, 0), $tan 15%);
+            background: linear-gradient(to left, rgba(0, 0, 0, 0), $orange 15%);
         }
 
         &.comic-reader__progress--50percent {
             transform: translateX(-50%);
-            background: linear-gradient(to left, rgba(0, 0, 0, 0), $tan 15%);
+            background: linear-gradient(to left, rgba(0, 0, 0, 0), $orange 15%);
         }
 
         &.comic-reader__progress--60percent {
             transform: translateX(-40%);
-            background: linear-gradient(to left, rgba(0, 0, 0, 0), $tan 15%);
+            background: linear-gradient(to left, rgba(0, 0, 0, 0), $orange 15%);
         }
 
         &.comic-reader__progress--70percent {
             transform: translateX(-30%);
-            background: linear-gradient(to left, rgba(0, 0, 0, 0), $tan 15%);
+            background: linear-gradient(to left, rgba(0, 0, 0, 0), $orange 15%);
         }
 
         &.comic-reader__progress--80percent {
             transform: translateX(-20%);
-            background: linear-gradient(to left, rgba(0, 0, 0, 0), $tan 15%);
+            background: linear-gradient(to left, rgba(0, 0, 0, 0), $orange 15%);
         }
 
         &.comic-reader__progress--90percent {
             transform: translateX(-10%);
-            background: linear-gradient(to left, rgba(0, 0, 0, 0), $tan 15%);
+            background: linear-gradient(to left, rgba(0, 0, 0, 0), $orange 15%);
         }
 
         &.comic-reader__progress--100percent {
@@ -164,12 +164,12 @@
             .comic-reader__nav-button {
                 padding: 0 2vw;
                 height: 45px;
-                color: $offWhite;
+                color: $charcoal;
                 transition: color 300ms ease-out, transform 300ms ease-in-out;
 
 
                 &:hover {
-                    color: $tan;
+                    color: $orange;
                     transform: translateY(-2px);
                 }
 
@@ -188,9 +188,9 @@
                 padding: 0 2vw;
                 margin: 0 1vw;
                 height: 45px;
-                color: $offWhite;
+                color: $charcoal;
                 background-color: rgba(0, 0, 0, 0);
-                border: solid 1px $offWhite;
+                border: solid 1px $charcoal;
                 border-radius: 2px;
                 transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
 

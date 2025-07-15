@@ -2,13 +2,14 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from 'next/image'
 import { usePathname } from "next/navigation";
 
 import Links from "@/common/components/Links";
 import SlidePanel from "@/common/components/SlidePanel";
 import HamburgerIcon from "@/common/components/HamburgerIcon";
+import rat from '@/public/assets/RatCropped.png'
 import { navBarLinks } from "@/common/constants/navLinks";
-import { hamburgerColors } from "@/common/constants/hamburgerColors";
 
 const Navbar = () => {
   const [isSlidePanelOpen, setIsSlidePanelOpen] = useState(false);
@@ -32,6 +33,7 @@ const Navbar = () => {
         toggleCallback={() => setIsSlidePanelOpen(!isSlidePanelOpen)}
       />
       <div className={getWrapperClassNames()}>
+        <Image className="navbar--rat" src={rat} alt="rat logo" />
         <div className="navbar--title__clickable">
           <Link href="/">Forrest Storrs</Link>
         </div>
@@ -46,7 +48,7 @@ const Navbar = () => {
             className="navbar--hamburger-button"
             onClick={() => setIsSlidePanelOpen(!isSlidePanelOpen)}
           >
-            <HamburgerIcon colorFill={hamburgerColors.slidePanelClosed} />
+            <HamburgerIcon colorFill="#222222" />
           </button>
         }
       </div>

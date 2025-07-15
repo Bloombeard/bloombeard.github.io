@@ -3,7 +3,6 @@
 .publications__wrapper {
     display: flex;
     flex-direction: column;
-    text-shadow: rgba(27, 27, 27, 0.3) 0 2px 15px;
 
     .publications__header {
         display: flex;
@@ -12,21 +11,18 @@
         justify-content: center;
         text-align: center;
         letter-spacing: 0.02em;
-        border: solid $offWhite 1px;
+        border: solid $charcoal 1px;
         border-radius: 2px;
         padding: 5px;
     }
 
     a {
-        color: $offWhite;
-        transition: text-shadow 300ms ease-in-out, transform 300ms ease-in-out, color 300ms ease-out;
+        color: $charcoal;
+        transition: color 300ms ease-out, transform 300ms ease-out;
         width: fit-content;
 
         &:hover {
-            color: $tan;
-            transform: translateY(-4px);
-            transform: scale(1.02);
-            text-shadow: rgba(27, 27, 27, 0.6) 0 2px 15px;
+            color: $orange;
 
             .pub__title {
                 @media (min-width: $screen-sm-min) {
@@ -42,14 +38,10 @@
         &:hover {
             .pub__details-wrapper {
                 color: inherit;
-                transform: inherit;
-                text-shadow: inherit;
-                transition: text-shadow 300ms ease-in-out, transform 300ms ease-in-out, color 300ms ease-out;
+                transition: color 300ms ease-out;
              
                 .pub__detail--availability {
-                    color: $tan;
-                    transform: scale(1.02);
-                    text-shadow: rgba(27, 27, 27, 0.6) 0 2px 15px;
+                    color: $orange;
                 }
             }
         }
@@ -98,7 +90,7 @@
     }
 
     .pub__divider-line {
-        background-color: $offWhite;
+        background-color: $charcoal;
         height: 1px;
         margin: 17px 0 17px 0;
     }
