@@ -10,12 +10,17 @@
   align-items: center;
   position: relative;
 
+  .navbar--rat {
+    display: none;
+  }
+
   &.homepage {
     height: 100vh;
     justify-content: center;
     flex-direction: column;
 
     .navbar--rat {
+      display: flex;
       max-width: 100px;
 
       @media (min-width: $screen-sm-min) {
@@ -26,6 +31,7 @@
         max-width: 300px;
       }
     }
+
 
     .navbar--title__clickable {
       a {
