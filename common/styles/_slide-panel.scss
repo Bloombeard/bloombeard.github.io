@@ -7,7 +7,7 @@
     width: 100%;
     height: 100%;
     // background-color: $orange;
-    background: linear-gradient(to top left, $charcoal, $orange);
+    background: $greyedOut;
     position: fixed;
     z-index: 10;
     transform: translateX(100%);
@@ -29,6 +29,10 @@
 
         a {
             color: $charcoal;
+
+            .current {
+                color: $orange;
+            }
 
             &:hover {
                 color: $charcoal;
