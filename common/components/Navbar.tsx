@@ -10,7 +10,6 @@ import SlidePanel from "@/common/components/SlidePanel";
 import HamburgerIcon from "@/common/components/HamburgerIcon";
 import rat from '@/public/assets/RatCropped.png'
 import { navBarLinks } from "@/common/constants/navLinks";
-import { hamburgerColors } from "@/common/constants/hamburgerColors";
 
 const Navbar = () => {
   const [isSlidePanelOpen, setIsSlidePanelOpen] = useState(false);
@@ -49,7 +48,7 @@ const Navbar = () => {
             className="navbar--hamburger-button"
             onClick={() => setIsSlidePanelOpen(!isSlidePanelOpen)}
           >
-            <HamburgerIcon colorFill={hamburgerColors.slidePanelClosed} />
+            <HamburgerIcon colorFill="#222222" />
           </button>
         }
       </div>
