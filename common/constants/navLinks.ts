@@ -8,6 +8,7 @@ import ElixersCover from '@/public/assets/coverImages/ElixersCover.png'
 import FurnitureCover from '@/public/assets/coverImages/FurnitureCover.png'
 import GlittergymCover from '@/public/assets/coverImages/GlittergymCover.png'
 import MallKingCover from '@/public/assets/coverImages/MallKingCover.png'
+import NerveGardensCover from '@/public/assets/coverImages/NerveGardensCover.png'
 import RedLightCover from '@/public/assets/coverImages/RedLightCover.png'
 import CampCover from '@/public/assets/coverImages/CampCover.png'
 import WhiskersCover from '@/public/assets/coverImages/WhiskersCover.png'
@@ -24,16 +25,22 @@ const _externalLinks = {
 
 export const comicLinks: TNavLinks = [
     {
-        label: `The Curse of the Mall\xa0King`,
-        target: '/comics/mallKing',
-        previewImage: MallKingCover,
-        previewAltText: 'The Curse of the Mall King',
+        label: 'Nerve Gardens',
+        target: '/comics/nerveGardens',
+        previewImage: NerveGardensCover,
+        previewAltText: 'Nerve Gardens',
     },
     {
         label: 'Desert Birds',
         target: '/comics/desertBirds',
         previewImage: DesertBirdsCover,
         previewAltText: 'Desert Birds',
+    },
+    {
+        label: `The Curse of the Mall\xa0King`,
+        target: '/comics/mallKing',
+        previewImage: MallKingCover,
+        previewAltText: 'The Curse of the Mall King',
     },
     {
         label: 'Red Light',
@@ -105,6 +112,13 @@ export const aboutPageLinks: TNavLinks = [
 ]
 
 export const externalDownloadLinks: TExternalLinks = {
+    nerveGardens: [
+        {
+            label: 'Download',
+            target: 'https://forreststorrs.itch.io/nerve-gardens',
+            isExternal: true,
+        },
+    ],
     mallKing: [
         {
             label: 'Download',

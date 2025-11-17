@@ -10,6 +10,7 @@ import FurnitureCover from '@/public/assets/coverImages/FurnitureCover.png'
 import GlittergymCover from '@/public/assets/coverImages/GlittergymCover.png'
 import Scapes from '@/public/assets/coverImages/Scapes.png'
 import MallKingCover from '@/public/assets/coverImages/MallKingCover.png'
+import NerveGardensCover from '@/public/assets/coverImages/NerveGardensCover.png'
 import RedLightCover from '@/public/assets/coverImages/RedLightCover.png'
 import CampCover from '@/public/assets/coverImages/CampCover.png'
 
@@ -69,11 +70,20 @@ export const redLightHeader: TDescriptionBlock = {
 
 export const desertBirdsHeader: TDescriptionBlock = {
     title: 'Desert Birds',
-    subtitle: '26 pages, partial color',
+    subtitle: '26 pages, color',
     bodyText: `Illustrated by <a href="https://www.bicycleboy.net/">Jackarais</a><br/><br/>Two people try to kill each other while a talking vulture heckles them.`,
     links: externalDownloadLinks.desertBirds,
     coverImage: DesertBirdsCover,
     coverAltText: 'Desert Birds cover',
+}
+
+export const nerveGardensHeader: TDescriptionBlock = {
+    title: 'Nerve Gardens',
+    subtitle: '46 pages, color',
+    bodyText: `Illustrated by <a href="https://bsky.app/profile/jonasgoonface.bsky.social">Jonas Goonface</a><br/><br/>A company ship goes dead, hoping to drift across a restricted sector without being spotted by the eldritch AI living there.`,
+    links: externalDownloadLinks.nerveGardens,
+    coverImage: NerveGardensCover,
+    coverAltText: 'Nerve Gardens cover',
 }
 
 export const elixersHeader: TDescriptionBlock = {

@@ -12,6 +12,7 @@ export type TNavLink = {
 export type TNavLinks = TNavLink[]
 
 export type TExternalLinks = {
+    nerveGardens: TNavLinks,
     mallKing: TNavLinks,
     achingHeights: TNavLinks,
     devyn: TNavLinks,
