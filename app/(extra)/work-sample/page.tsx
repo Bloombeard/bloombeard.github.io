@@ -8,20 +8,19 @@ import WorkSample7 from '@/public/assets/workSamples/WorkSample7.jpg'
 import WorkSample8 from '@/public/assets/workSamples/WorkSample8.jpg'
 import WorkSample9 from '@/public/assets/workSamples/WorkSample9.jpeg'
 
-import Image from 'next/image'
 
 const WorkSample = () => {
     return (
         <main style={{ maxWidth: '1000px' }}>
-            <Image src={WorkSample1} alt="Work Sample 1" style={{ width: '100%', height: 'auto' }} />
-            <Image src={WorkSample2} alt="Work Sample 2" style={{ width: '100%', height: 'auto' }} />
-            <Image src={WorkSample3} alt="Work Sample 3" style={{ width: '100%', height: 'auto' }} />
-            <Image src={WorkSample4} alt="Work Sample 4" style={{ width: '100%', height: 'auto' }} />
-            <Image src={WorkSample5} alt="Work Sample 5" style={{ width: '100%', height: 'auto' }} />
-            <Image src={WorkSample6} alt="Work Sample 6" style={{ width: '100%', height: 'auto' }} />
-            <Image src={WorkSample7} alt="Work Sample 7" style={{ width: '100%', height: 'auto' }} />
-            <Image src={WorkSample8} alt="Work Sample 8" style={{ width: '100%', height: 'auto' }} />
-            <Image src={WorkSample9} alt="Work Sample 9" style={{ width: '100%', height: 'auto' }} />
+            <img src={typeof WorkSample1 === 'string' ? WorkSample1 : WorkSample1.src} alt="Work Sample 1" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <img src={typeof WorkSample2 === 'string' ? WorkSample2 : WorkSample2.src} alt="Work Sample 2" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <img src={typeof WorkSample3 === 'string' ? WorkSample3 : WorkSample3.src} alt="Work Sample 3" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <img src={typeof WorkSample4 === 'string' ? WorkSample4 : WorkSample4.src} alt="Work Sample 4" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <img src={typeof WorkSample5 === 'string' ? WorkSample5 : WorkSample5.src} alt="Work Sample 5" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <img src={typeof WorkSample6 === 'string' ? WorkSample6 : WorkSample6.src} alt="Work Sample 6" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <img src={typeof WorkSample7 === 'string' ? WorkSample7 : WorkSample7.src} alt="Work Sample 7" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <img src={typeof WorkSample8 === 'string' ? WorkSample8 : WorkSample8.src} alt="Work Sample 8" style={{ width: '100%', height: 'auto', display: 'block' }} />
+            <img src={typeof WorkSample9 === 'string' ? WorkSample9 : WorkSample9.src} alt="Work Sample 9" style={{ width: '100%', height: 'auto', display: 'block' }} />
         </main>
     )
 }
