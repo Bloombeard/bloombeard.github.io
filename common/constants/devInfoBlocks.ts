@@ -40,15 +40,6 @@ export const devInfoBlocks: TDevInfoBlock = {
             },
             {
                 preHeader: 'coding project',
-                sectionHeader: 'Game Not Included',
-                subHeader: 'Jul 2024 | gamenotincluded.fun',
-                bullets: [
-                    'Wrote piece of software for digital arts curriculum startup.',
-                    'Used Python to parse a .psd file to allow a student to upload a filled-out photoshop template and have their artwork pulled into the web app.',
-                ],
-            },
-            {
-                preHeader: 'coding project',
                 sectionHeader: 'Personal Portfolio Website',
                 subHeader: 'Mar 2024 | forreststorrs.com',
                 bodyText: 'Beyond his career as a software engineer, Forrest also writes fiction, comics, and material for tabletop role-playing games. He built his writing portfolio website from scratch using Nextjs, React, Typescript, and sass, and hosted it using github pages and github actions.',
