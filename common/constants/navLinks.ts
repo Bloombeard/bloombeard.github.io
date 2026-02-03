@@ -1,6 +1,7 @@
 import { TExternalLinks, TNavLinks } from '../types/types'
 
 import AchingHeightsCover from '@/public/assets/coverImages/AchingHeightsCover.png'
+import ArtkymFace from '@/public/assets/coverImages/ArtkymFace.png'
 import AuditCover from '@/public/assets/coverImages/AuditCover.png'
 import DesertBirdsCover from '@/public/assets/coverImages/DesertBirdsCover.png'
 import DevynCover from '@/public/assets/coverImages/DevynCover.jpeg'
@@ -14,6 +15,7 @@ import CampCover from '@/public/assets/coverImages/CampCover.png'
 import WhiskersCover from '@/public/assets/coverImages/WhiskersCover.png'
 
 const _externalLinks = {
+    artkym: 'https://illustratornate.itch.io/a-road-that-knows-your-name',
     blog: 'https://bloombeard.tumblr.com/',
     instagram: 'https://www.instagram.com/bloombeard/',
     elixers: 'https://forreststorrs.itch.io/elixers',
@@ -69,6 +71,11 @@ export const comicLinks: TNavLinks = [
 ]
 
 export const gameLinks: TNavLinks = [
+    {
+        label: "A Road that Knows Your Name",
+        target: _externalLinks.artkym,
+        previewImage: ArtkymFace,
+    },
     {
         label: "The Vile & Wicked Mrs. Whiskers",
         target: _externalLinks.whiskers,
