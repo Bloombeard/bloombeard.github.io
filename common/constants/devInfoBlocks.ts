@@ -30,7 +30,7 @@ export const devInfoBlocks: TDevInfoBlock = {
             {
                 preHeader: 'software engineer (front end)',
                 sectionHeader: 'Niche Inc.',
-                subHeader: 'Feb 2020 - Present | niche.com',
+                subHeader: 'Feb 2020 - Jan 2026 | niche.com',
                 bullets: [
                     'Built systems and interfaces for Niche Direct Admissions, including user profile validations, multi-tab modals, and recommendation interfaces.',
                     'Built user profile page, including forms architecture and modals for editing profiles.',
