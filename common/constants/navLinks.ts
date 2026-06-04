@@ -15,7 +15,7 @@ import CampCover from '@/public/assets/coverImages/CampCover.png'
 import WhiskersCover from '@/public/assets/coverImages/WhiskersCover.png'
 
 const _externalLinks = {
-    artkym: 'https://illustratornate.itch.io/a-road-that-knows-your-name',
+    artkym: 'https://www.kickstarter.com/projects/forreststorrs/a-road-that-knows-your-name',
     blog: 'https://bloombeard.tumblr.com/',
     instagram: 'https://www.instagram.com/bloombeard/',
     elixers: 'https://forreststorrs.itch.io/elixers',
