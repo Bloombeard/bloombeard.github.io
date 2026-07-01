@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Advent_Pro, Forum } from 'next/font/google'
+import { Forum } from 'next/font/google'
 
 import '@/common/styles/wedding.scss'
 
