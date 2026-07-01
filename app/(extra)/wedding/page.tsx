@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { Tangerine } from 'next/font/google'
+import { setItem, getItem } from '@/common/utils/localStorage'
 
 import weddingRingTop from '@/public/assets/wedding/weddingRingTop.png'
 import weddingRingBottom from '@/public/assets/wedding/weddingRingBottom.png'
@@ -20,7 +21,9 @@ const Wedding = () => {
     const largestFontSize = '46px';
 
     const password = 'Zhen&Forrest2026'
-    const [hasAccess, setHasAccess] = useState<boolean>(false)
+    const [hasAccess, setHasAccess] = useState<boolean>(() => {
+        return getItem('hasAccess') || false
+    })
     const [passwordMissed, setPasswordMissed] = useState<boolean>(false)
     const [passwordInput, setPasswordInput] = useState<string>('')
     const inputRef = useRef<HTMLInputElement>(null)
@@ -37,9 +40,14 @@ const Wedding = () => {
         return () => document.removeEventListener('keypress', (e) => onEnterKeyPressed(e))
     })
 
+    useEffect(() => {
+        setItem('hasAccess', hasAccess)
+    }, [hasAccess])
+
     const onLoginClick = () => {
         if (passwordInput === password) {
             setHasAccess(true)
+
         } else {
             setPasswordMissed(true)
         }
@@ -47,7 +55,7 @@ const Wedding = () => {
 
     return (
         <main>
-            {/* { hasAccess ? ( */}
+            { hasAccess ? (
                 <>
                     <div className="center-column">
                         <div className="info-1">
@@ -65,14 +73,14 @@ const Wedding = () => {
                         <Image objectFit="cover" className="ring ring-top" src={weddingRingTop} alt="ring of animals, top" />
                         <Image objectFit="cover" className="ring ring-bottom" src={weddingRingBottom} alt="ring of animals, bottom" />
                 </>
-            {/* ) : (
+            ) : (
                 <div className="login-wrapper">
                     <div>please enter password</div>
                     <input onChange={ (e) => setPasswordInput(e.target.value)} ref={inputRef} value={passwordInput} />
                     <button onClick={onLoginClick}>enter</button>
                     { passwordMissed && (<div style={{ color: 'red' }}>password incorrect</div>)}
                 </div>
-            )} */}
+            )}
         </main>
     )
 }
