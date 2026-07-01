@@ -1,5 +1,8 @@
 $darkGreen: #022400;
 $lightPurple: #FDE5FF;
+$bottomLayer: auto;
+$middleLayer: 1;
+$topLayer: 2;
 
 body {
     background: $darkGreen;
@@ -47,10 +50,30 @@ main {
         justify-items: center;   
         text-align: center;
         gap: 5vh;
+        z-index: $middleLayer;
+        text-shadow: 1px 1px 2px black;
 
         .info-1 {
             gap: 3vh;
         }
 
+    }
+
+    .ring {
+        padding-top: 20vh;
+        transform: scale(75%);
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        inset: 0px;
+        object-fit: cover;
+
+        &.ring-top {
+            z-index: $bottomLayer;
+        }
+        
+        &.ring-bottom {
+            z-index: $topLayer;
+        }
     }
 }
