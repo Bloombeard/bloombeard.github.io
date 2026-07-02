@@ -94,6 +94,10 @@ main {
             gap: 3vh;
         }
 
+        .rsvp-link {
+            color: $lightPurple;
+        }
+
     }
 
     .ring {
@@ -118,6 +122,7 @@ main {
         
         &.ring-bottom {
             z-index: $topLayer;
+            pointer-events: none;
         }
     }
 

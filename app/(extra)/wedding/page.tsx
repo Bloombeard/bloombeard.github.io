@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Tangerine } from 'next/font/google'
 import { setItem, getItem } from '@/common/utils/localStorage'
 
@@ -23,6 +24,8 @@ const Wedding = () => {
 
     const password = 'Zhen&Forrest2026'
     const outOfTownPassword = 'Zhen&ForrestInnerCircle'
+    const rsvpUrl = 'https://www.forreststorrs.com'
+
     const [hasAccess, setHasAccess] = useState<boolean>(() => {
         return getItem('hasAccess') || false
     })
@@ -96,7 +99,7 @@ const Wedding = () => {
                             </div>
                         )}
                         <div style={{ fontSize: `${defaultFontSize}`}}>More details to follow.</div>
-                        <div style={{ fontSize: `${largerFontSize}` }}>Save the date!</div>
+                        <Link className="rsvp-link" style={{ fontSize: `${largerFontSize}` }} href={rsvpUrl}>RSVP</Link>
                     </div>
                         <Image objectFit="cover" className="wedding-stars" src={weddingStars} alt="field of cartoon stars" />
                         <Image objectFit="cover" className="ring ring-top" src={weddingRingTop} alt="ring of animals, top" />
