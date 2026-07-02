@@ -7,6 +7,7 @@ import { setItem, getItem } from '@/common/utils/localStorage'
 
 import weddingRingTop from '@/public/assets/wedding/weddingRingTop.png'
 import weddingRingBottom from '@/public/assets/wedding/weddingRingBottom.png'
+import weddingStars from '@/public/assets/wedding/weddingStars.png'
 
 const tangerine = Tangerine({
     adjustFontFallback: false,
@@ -18,14 +19,18 @@ const tangerine = Tangerine({
 const Wedding = () => {
     const defaultFontSize = '22px';
     const largerFontSize = '32px';
-    const largestFontSize = '46px';
+    const largestFontSize = '60px';
 
     const password = 'Zhen&Forrest2026'
+    const outOfTownPassword = 'Zhen&ForrestInnerCircle'
     const [hasAccess, setHasAccess] = useState<boolean>(() => {
         return getItem('hasAccess') || false
     })
     const [passwordMissed, setPasswordMissed] = useState<boolean>(false)
     const [passwordInput, setPasswordInput] = useState<string>('')
+    const [isInnerCircle, setIsInnerCircle] = useState<boolean>(() => {
+        return getItem('isInnerCircle') || false
+    })
     const inputRef = useRef<HTMLInputElement>(null)
 
     const onEnterKeyPressed = (e: any) => {
@@ -42,34 +47,58 @@ const Wedding = () => {
 
     useEffect(() => {
         setItem('hasAccess', hasAccess)
+        setItem('isInnerCircle', isInnerCircle)
     }, [hasAccess])
 
     const onLoginClick = () => {
         if (passwordInput === password) {
             setHasAccess(true)
 
+        } else if (passwordInput === outOfTownPassword) {
+            setHasAccess(true)
+            setIsInnerCircle(true)
+
         } else {
             setPasswordMissed(true)
         }
     }
 
+    const getMainClassNames = () => {
+        if (isInnerCircle) {
+            return 'is-InnerCircle'
+        }
+
+        return ''
+    }
+
     return (
-        <main>
+        <main className={getMainClassNames()}>
             { hasAccess ? (
                 <>
                     <div className="center-column">
                         <div className="info-1">
                             <div className={tangerine.className} style={{ fontSize: '64px' }}>You are invited</div>
-                            <div style={{ fontSize: `${defaultFontSize}`}}>to a much belated wedding between</div>
+                            <div style={{ fontSize: `${defaultFontSize}`}}>to</div>
+                        {/* </div>
+                        <div className="info-1"> */}
+                            <div style={{ fontSize: `${largestFontSize}`, fontWeight: 'bold', gap: '0' }}>Zhen & Forrest's</div>
+                            <div style={{ fontSize: `${largestFontSize}`, fontWeight: 'bold' }}>Wedding Rumpus</div>
                         </div>
-                        <div style={{ fontSize: `${largestFontSize}`, fontWeight: 'bold' }}>Zhen & Forrest</div>
                         <div className="info-2">
                             <div style={{ fontSize: `${defaultFontSize}`}}>on October the 17th, after nightfall</div>
                             <div style={{ fontSize: `${defaultFontSize}`}}>with a reception to follow on the 18th.</div>
                         </div>
+                        {isInnerCircle && (
+                            <div className="info-2">
+                                <div style={{ fontSize: `${defaultFontSize}`}}>YOU, specifically, are also invited</div>
+                                <div style={{ fontSize: `${defaultFontSize}`}}>to a secret gathering of close friends,</div>
+                                <div style={{ fontSize: `${defaultFontSize}`}}>on the preceding evening, the 16th.</div>
+                            </div>
+                        )}
                         <div style={{ fontSize: `${defaultFontSize}`}}>More details to follow.</div>
                         <div style={{ fontSize: `${largerFontSize}` }}>Save the date!</div>
                     </div>
+                        <Image objectFit="cover" className="wedding-stars" src={weddingStars} alt="field of cartoon stars" />
                         <Image objectFit="cover" className="ring ring-top" src={weddingRingTop} alt="ring of animals, top" />
                         <Image objectFit="cover" className="ring ring-bottom" src={weddingRingBottom} alt="ring of animals, bottom" />
                 </>

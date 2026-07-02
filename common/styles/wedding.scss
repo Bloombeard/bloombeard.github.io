@@ -32,6 +32,7 @@ $topLayer: 2;
 
 body {
     background: $darkGreen;
+    background-color: $darkGreen;
 }
 
 main {
@@ -41,6 +42,10 @@ main {
     padding: 100px 0 100px 0;
     background: $darkGreen;
     color: $lightPurple;
+
+    &.is-pilgrim {
+        padding: 50px 0 100px 0;
+    }
 
     .login-wrapper {
         display: flex;
@@ -77,7 +82,10 @@ main {
         text-align: center;
         gap: 5vh;
         z-index: $middleLayer;
-        text-shadow: 2px 2px 1px black;
+        text-shadow:
+            0 0 20px black,
+            0 0 20px black,
+            0 0 20px black;
         padding-bottom: 100px;
         opacity: 0;
         animation: slideInFromBottom 3s ease-out 0s 1 forwards;
@@ -111,5 +119,17 @@ main {
         &.ring-bottom {
             z-index: $topLayer;
         }
+    }
+
+    .wedding-stars {
+        position: fixed;
+        height: 75%;
+        width: 100%;
+        max-height: 900px;
+        max-width: 900px;
+        inset: 0px;
+        object-fit: cover;
+        animation: fadeInAndDescend 1s ease-out 0s 1;
+        justify-self: center;
     }
 }
