@@ -24,7 +24,8 @@ const Wedding = () => {
 
     const password = 'Zhen&Forrest2026'
     const outOfTownPassword = 'Zhen&ForrestInnerCircle'
-    const rsvpUrl = 'https://www.forreststorrs.com'
+    const rsvpUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeLeU9Y38zl_NHUGQIyl-_4Vkw0axqahIwra1Fu-jmkG6tSaA/viewform'
+    const rsvpUrlInnerCircle = 'https://docs.google.com/forms/d/e/1FAIpQLSf4ASXlGqEI8PMTqtlrHLfFA-6ISL6erG_S0zXEE7VpO8koZw/viewform'
 
     const [hasAccess, setHasAccess] = useState<boolean>(() => {
         return getItem('hasAccess') || false
@@ -99,7 +100,7 @@ const Wedding = () => {
                             </div>
                         )}
                         <div style={{ fontSize: `${defaultFontSize}`}}>More details to follow.</div>
-                        <Link className="rsvp-link" style={{ fontSize: `${largerFontSize}` }} href={rsvpUrl}>RSVP</Link>
+                        <Link className="rsvp-link" style={{ fontSize: `${largerFontSize}` }} href={isInnerCircle ? rsvpUrlInnerCircle : rsvpUrl}>RSVP</Link>
                     </div>
                         <Image objectFit="cover" className="wedding-stars" src={weddingStars} alt="field of cartoon stars" />
                         <Image objectFit="cover" className="ring ring-top" src={weddingRingTop} alt="ring of animals, top" />
