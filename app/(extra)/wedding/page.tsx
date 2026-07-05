@@ -69,7 +69,7 @@ const Wedding = () => {
 
     const getMainClassNames = () => {
         if (isInnerCircle) {
-            return 'is-InnerCircle'
+            return 'is-inner-circle'
         }
 
         return ''

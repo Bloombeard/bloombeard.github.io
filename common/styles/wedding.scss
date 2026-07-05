@@ -43,8 +43,8 @@ main {
     background: $darkGreen;
     color: $lightPurple;
 
-    &.is-pilgrim {
-        padding: 50px 0 100px 0;
+    &.is-inner-circle {
+        padding: 15px 0 100px 0;
     }
 
     .login-wrapper {
