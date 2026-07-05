@@ -52,7 +52,7 @@ const Wedding = () => {
     useEffect(() => {
         setItem('hasAccess', hasAccess)
         setItem('isInnerCircle', isInnerCircle)
-    }, [hasAccess])
+    }, [hasAccess, isInnerCircle])
 
     const onLoginClick = () => {
         if (passwordInput === password) {
