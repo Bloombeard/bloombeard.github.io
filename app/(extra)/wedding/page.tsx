@@ -85,7 +85,7 @@ const Wedding = () => {
                             <div style={{ fontSize: `${defaultFontSize}`}}>to</div>
                         {/* </div>
                         <div className="info-1"> */}
-                            <div style={{ fontSize: `${largestFontSize}`, fontWeight: 'bold', gap: '0' }}>Zhen & Forrest's</div>
+                            <div style={{ fontSize: `${largestFontSize}`, fontWeight: 'bold', gap: '0' }}>Zhen & Forrest&apos;s</div>
                             <div style={{ fontSize: `${largestFontSize}`, fontWeight: 'bold' }}>Wedding Rumpus</div>
                         </div>
                         <div className="info-2">
