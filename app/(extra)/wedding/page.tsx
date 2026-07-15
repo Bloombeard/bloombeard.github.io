@@ -23,7 +23,8 @@ const Wedding = () => {
     const largestFontSize = '60px';
 
     const password = 'Zhen&Forrest2026'
-    const outOfTownPassword = 'Zhen&ForrestInnerCircle'
+    const forrestPartyPassword = 'Pilgrim'
+    const zhenPartyPassword = 'Potato'
     const rsvpUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeLeU9Y38zl_NHUGQIyl-_4Vkw0axqahIwra1Fu-jmkG6tSaA/viewform'
     const rsvpUrlInnerCircle = 'https://docs.google.com/forms/d/e/1FAIpQLSf4ASXlGqEI8PMTqtlrHLfFA-6ISL6erG_S0zXEE7VpO8koZw/viewform'
 
@@ -32,8 +33,11 @@ const Wedding = () => {
     })
     const [passwordMissed, setPasswordMissed] = useState<boolean>(false)
     const [passwordInput, setPasswordInput] = useState<string>('')
-    const [isInnerCircle, setIsInnerCircle] = useState<boolean>(() => {
-        return getItem('isInnerCircle') || false
+    const [isForrestParty, setIsForrestParty] = useState<boolean>(() => {
+        return getItem('isForrestParty') || false
+    })
+    const [isZhenParty, setIsZhenParty] = useState<boolean>(() => {
+        return getItem('isZhenParty') || false
     })
     const inputRef = useRef<HTMLInputElement>(null)
 
@@ -51,24 +55,27 @@ const Wedding = () => {
 
     useEffect(() => {
         setItem('hasAccess', hasAccess)
-        setItem('isInnerCircle', isInnerCircle)
-    }, [hasAccess, isInnerCircle])
+        setItem('isForrestParty', isForrestParty)
+        setItem('isZhenParty', isZhenParty)
+    }, [hasAccess, isForrestParty, isZhenParty])
 
     const onLoginClick = () => {
         if (passwordInput === password) {
             setHasAccess(true)
 
-        } else if (passwordInput === outOfTownPassword) {
+        } else if (passwordInput === forrestPartyPassword) {
             setHasAccess(true)
-            setIsInnerCircle(true)
-
+            setIsForrestParty(true)
+        } else if (passwordInput === zhenPartyPassword) {
+            setHasAccess(true)
+            setIsZhenParty(true)
         } else {
             setPasswordMissed(true)
         }
     }
 
     const getMainClassNames = () => {
-        if (isInnerCircle) {
+        if (isForrestParty || isZhenParty) {
             return 'is-inner-circle'
         }
 
@@ -92,15 +99,22 @@ const Wedding = () => {
                             <div style={{ fontSize: `${defaultFontSize}`}}>on October the 17th, after nightfall</div>
                             <div style={{ fontSize: `${defaultFontSize}`}}>with a reception to follow on the 18th.</div>
                         </div>
-                        {isInnerCircle && (
+                        {isForrestParty && (
                             <div className="info-2">
-                                <div style={{ fontSize: `${defaultFontSize}`}}>YOU, specifically, are also invited</div>
-                                <div style={{ fontSize: `${defaultFontSize}`}}>to a secret gathering of close friends,</div>
+                                <div style={{ fontSize: `${defaultFontSize}`}}>YOU, specifically, are also invited to a</div>
+                                <div style={{ fontSize: `${defaultFontSize}`}}>secret gathering of Forrest's out-of-town friends,</div>
+                                <div style={{ fontSize: `${defaultFontSize}`}}>on the preceding evening, the 16th.</div>
+                            </div>
+                        )}
+                        {isZhenParty && (
+                            <div className="info-2">
+                                <div style={{ fontSize: `${defaultFontSize}`}}>YOU, specifically, are also invited to</div>
+                                <div style={{ fontSize: `${defaultFontSize}`}}>Zhen's pre-wedding party,</div>
                                 <div style={{ fontSize: `${defaultFontSize}`}}>on the preceding evening, the 16th.</div>
                             </div>
                         )}
                         <div style={{ fontSize: `${defaultFontSize}`}}>More details to follow.</div>
-                        <Link className="rsvp-link" style={{ fontSize: `${largerFontSize}` }} href={isInnerCircle ? rsvpUrlInnerCircle : rsvpUrl}>RSVP</Link>
+                        <Link className="rsvp-link" style={{ fontSize: `${largerFontSize}` }} href={isForrestParty ? rsvpUrlInnerCircle : rsvpUrl}>RSVP</Link>
                     </div>
                         <Image objectFit="cover" className="wedding-stars" src={weddingStars} alt="field of cartoon stars" />
                         <Image objectFit="cover" className="ring ring-top" src={weddingRingTop} alt="ring of animals, top" />
