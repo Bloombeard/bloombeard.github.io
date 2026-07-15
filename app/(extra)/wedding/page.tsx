@@ -25,8 +25,9 @@ const Wedding = () => {
     const password = 'Zhen&Forrest2026'
     const forrestPartyPassword = 'Pilgrim'
     const zhenPartyPassword = 'Potato'
-    const rsvpUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSeLeU9Y38zl_NHUGQIyl-_4Vkw0axqahIwra1Fu-jmkG6tSaA/viewform'
-    const rsvpUrlInnerCircle = 'https://docs.google.com/forms/d/e/1FAIpQLSf4ASXlGqEI8PMTqtlrHLfFA-6ISL6erG_S0zXEE7VpO8koZw/viewform'
+    const rsvpUrl = 'https://forms.gle/yZedzKbNhN3FS2nn6'
+    const rspvUrlForrestParty = 'https://forms.gle/43VjZfEJV2rHXaj58'
+    const rspvUrlZhenParty = 'https://forms.gle/Sv94T2tpjn9CYags8'
 
     const [hasAccess, setHasAccess] = useState<boolean>(() => {
         return getItem('hasAccess') || false
@@ -82,6 +83,18 @@ const Wedding = () => {
         return ''
     }
 
+    const getRsvpUrl = () => {
+        if (isForrestParty) {
+            return rspvUrlForrestParty
+        }
+        
+        if (isZhenParty) {
+            return rspvUrlZhenParty
+        }
+
+        return rsvpUrl
+    }
+
     return (
         <main className={getMainClassNames()}>
             { hasAccess ? (
@@ -102,19 +115,19 @@ const Wedding = () => {
                         {isForrestParty && (
                             <div className="info-2">
                                 <div style={{ fontSize: `${defaultFontSize}`}}>YOU, specifically, are also invited to a</div>
-                                <div style={{ fontSize: `${defaultFontSize}`}}>secret gathering of Forrest's out-of-town friends,</div>
+                                <div style={{ fontSize: `${defaultFontSize}`}}>secret gathering of Forrest&apos;s out-of-town friends,</div>
                                 <div style={{ fontSize: `${defaultFontSize}`}}>on the preceding evening, the 16th.</div>
                             </div>
                         )}
                         {isZhenParty && (
                             <div className="info-2">
                                 <div style={{ fontSize: `${defaultFontSize}`}}>YOU, specifically, are also invited to</div>
-                                <div style={{ fontSize: `${defaultFontSize}`}}>Zhen's pre-wedding party,</div>
+                                <div style={{ fontSize: `${defaultFontSize}`}}>Zhen&apos;s pre-wedding party,</div>
                                 <div style={{ fontSize: `${defaultFontSize}`}}>on the preceding evening, the 16th.</div>
                             </div>
                         )}
                         <div style={{ fontSize: `${defaultFontSize}`}}>More details to follow.</div>
-                        <Link className="rsvp-link" style={{ fontSize: `${largerFontSize}` }} href={isForrestParty ? rsvpUrlInnerCircle : rsvpUrl}>RSVP</Link>
+                        <Link className="rsvp-link" style={{ fontSize: `${largerFontSize}` }} href={getRsvpUrl()}>RSVP</Link>
                     </div>
                         <Image objectFit="cover" className="wedding-stars" src={weddingStars} alt="field of cartoon stars" />
                         <Image objectFit="cover" className="ring ring-top" src={weddingRingTop} alt="ring of animals, top" />
