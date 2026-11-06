@@ -112,3 +112,5 @@ export type TAslSign = {
     link: string
 }
 export type TAslSigns = TAslSign[]
+
+export type TTidyTextBodyBlocks = "about" | "experience" | "contact"
