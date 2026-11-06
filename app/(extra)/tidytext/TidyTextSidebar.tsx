@@ -28,9 +28,11 @@ const TidyTextSidebar = (props: TProps) => {
         <div className="tidy-text-sidebar--wrapper">
             <Image className="tidy-text-sidebar--logo" src={tidyTextImage} alt="tidy text logo" />
             Forrest Storrs
-            <button className={getButtonClassNames("about")} onClick={() => onSidebarButtonClickCallback("about")}>about</button>
-            <button className={getButtonClassNames("experience")} onClick={() => onSidebarButtonClickCallback("experience")}>experience</button>
-            <button className={getButtonClassNames("contact")} onClick={() => onSidebarButtonClickCallback("contact")}>contact</button>
+            <div className="tidy-text-sidebar--buttons-container">
+                <button className={getButtonClassNames("about")} onClick={() => onSidebarButtonClickCallback("about")}>about</button>
+                <button className={getButtonClassNames("experience")} onClick={() => onSidebarButtonClickCallback("experience")}>experience</button>
+                <button className={getButtonClassNames("contact")} onClick={() => onSidebarButtonClickCallback("contact")}>contact</button>
+            </div>
         </div>
     )
 }
